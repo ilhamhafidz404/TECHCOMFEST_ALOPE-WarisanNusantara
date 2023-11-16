@@ -1,10 +1,16 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { FaBeer } from "react-icons/fa";
+import { FaBeer, FaHome } from "react-icons/fa";
 
 // icons
 import ChevronRightIcon from "./components/icons/chevronRight.jsx";
 import ChevronLeftIcon from "./components/icons/chevronLeftIcon.jsx";
+
+// react icons
+import { GiMusicalScore } from "react-icons/gi";
+import { FaBowlFood } from "react-icons/fa6";
+import { GiHeartInside } from "react-icons/gi";
+import { MdOutlinePiano } from "react-icons/md";
+import { FaLanguage } from "react-icons/fa";
 
 // pages
 import About from "./pages/About";
@@ -314,102 +320,103 @@ export default function App() {
           <div>
             <div className="grid grid-cols-3 gap-7">
               <div className="shadow py-4 px-2 text-center rounded border-b-4 border-red-500 hover:bg-red-500 hover:text-white duration-500 cursor-pointer">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-6 h-6 mx-auto"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M9 2.25a.75.75 0 01.75.75v1.506a49.38 49.38 0 015.343.371.75.75 0 11-.186 1.489c-.66-.083-1.323-.151-1.99-.206a18.67 18.67 0 01-2.969 6.323c.317.384.65.753.998 1.107a.75.75 0 11-1.07 1.052A18.902 18.902 0 019 13.687a18.823 18.823 0 01-5.656 4.482.75.75 0 11-.688-1.333 17.323 17.323 0 005.396-4.353A18.72 18.72 0 015.89 8.598a.75.75 0 011.388-.568A17.21 17.21 0 009 11.224a17.17 17.17 0 002.391-5.165 48.038 48.038 0 00-8.298.307.75.75 0 01-.186-1.489 49.159 49.159 0 015.343-.371V3A.75.75 0 019 2.25zM15.75 9a.75.75 0 01.68.433l5.25 11.25a.75.75 0 01-1.36.634l-1.198-2.567h-6.744l-1.198 2.567a.75.75 0 01-1.36-.634l5.25-11.25A.75.75 0 0115.75 9zm-2.672 8.25h5.344l-2.672-5.726-2.672 5.726z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <FaLanguage className="mx-auto" size={30} />
                 <h6 className="mt-3">BAHASA</h6>
               </div>
               <div className="shadow py-4 px-2 text-center rounded border-b-4 border-indigo-500 hover:bg-indigo-500 hover:text-white duration-500 cursor-pointer">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-6 h-6 mx-auto"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M9 2.25a.75.75 0 01.75.75v1.506a49.38 49.38 0 015.343.371.75.75 0 11-.186 1.489c-.66-.083-1.323-.151-1.99-.206a18.67 18.67 0 01-2.969 6.323c.317.384.65.753.998 1.107a.75.75 0 11-1.07 1.052A18.902 18.902 0 019 13.687a18.823 18.823 0 01-5.656 4.482.75.75 0 11-.688-1.333 17.323 17.323 0 005.396-4.353A18.72 18.72 0 015.89 8.598a.75.75 0 011.388-.568A17.21 17.21 0 009 11.224a17.17 17.17 0 002.391-5.165 48.038 48.038 0 00-8.298.307.75.75 0 01-.186-1.489 49.159 49.159 0 015.343-.371V3A.75.75 0 019 2.25zM15.75 9a.75.75 0 01.68.433l5.25 11.25a.75.75 0 01-1.36.634l-1.198-2.567h-6.744l-1.198 2.567a.75.75 0 01-1.36-.634l5.25-11.25A.75.75 0 0115.75 9zm-2.672 8.25h5.344l-2.672-5.726-2.672 5.726z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <MdOutlinePiano className="mx-auto" size={30} />
                 <h6 className="mt-3">ALAT MUSIK</h6>
               </div>
               <div className="shadow py-4 px-2 text-center rounded border-b-4 border-emerald-500 hover:bg-emerald-500 hover:text-white duration-500 cursor-pointer">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-6 h-6 mx-auto"
-                >
-                  <path d="M19.006 3.705a.75.75 0 00-.512-1.41L6 6.838V3a.75.75 0 00-.75-.75h-1.5A.75.75 0 003 3v4.93l-1.006.365a.75.75 0 00.512 1.41l16.5-6z" />
-                  <path
-                    fillRule="evenodd"
-                    d="M3.019 11.115L18 5.667V9.09l4.006 1.456a.75.75 0 11-.512 1.41l-.494-.18v8.475h.75a.75.75 0 010 1.5H2.25a.75.75 0 010-1.5H3v-9.129l.019-.006zM18 20.25v-9.565l1.5.545v9.02H18zm-9-6a.75.75 0 00-.75.75v4.5c0 .414.336.75.75.75h3a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75H9z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <FaHome className="mx-auto" size={30} />
 
                 <h6 className="mt-3">RUMAH ADAT</h6>
               </div>
               <div className="shadow py-4 px-2 text-center rounded border-b-4 border-yellow-500 hover:bg-yellow-500 hover:text-white duration-500 cursor-pointer">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-6 h-6 mx-auto"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M9 2.25a.75.75 0 01.75.75v1.506a49.38 49.38 0 015.343.371.75.75 0 11-.186 1.489c-.66-.083-1.323-.151-1.99-.206a18.67 18.67 0 01-2.969 6.323c.317.384.65.753.998 1.107a.75.75 0 11-1.07 1.052A18.902 18.902 0 019 13.687a18.823 18.823 0 01-5.656 4.482.75.75 0 11-.688-1.333 17.323 17.323 0 005.396-4.353A18.72 18.72 0 015.89 8.598a.75.75 0 011.388-.568A17.21 17.21 0 009 11.224a17.17 17.17 0 002.391-5.165 48.038 48.038 0 00-8.298.307.75.75 0 01-.186-1.489 49.159 49.159 0 015.343-.371V3A.75.75 0 019 2.25zM15.75 9a.75.75 0 01.68.433l5.25 11.25a.75.75 0 01-1.36.634l-1.198-2.567h-6.744l-1.198 2.567a.75.75 0 01-1.36-.634l5.25-11.25A.75.75 0 0115.75 9zm-2.672 8.25h5.344l-2.672-5.726-2.672 5.726z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <GiHeartInside className="mx-auto" size={30} />
                 <h6 className="mt-3">SENI TARI</h6>
               </div>
               <div className="shadow py-4 px-2 text-center rounded border-b-4 border-purple-500 hover:bg-purple-500 hover:text-white duration-500 cursor-pointer">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-6 h-6 mx-auto"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M19.952 1.651a.75.75 0 01.298.599V16.303a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.403-4.909l2.311-.66a1.5 1.5 0 001.088-1.442V6.994l-9 2.572v9.737a3 3 0 01-2.176 2.884l-1.32.377a2.553 2.553 0 11-1.402-4.909l2.31-.66a1.5 1.5 0 001.088-1.442V9.017 5.25a.75.75 0 01.544-.721l10.5-3a.75.75 0 01.658.122z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-
+                <GiMusicalScore className="mx-auto" size={30} />
                 <h6 className="mt-3">LAGU DAERAH</h6>
               </div>
               <div className="shadow py-4 px-2 text-center rounded border-b-4 border-orange-500 hover:bg-orange-500 hover:text-white duration-500 cursor-pointer">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="w-6 h-6 mx-auto"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M9 2.25a.75.75 0 01.75.75v1.506a49.38 49.38 0 015.343.371.75.75 0 11-.186 1.489c-.66-.083-1.323-.151-1.99-.206a18.67 18.67 0 01-2.969 6.323c.317.384.65.753.998 1.107a.75.75 0 11-1.07 1.052A18.902 18.902 0 019 13.687a18.823 18.823 0 01-5.656 4.482.75.75 0 11-.688-1.333 17.323 17.323 0 005.396-4.353A18.72 18.72 0 015.89 8.598a.75.75 0 011.388-.568A17.21 17.21 0 009 11.224a17.17 17.17 0 002.391-5.165 48.038 48.038 0 00-8.298.307.75.75 0 01-.186-1.489 49.159 49.159 0 015.343-.371V3A.75.75 0 019 2.25zM15.75 9a.75.75 0 01.68.433l5.25 11.25a.75.75 0 01-1.36.634l-1.198-2.567h-6.744l-1.198 2.567a.75.75 0 01-1.36-.634l5.25-11.25A.75.75 0 0115.75 9zm-2.672 8.25h5.344l-2.672-5.726-2.672 5.726z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <FaBowlFood className="mx-auto" size={30} />
                 <h6 className="mt-3">MAKANAN KHAS</h6>
               </div>
             </div>
           </div>
         </section>
       </main>
+      <section className="mt-20 bg-gray-200 pt-20">
+        <h3 className="text-center text-4xl font-bold">KEGIATAN KAMI</h3>
+        <p className="w-[900px] text-center mx-auto mt-5 mb-10">
+          Kami memiliki dedikasi tinggi untuk melestarikan kekayaan budaya
+          Indonesia yang luar biasa. Melalui berbagai kegiatan, kami berupaya
+          untuk memahami, merawat, dan menghidupkan kembali warisan budaya yang
+          berharga ini.
+        </p>
+        <div className="slider h-[500px] overflow-x-hidden py-10 relative">
+          <div className="slide-track flex gap-20 items-center">
+            <div className="slide">
+              <img
+                src="https://react.dev/images/home/community/react_india_selfie.webp"
+                className="w-[500px] h-[300px] object-cover rounded-lg"
+                alt=""
+              />
+            </div>
+            <div className="slide">
+              <img
+                src="https://react.dev/images/home/community/react_india_hallway.webp"
+                className="w-[500px] h-[300px] object-cover rounded-lg"
+                alt=""
+              />
+            </div>
+            <div className="slide">
+              <img
+                src="https://react.dev/images/home/community/react_india_team.webp"
+                className="w-[500px] h-[300px] object-cover rounded-lg"
+                alt=""
+              />
+            </div>
+            <div className="slide">
+              <img
+                src="https://react.dev/images/home/community/react_conf_nat.webp"
+                className="w-[500px] h-[300px] object-cover rounded-lg"
+                alt=""
+              />
+            </div>
+            <div className="slide">
+              <img
+                src="https://react.dev/images/home/community/react_conf_fun.webp"
+                className="w-[500px] h-[300px] object-cover rounded-lg"
+                alt=""
+              />
+            </div>
+            <div className="slide">
+              <img
+                src="https://react.dev/images/home/community/react_india_sunil.webp"
+                className="w-[500px] h-[300px] object-cover rounded-lg"
+                alt=""
+              />
+            </div>
+            <div className="slide">
+              <img
+                src="https://react.dev/images/home/community/react_conf_hallway.webp"
+                className="w-[500px] h-[300px] object-cover rounded-lg"
+                alt=""
+              />
+            </div>
+            <div className="slide">
+              <img
+                src="https://react.dev/images/home/community/react_conf_elizabet.webp"
+                className="w-[500px] h-[300px] object-cover rounded-lg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* <nav className="h-[700px] relative">
         

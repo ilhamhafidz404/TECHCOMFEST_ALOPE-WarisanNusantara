@@ -1,8 +1,13 @@
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 #slider1 {
-  background-image: url(./../images/slider/1.jpeg);
+  background-image: url(./../images/carausel/1.jpeg);
 }
 #slider2 {
-  background-image: url(./../images/slider/2.gif);
+  background-image: url(./../images/carausel/2.gif);
 }
 
 header:hover #sliderControlArrow #next {
@@ -14,4 +19,56 @@ header:hover #sliderControlArrow #prev {
   left: 50px !important;
   opacity: 1;
   transition: 0.3s;
+}
+
+.slider::before,
+.slider::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(500px * 8);
+}
+
+.slide {
+  width: 500px;
+  transition: 0.3s;
+}
+
+.slide-track .slide:nth-child(even) {
+  transform: rotate(-3deg);
+}
+.slide-track .slide:nth-child(odd) {
+  transform: rotate(3deg);
+}
+
+.slide-track .slide:hover {
+  transform: rotate(0deg) scale(1.2);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-500px * 4));
+  }
 }
