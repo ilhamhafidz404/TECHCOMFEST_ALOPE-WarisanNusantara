@@ -1,0 +1,17 @@
+#slider1 {
+  background-image: url(./../images/slider/1.jpeg);
+}
+#slider2 {
+  background-image: url(./../images/slider/2.gif);
+}
+
+header:hover #sliderControlArrow #next {
+  right: 50px !important;
+  opacity: 1;
+  transition: 0.3s;
+}
+header:hover #sliderControlArrow #prev {
+  left: 50px !important;
+  opacity: 1;
+  transition: 0.3s;
+}
