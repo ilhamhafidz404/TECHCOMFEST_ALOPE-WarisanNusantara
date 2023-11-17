@@ -1,5 +1,12 @@
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { FaBeer, FaHome } from "react-icons/fa";
+import { FaBeer, FaHome, FaPause, FaPlay } from "react-icons/fa";
+import Button from "@mui/material/Button";
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+// import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 // icons
 import ChevronRightIcon from "./components/icons/chevronRight.jsx";
@@ -30,6 +37,89 @@ function Topics() {
     </div>
   );
 }
+
+const songs = [
+  {
+    name: "Tokecang",
+    lyric:
+      "Tokecang tokecang bala gendir tosblong <br/> Angeun kacang angeun kacang sapependil kosong <br/> <br/> Aya listrik di masigit meuni caang <br/> katingalna <br/> Aya istri jangkung alit karangan dina pipina <br/> <br/> Tokecang tokecang bala gendir tosblong <br/> Angeun kacang angeun kacang sapependil kosong",
+    from: "Jawa Barat",
+    creator: "R.C Hardjosubroto",
+    song: "tokecang.mp3",
+    history:
+      "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini. Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Lagu-lagu tradisional seperti Tokecang merupakan bagian penting dari warisan budaya Indonesia. Mereka mencerminkan kekayaan budaya dan keindahan tradisi yang telah dijaga dan dilestarikan oleh masyarakat setempat selama bertahun-tahun. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
+  },
+  {
+    name: "Rasa Sayange",
+    lyric:
+      "Rasa sayange rasa sayang sayange <br/> Lihat nona dari jauh rasa sayang sayange <br/> Rasa sayange rasa sayang sayange <br/> Lihat nona dari jauh rasa sayang sayange <br/><br/> Di sana gunung disini gunung <br/> Tengah tengah bunga melati <br/> Di sana bingung disini bingung <br/> Dua dua teman sejati <br/><br/> Rasa sayange rasa sayang sayange <br/> Lihat nona dari jauh rasa sayang sayange <br/> Rasa sayange rasa sayang sayange <br/> Lihat nona dari jauh rasa sayang sayange",
+    from: "Maluku",
+    creator: "Paulus Pea",
+    song: "rasaSayange.mp3",
+    history:
+      "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini. Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Lagu-lagu tradisional seperti Tokecang merupakan bagian penting dari warisan budaya Indonesia. Mereka mencerminkan kekayaan budaya dan keindahan tradisi yang telah dijaga dan dilestarikan oleh masyarakat setempat selama bertahun-tahun. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
+  },
+  {
+    name: "Ampar-ampar Pisang",
+    lyric:
+      "Ampar ampar pisang <br/> Pisangku balum masak <br/> Masak sabigi dihurung bari-bari <br/> Masak sabigi dihurung bari-bari <br/><br/> Mangga lepak mangga lepok <br/><br/> Patah kayu bengkok <br/> Bengkok dimakan api <br/> apinya canculupan <br/><br/> Patah kayu bengkok <br/> Bengkok dimakan api <br/> apinya canculupan",
+    from: "Kalimantan Selatan",
+    creator: "Paulus Pea AC",
+    song: "amparAmparPisang.mp3",
+    history:
+      "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini. Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Lagu-lagu tradisional seperti Tokecang merupakan bagian penting dari warisan budaya Indonesia. Mereka mencerminkan kekayaan budaya dan keindahan tradisi yang telah dijaga dan dilestarikan oleh masyarakat setempat selama bertahun-tahun. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
+  },
+  {
+    name: "Bungong Jumpa",
+    lyric:
+      "Bungong Jeumpa Bungong Jeumpa <br/> Meugah di Aceh <br/> Bungong teuleubeh teuleubeh <br/> Indah lagoina <br/><br/> Bungong Jeumpa Bungong Jeumpa <br/> Meugah di Aceh <br/> Bungong teuleubeh teuleubeh <br/> Indah lagoina <br/><br/> Puteh kuneng meujampu mirah <br/> Bungong si-ula indah lagoina <br/> Puteh kuneng meujampu mirah <br/> Bungong si-ula indah lagoina",
+    from: "Nanggoroe Aceh Darussalam",
+    creator: "Ibrahim Abduh",
+    song: "bungongJumpa.mp3",
+    history:
+      "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini. Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Lagu-lagu tradisional seperti Tokecang merupakan bagian penting dari warisan budaya Indonesia. Mereka mencerminkan kekayaan budaya dan keindahan tradisi yang telah dijaga dan dilestarikan oleh masyarakat setempat selama bertahun-tahun. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
+  },
+  {
+    name: "Gundul-gundul Pacul",
+    lyric:
+      "Gundul gundul pacul cul gelelengan <br/> Nyunggi nyunggi wakul kul gembelengan <br/> Wakul ngglimpang segane dadi sak ratan <br/> Wakul ngglimpang segane dadi sak ratan",
+    from: "Jawa Tengah",
+    creator: "Raden Cajetanus Hardjosoebroto",
+    song: "gundulGundulPacul.mp3",
+    history:
+      "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini. Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Lagu-lagu tradisional seperti Tokecang merupakan bagian penting dari warisan budaya Indonesia. Mereka mencerminkan kekayaan budaya dan keindahan tradisi yang telah dijaga dan dilestarikan oleh masyarakat setempat selama bertahun-tahun. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
+  },
+  {
+    name: "Yamko Rambe Yamko",
+    lyric:
+      "Hee yamko rambe yamko aronawa kombe  <br/> Hee yamko rambe yamko aronawa kombe  <br/> <br/> Teemi nokibe kubano ko bombe ko  <br/> Yuma no bungo awe ade  <br/> Teemi nokibe kubano ko bombe ko  <br/> Yuma no bungo awe ade  <br/> <br/> Hongke hongke hongke riro  <br/> Hongke jombe jombe riro  <br/> Hongke hongke hongke riro  <br/> Hongke jombe jombe riro",
+    from: "Papua",
+    creator: "Dr. Yusuf Hartono",
+    song: "yamkoRambeYamko.mp3",
+    history:
+      "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini. Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Lagu-lagu tradisional seperti Tokecang merupakan bagian penting dari warisan budaya Indonesia. Mereka mencerminkan kekayaan budaya dan keindahan tradisi yang telah dijaga dan dilestarikan oleh masyarakat setempat selama bertahun-tahun. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
+  },
+  {
+    name: "Sajojo",
+    lyric:
+      "Sajojo, sajojo <br/> Yumanamko misa papara <br/> Samuna muna-muna keke <br/> Samuna muna-muna keke <br/><br/> Sajojo, sajojo <br/> Yumanamko misa papara <br/> Samuna muna-muna keke <br/> Samuna muna-muna keke <br/><br/> Kuserai, kusaserai, rai-rai-rai-rai <br/> Kuserai, kusaserai, rai-rai-rai-rai <br/><br/> Inamgo mikim ye <br/> Kia sore, kiasa sore, ye-ye <br/><br/> Inamgo mikim ye <br/> Kia sore, kiasa sore",
+    from: "Papua",
+    creator: "David Rumagesan",
+    song: "sajojo.mp3",
+    history:
+      "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini. Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Lagu-lagu tradisional seperti Tokecang merupakan bagian penting dari warisan budaya Indonesia. Mereka mencerminkan kekayaan budaya dan keindahan tradisi yang telah dijaga dan dilestarikan oleh masyarakat setempat selama bertahun-tahun. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
+  },
+  {
+    name: "Apuse",
+    lyric:
+      "Apuse kokon dao <br/> Yarabe soren doreri <br/> Wuf lenso bani nema baki pase <br/><br/> Apuse kokon dao <br/> Yarabe soren doreri <br/> Wuf lenso bani nema baki pase <br/> Arafabye aswarakwar <br/> Arafabye aswarakwar",
+    from: "Papua",
+    creator: "Tete Mandosir Sarumi",
+    song: "apuse.mp3",
+    history:
+      "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini. Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Lagu-lagu tradisional seperti Tokecang merupakan bagian penting dari warisan budaya Indonesia. Mereka mencerminkan kekayaan budaya dan keindahan tradisi yang telah dijaga dan dilestarikan oleh masyarakat setempat selama bertahun-tahun. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
+  },
+];
 
 const sliderControlCondition = () => {
   const dot1 = document.querySelector("#dot1");
@@ -86,6 +176,34 @@ const prevSlider = () => {
 };
 
 export default function App() {
+  const [selectedSong, setSelectedSong] = useState({
+    name: "Tokecang",
+    lyric:
+      "Tokecang tokecang bala gendir tosblong <br/> Angeun kacang angeun kacang sapependil kosong <br/> Aya listrik di masigit meuni caang <br/> katingalna <br/> Aya istri jangkung alit karangan dina pipina <br/> Tokecang tokecang bala gendir tosblong <br/> Angeun kacang angeun kacang sapependil kosong",
+    from: "Jawa Barat",
+    creator: "R.C Hardjosubroto",
+    song: "tokecang.mp3",
+    history:
+      "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini. Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Lagu-lagu tradisional seperti Tokecang merupakan bagian penting dari warisan budaya Indonesia. Mereka mencerminkan kekayaan budaya dan keindahan tradisi yang telah dijaga dan dilestarikan oleh masyarakat setempat selama bertahun-tahun. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
+  });
+
+  const [musicPlayer, setMusicPlayer] = useState("tokecang.mp3");
+
+  const changeMusic = (song: any) => {
+    setMusicPlayer("");
+
+    setTimeout(() => {
+      setMusicPlayer(song);
+    }, 500);
+  };
+
+  const [expanded, setExpanded] = React.useState<string | false>(false);
+
+  const handleChangeAccordionItem =
+    (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+      setExpanded(isExpanded ? panel : false);
+    };
+
   return (
     <>
       <nav className="fixed left-0 right-0 bg-black z-50 text-white py-5 px-20 flex justify-between">
@@ -303,7 +421,7 @@ export default function App() {
         </section>
       </header>
 
-      <main className="container mx-auto">
+      <main className="container mx-auto px-10">
         <section className="grid md:grid-cols-2 gap-10 py-7 mt-20 place-items-center md:px-0 px-10">
           <div>
             <h2 className="font-bold text-3xl mb-3">
@@ -344,6 +462,168 @@ export default function App() {
                 <FaBowlFood className="mx-auto" size={30} />
                 <h6 className="mt-3">MAKANAN KHAS</h6>
               </div>
+            </div>
+          </div>
+        </section>
+        {/*  */}
+        <section className="mt-20">
+          <div className="flex gap-10 items-center mb-10">
+            <div className="shadow py-4 w-[100px] text-center rounded bg-purple-500 text-white">
+              <GiMusicalScore className="mx-auto" size={30} />
+            </div>
+            <div className="flex justify-between">
+              <div>
+                <h2 className="font-bold text-3xl mb-3">
+                  LAGU DAERAH INDONESIA
+                </h2>
+                <p className="w-[700px]">
+                  Indonesia dengan kekayaan budaya yang luar biasa memiliki
+                  lebih dari 439 lagu tradisional. Setiap lagu menceritakan
+                  kisah unik dan memikat, menjadi simbol keanekaragaman seni dan
+                  warisan budaya yang memperkaya bangsa ini.
+                </p>
+              </div>
+              {/* <img
+                src="https://react.dev/images/home/community/react_conf_nat.webp"
+                className="object-cover w-[300px] h-[100px] object-center"
+                alt=""
+              /> */}
+            </div>
+          </div>
+          <hr />
+          <div className="grid grid-cols-4 gap-10 mt-10">
+            <div className="h-[500px] overflow-auto rounded shadow">
+              {songs.map((song) => (
+                <div
+                  className={
+                    song.name == selectedSong.name
+                      ? "bg-purple-500/20 px-5 py-3"
+                      : "px-5 py-3 hover:bg-purple-500/10 cursor-pointer"
+                  }
+                  onClick={() => {
+                    changeMusic(song.song);
+                    setSelectedSong(song);
+                  }}
+                >
+                  <div>
+                    <h6 className="text-xl font-semibold">{song.name}</h6>
+                    <small className="text-gray-500 block">
+                      Lagu Daerah {song.from}
+                    </small>
+                    <small className="text-gray-500 block">
+                      Cipt: {song.creator}
+                    </small>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div>
+              <div className="mb-5">
+                <h5 className="font-semibold text-xl mb-3 uppercase">
+                  LAGU {selectedSong.name}
+                </h5>
+
+                {musicPlayer == "tokecang.mp3" ? (
+                  <audio controls>
+                    <source src={`/songs/tokecang.mp3`} type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                  </audio>
+                ) : musicPlayer == "amparAmparPisang.mp3" ? (
+                  <audio controls>
+                    <source
+                      src={`/songs/amparAmparPisang.mp3`}
+                      type="audio/mpeg"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                ) : musicPlayer == "apuse.mp3" ? (
+                  <audio controls>
+                    <source src={`/songs/apuse.mp3`} type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                  </audio>
+                ) : musicPlayer == "bungongJumpa.mp3" ? (
+                  <audio controls>
+                    <source src={`/songs/bungongJumpa.mp3`} type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                  </audio>
+                ) : musicPlayer == "gundulGundulPacul.mp3" ? (
+                  <audio controls>
+                    <source
+                      src={`/songs/gundulGundulPacul.mp3`}
+                      type="audio/mpeg"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                ) : musicPlayer == "rasaSayange.mp3" ? (
+                  <audio controls>
+                    <source src={`/songs/rasaSayange.mp3`} type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                  </audio>
+                ) : musicPlayer == "sajojo.mp3" ? (
+                  <audio controls>
+                    <source src={`/songs/sajojo.mp3`} type="audio/mpeg" />
+                    Your browser does not support the audio element.
+                  </audio>
+                ) : musicPlayer == "yamkoRambeYamko.mp3" ? (
+                  <audio controls>
+                    <source
+                      src={`/songs/yamkoRambeYamko.mp3`}
+                      type="audio/mpeg"
+                    />
+                    Your browser does not support the audio element.
+                  </audio>
+                ) : (
+                  ""
+                )}
+              </div>
+
+              <h5 className="font-semibold text-xl">LIRIK</h5>
+              <small>Ciptaan: {selectedSong.creator}</small>
+
+              <p
+                className="mt-5"
+                dangerouslySetInnerHTML={{ __html: selectedSong.lyric }}
+              ></p>
+            </div>
+            <div className="col-span-2">
+              <h5 className="font-semibold text-xl mb-3 uppercase">
+                INFORMASI LAINNYA
+              </h5>
+
+              <Accordion
+                expanded={expanded === "panel1"}
+                onChange={handleChangeAccordionItem("panel1")}
+              >
+                <AccordionSummary
+                  // expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography>Makna Lagu</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Suspendisse malesuada lacus ex, sit amet blandit leo
+                    lobortis eget.
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion
+                expanded={expanded === "panel2"}
+                onChange={handleChangeAccordionItem("panel2")}
+              >
+                <AccordionSummary
+                  // expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel2a-content"
+                  id="panel2a-header"
+                >
+                  <Typography>Sejarah</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>{selectedSong.history}</Typography>
+                </AccordionDetails>
+              </Accordion>
             </div>
           </div>
         </section>
@@ -443,6 +723,11 @@ export default function App() {
         </section>
       </nav> */}
 
+      <section className="relative">
+        <img src="/images/indonesia.png" className="w-screen h-[600px]" />
+        <span className="w-[20px] h-[20px] bg-white rounded-full absolute top-[130px] left-[50px]"></span>
+      </section>
+
       <Router>
         <div>
           <ul>
@@ -467,6 +752,7 @@ export default function App() {
 
       <FaBeer />
 
+      <Button variant="contained">Hello world</Button>
       <br />
       <br />
       <br />
