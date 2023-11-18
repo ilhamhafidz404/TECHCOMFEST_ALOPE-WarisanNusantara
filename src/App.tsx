@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { FaBeer, FaHome, FaPause, FaPlay } from "react-icons/fa";
 import Button from "@mui/material/Button";
@@ -37,6 +37,63 @@ function Topics() {
     </div>
   );
 }
+
+const alatMusik = [
+  {
+    name: "Angklung",
+    from: "Jawa Barat",
+    image: "angklung.jpg",
+    sound: "angklung.mp3",
+  },
+  {
+    name: "Bonang",
+    from: "Jawa Timur",
+    image: "bonang.jpeg",
+    sound: "bonang.mp3",
+  },
+  {
+    name: "Kolintang",
+    from: "Sulawesi Utara",
+    image: "kolintang.png",
+    sound: "kolintang.mp3",
+  },
+  {
+    name: "Suling",
+    from: "Jawa Barat",
+    image: "suling.webp",
+    sound: "suling.mp3",
+  },
+  {
+    name: "Serunai",
+    from: "Sumatra Barat",
+    image: "serunai.jpg",
+    sound: "serunai.mp3",
+  },
+  {
+    name: "Kecrek",
+    from: "Betawi",
+    image: "kecrek.jpg",
+    sound: "kecrek.mp3",
+  },
+  {
+    name: "Cangor",
+    from: "Jambi",
+    image: "cangor.png",
+    sound: "cangor.mp3",
+  },
+  {
+    name: "Gamelan",
+    from: "Jawa Tengah",
+    image: "gamelan.jpg",
+    sound: "gamelan.mp3",
+  },
+  {
+    name: "Talindo",
+    from: "Sulawesi Tengah",
+    image: "talindo.jpg",
+    sound: "angklung.mp3",
+  },
+];
 
 const songs = [
   {
@@ -187,6 +244,12 @@ export default function App() {
       "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini. Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Lagu-lagu tradisional seperti Tokecang merupakan bagian penting dari warisan budaya Indonesia. Mereka mencerminkan kekayaan budaya dan keindahan tradisi yang telah dijaga dan dilestarikan oleh masyarakat setempat selama bertahun-tahun. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
   });
 
+  const [selectedAlatMusik, setSelectedAlatMusik] = useState({
+    name: "Angklung",
+    from: "Jawa Barat",
+    image: "angklung.jpg",
+  });
+
   const [musicPlayer, setMusicPlayer] = useState("tokecang.mp3");
 
   const changeMusic = (song: any) => {
@@ -203,6 +266,37 @@ export default function App() {
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
       setExpanded(isExpanded ? panel : false);
     };
+
+  const [recentAlatMusik, setRecentAlatMusik] = useState<string | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  // Gunakan useRef untuk menyimpan referensi ke objek audio
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const playAlatMusik = (alatMusik: string, data: any) => {
+    setSelectedAlatMusik(data);
+
+    // Hentikan musik sebelumnya jika sedang diputar
+    if (isPlaying) {
+      audioRef.current?.pause();
+      setIsPlaying(false);
+    }
+
+    // Mulai pemutaran musik baru
+    const audioAlatMusikBaru = new Audio(alatMusik);
+    setRecentAlatMusik(alatMusik);
+
+    audioAlatMusikBaru.addEventListener("ended", () => {
+      // Setelah musik selesai, atur state isPlaying ke false
+      setIsPlaying(false);
+    });
+
+    audioAlatMusikBaru.play();
+    setIsPlaying(true);
+
+    // Simpan referensi objek audio ke useRef
+    audioRef.current = audioAlatMusikBaru;
+  };
 
   return (
     <>
@@ -626,6 +720,68 @@ export default function App() {
               </Accordion>
             </div>
           </div>
+        </section>
+        <section className="mt-20">
+          <div className="flex gap-10 items-center mb-10">
+            <div className="shadow py-4 w-[100px] text-center rounded bg-indigo-500 text-white">
+              <MdOutlinePiano className="mx-auto" size={30} />
+            </div>
+            <div className="flex justify-between">
+              <div>
+                <h2 className="font-bold text-3xl mb-3">
+                  ALAT MUSIK TRADISIONAL INDONESIA
+                </h2>
+                <p className="w-[700px]">
+                  Indonesia dengan kekayaan budaya yang luar biasa memiliki
+                  lebih dari 439 lagu tradisional. Setiap lagu menceritakan
+                  kisah unik dan memikat, menjadi simbol keanekaragaman seni dan
+                  warisan budaya yang memperkaya bangsa ini.
+                </p>
+              </div>
+              {/* <img
+                src="https://react.dev/images/home/community/react_conf_nat.webp"
+                className="object-cover w-[300px] h-[100px] object-center"
+                alt=""
+              /> */}
+            </div>
+          </div>
+          <hr className="mb-5" />
+          <div className="grid grid-cols-5 gap-20 items-center">
+            <div className="col-span-2">
+              <img
+                src={`/images/alatMusik/${selectedAlatMusik.image}`}
+                className="w-full h-[400px] object-cover rounded"
+              />
+            </div>
+            <div className="grid grid-cols-3 col-span-3 gap-5">
+              {alatMusik.map((row) => (
+                <div
+                  key={row.name} // Add a unique key for each item
+                  className={
+                    row.name == selectedAlatMusik.name
+                      ? "bg-indigo-500 text-white shadow p-4 rounded flex justify-between items-center cursor-pointer"
+                      : "shadow p-4 rounded flex justify-between items-center cursor-pointer"
+                  }
+                  onClick={() => playAlatMusik(`/sounds/${row.sound}`, row)}
+                >
+                  <div>
+                    <h3>{row.name}</h3>
+                    <small>{row.from}</small>
+                  </div>
+                  <div className="pr-4">
+                    <span>
+                      <FaPlay />
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* <audio controls>
+            <source src={`/songs/yamkoRambeYamko.mp3`} type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio> */}
         </section>
       </main>
       <section className="mt-20 bg-gray-200 pt-20">
