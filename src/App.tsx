@@ -1,11 +1,13 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { FaBeer, FaChevronDown, FaHome, FaPlay } from "react-icons/fa";
+import { FaBeer, FaChevronDown, FaHome, FaPause, FaPlay } from "react-icons/fa";
 import Button from "@mui/material/Button";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
+import { styled } from "@mui/material/styles";
+import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 // import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 // icons
@@ -41,6 +43,17 @@ function Topics() {
     </div>
   );
 }
+
+const BootstrapTooltip = styled(({ className, ...props }: TooltipProps) => (
+  <Tooltip {...props} arrow classes={{ popper: className }} />
+))(({ theme }) => ({
+  [`& .${tooltipClasses.arrow}`]: {
+    color: theme.palette.common.black,
+  },
+  [`& .${tooltipClasses.tooltip}`]: {
+    backgroundColor: theme.palette.common.black,
+  },
+}));
 
 const alatMusik = [
   {
@@ -284,9 +297,7 @@ export default function App() {
   // Gunakan useRef untuk menyimpan referensi ke objek audio
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
-  const playAlatMusik = (alatMusik: string, data: any) => {
-    setSelectedAlatMusik(data);
-
+  const playAlatMusik = (alatMusik: string) => {
     // Hentikan musik sebelumnya jika sedang diputar
     if (isPlaying) {
       audioRef.current?.pause();
@@ -307,6 +318,19 @@ export default function App() {
     // Simpan referensi objek audio ke useRef
     audioRef.current = audioAlatMusikBaru;
   };
+
+  const pauseAlatMusik = () => {
+    // Hentikan musik yang sedang diputar
+    if (isPlaying) {
+      audioRef.current?.pause();
+      setIsPlaying(false);
+    }
+  };
+
+  useEffect(() => {
+    audioRef.current?.pause();
+    setIsPlaying(false);
+  }, [selectedAlatMusik]);
 
   return (
     <>
@@ -784,20 +808,33 @@ export default function App() {
                   key={row.name} // Add a unique key for each item
                   className={
                     row.name === selectedAlatMusik.name
-                      ? "bg-indigo-500 text-white shadow p-4 rounded flex justify-between items-center cursor-pointer"
+                      ? "bg-gradient-to-r from-indigo-500/70 to-indigo-200/20 text-white shadow p-4 rounded flex justify-between items-center cursor-pointer"
                       : "shadow p-4 rounded flex justify-between items-center cursor-pointer"
                   }
-                  onClick={() => playAlatMusik(`/sounds/${row.sound}`, row)}
+                  onClick={() => setSelectedAlatMusik(row)}
                 >
                   <div>
                     <h3>{row.name}</h3>
                     <small>{row.from}</small>
                   </div>
-                  <div className="pr-4">
-                    <span>
-                      <FaPlay />
-                    </span>
-                  </div>
+                  {selectedAlatMusik.name === row.name ? (
+                    <BootstrapTooltip
+                      title="Play Music"
+                      placement="top"
+                      className="pr-2"
+                      onClick={() => {
+                        isPlaying
+                          ? pauseAlatMusik()
+                          : playAlatMusik(`/sounds/${row.sound}`);
+                      }}
+                    >
+                      <span className="bg-white shadow text-indigo-500 flex items-center justify-center w-[30px] h-[30px] rounded-full">
+                        {isPlaying ? <FaPause /> : <FaPlay />}
+                      </span>
+                    </BootstrapTooltip>
+                  ) : (
+                    ""
+                  )}
                 </div>
               ))}
             </div>
