@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { FaBeer, FaHome, FaPause, FaPlay } from "react-icons/fa";
+import { FaBeer, FaChevronDown, FaHome, FaPause, FaPlay } from "react-icons/fa";
 import Button from "@mui/material/Button";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -16,7 +16,11 @@ import ChevronLeftIcon from "./components/icons/chevronLeftIcon.jsx";
 import { GiMusicalScore } from "react-icons/gi";
 import { FaBowlFood } from "react-icons/fa6";
 import { GiHeartInside } from "react-icons/gi";
-import { MdOutlinePiano } from "react-icons/md";
+import {
+  MdInventory,
+  MdOutlineHistoryEdu,
+  MdOutlinePiano,
+} from "react-icons/md";
 import { FaLanguage } from "react-icons/fa";
 
 // pages
@@ -104,7 +108,8 @@ const songs = [
     creator: "R.C Hardjosubroto",
     song: "tokecang.mp3",
     history:
-      "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini. Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Lagu-lagu tradisional seperti Tokecang merupakan bagian penting dari warisan budaya Indonesia. Mereka mencerminkan kekayaan budaya dan keindahan tradisi yang telah dijaga dan dilestarikan oleh masyarakat setempat selama bertahun-tahun. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
+      "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini.<br /><br /> Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
+    mean: "Lagu Tokecang adalah anjuran agar manusia tidak berlebihan dalam mengambil makanan, hingga tidak menyisakan untuk orang lain. <br/> Hal ini menjadi pengingat agar manusia tidak serakah, supaya nantinya tidak merugikan diri sendiri dan orang di sekitar.<br/> Selain itu, manusia harus selalu berbagi dan peduli dan tidak terjebak dengan hanya memikirkan diri sendiri.",
   },
   {
     name: "Rasa Sayange",
@@ -114,7 +119,8 @@ const songs = [
     creator: "Paulus Pea",
     song: "rasaSayange.mp3",
     history:
-      "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini. Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Lagu-lagu tradisional seperti Tokecang merupakan bagian penting dari warisan budaya Indonesia. Mereka mencerminkan kekayaan budaya dan keindahan tradisi yang telah dijaga dan dilestarikan oleh masyarakat setempat selama bertahun-tahun. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
+      "Lagu ini seringkali dinyanyikan oleh anak-anak sebagai tanda suka cita. Lagu ini biasa juga dinyanyikan dalam suatu acara atau saat menyambut tamu.<br/><br/> Alkisah, lagu ini diciptakan oleh Paulus Pea. Paulus Pea sendiri adalah seorang putra daerah asli Indonesia. Pada awalnya, dia menciptakan lagu ini sebagai iringan saat sedang mengajar di dalam kelas, kemudian dia meminta para guru lainnya untuk menyanyikan lagu tersebut saat di depan kelas. Dari situlah lagu ini mulai diperdengarkan dari telinga ke telinga dan menjadi lagu daerah yang sampai saat ini masih lestari dan sering didengar. <br/><br/> Menurut Museum Nusantara, lagu Rasa Sayange pertama kali direkam di studio di daerah Solo pada 1962 menggunakan piringan hitam. Lagu itu direkam sebagai bagian dari souvenir Asian Games ke-4. Menariknya, hasil rekaman pertama itu masih tersimpan dengan rapi di Perum PNRI Cabang Surakarta hingga sekarang. Ini juga yang menjadi bukti bahwa lagu Rasa Sayange asli Indonesia",
+    mean: "‘Rasa Sayange’ merupakan lagu daerah Maluku yang tergolong dalam lagu anak-anak. Masyarakat Maluku secara turun-temurun menyanyikan lagu ini sebagai ungkapan kasih sayang kepada lingkungan sosial mereka. <br /> Liriknya merupakan pantun atau sajak yang dinyanyikan secara bersahutan. Pantunnya bisa kamu bikin sendiri lho, Toppers. Sampai sekarang ada berbagai versi pantun ‘Rasa Sayange’, namun tetap sesuai maksud dan tujuan dari lagu tersebut.",
   },
   {
     name: "Ampar-ampar Pisang",
@@ -124,7 +130,8 @@ const songs = [
     creator: "Paulus Pea AC",
     song: "amparAmparPisang.mp3",
     history:
-      "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini. Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Lagu-lagu tradisional seperti Tokecang merupakan bagian penting dari warisan budaya Indonesia. Mereka mencerminkan kekayaan budaya dan keindahan tradisi yang telah dijaga dan dilestarikan oleh masyarakat setempat selama bertahun-tahun. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
+      "Lagu ampar ampar pisang ini pada awalnya dinyanyikan secara iseng saat masyarakat Kalimantan Selatan membuat sebuah kue/makanan yang terbuat dari pisang. Makanan ini bernama rimpi. <br /><br /> Cara membuat makanan rimpi ini adalah dengan cara pisang di diampar (disusun) kemudian dibiarkan hingga hampir matang mendekati busuk. setelah itu pisang dijemur diampar(disusun) di bawah sinar matahari sampai kira kira pisang mengeras dan mengeluarkan bau manis yang sangat khas.  Isi dari lagu ampar-ampar pisang menceritakan tentang pisang yang diampar dan dikerubuti binatang kecil kecil bisa terbang yang senang dgn aroma pisang. Binatang ini dikenal masyarakat Kalimantan dengan nama bari bari. <br /><br /> Pada akhir lagu di ceritakan tentang binatang yang ditakuti anak kecil zaman dulu (lihat kata “dikitip bidawang”) yang artinya digigit biawak. Konon, kata dikitip bidawang itu digunakan untuk menakuti anak anak yang suka mencuri pisang/kue rimpi yang masih dalam proses penjemuran.",
+    mean: "‘Ampar-ampar Pisang’ terkenal sebagai lagu bermain anak-anak di masyarakat sekarang. Di sisi cerita, lagu berbahasa Banjar ini menceritakan tentang pisang yang diolah dengan cara dijemur kemudian menjadi makanan khas. <br /><br /> Selain itu, lagu ‘Ampar-ampar Pisang’ mencerminkan kebiasaan masyarakat Kalimantan Selatan yang suka menyusun buah pisang yang mulai masak. Jika sudah masak dan tinggal sebiji, anak-anak akan makan pisang tersebut seperti api memakan batang kayu.",
   },
   {
     name: "Bungong Jumpa",
@@ -134,7 +141,8 @@ const songs = [
     creator: "Ibrahim Abduh",
     song: "bungongJumpa.mp3",
     history:
-      "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini. Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Lagu-lagu tradisional seperti Tokecang merupakan bagian penting dari warisan budaya Indonesia. Mereka mencerminkan kekayaan budaya dan keindahan tradisi yang telah dijaga dan dilestarikan oleh masyarakat setempat selama bertahun-tahun. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
+      "Bungong Jeumpa pada awalnya hanya lagu daerah yang diciptakan oleh Ibrahim Abduh. <br /><br /> Lagu Bungong Jeumpa bermula dari Kerajaan Jeumpa yang berdiri pada abad ke-7 M. Selain bisa dinyanyikan, lagu ini pun mempunyai gerakan-gerakan tarian. <br /><br /> Tarian Bungong Jeumpa seringkali ditampilkan dalam acara kerajaan di istana. Konon, para raja menyukai tarian ini karena dianggap membawa rezeki dan keuntungan bagi kerajaannya. <br /><br /> Hingga saat ini, tarian Bungong Jeumpa masih dilestarikan warga Aceh setempat sebagai warisan budaya dari leluhurnya di zaman dahulu.",
+    mean: "Bungong Jeumpa memiliki arti bunga cempaka yang menjadi simbol bunga khas Aceh. Lagu ini juga mencerminkan masyarakat Aceh yang bersyukur telah diberi tanah yang subur dan indah. <br/><br/> Nyanyian ini biasanya dibarengi dengan tarian tradisional khas Aceh dengan nama yang sama. Formasi tarian Bungong Jeumpa dilakukan duduk dan berdiri dengan gerakan tangan yang serasi bersama penari lain.",
   },
   {
     name: "Gundul-gundul Pacul",
@@ -144,7 +152,8 @@ const songs = [
     creator: "Raden Cajetanus Hardjosoebroto",
     song: "gundulGundulPacul.mp3",
     history:
-      "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini. Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Lagu-lagu tradisional seperti Tokecang merupakan bagian penting dari warisan budaya Indonesia. Mereka mencerminkan kekayaan budaya dan keindahan tradisi yang telah dijaga dan dilestarikan oleh masyarakat setempat selama bertahun-tahun. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
+      "Gundul-gundul Pacul ditulis Sunan Kalijaga bersama teman-temannya pada tahun 1.400. Meski liriknya terkesan jenaka, Sunan Kalijaga ternyata menyisipkan nasihat dan sindiran bagi penguasa. <br /><br /> Kepala adalah lambang kehormatan dan kemuliaan bagi seseorang. Sementara rambut diartikan sebagai mahkota dan lambang keindahan kepala. Maka dari itu, gundul atau kepala tanpa rambut memiliki arti kehormatan tanpa mahkota. Pacul sendiri adalah cangkul, alat petani yang terbuat dari lempeng besi segi empat. Pacul menjadi sebuah lambang bagi rakyat yang di zaman dulu didominasi para petani. <br /><br /> Gundul Pacul pun diartikan bahwa seorang pemimpin sesungguhnya bukan orang yang diberi mahkota tetapi mereka yang membawa pacul untuk mencangkul dan mengupayakan kesejahteraan bagi rakyatnya. <br /><br />",
+    mean: "Meskipun liriknya simpel, akan tetapi arti lirik tersebut memiliki pesan amanat yang dalam. Adapun artinya adalah banyak pemimpin yang lupa bahwa dia tengah memegang amanat yang berat. <br/><br/> Pemimpin tidak seharusnya untuk berlaku semena-mena dengan rakyat ketika menjabat. Melainkan mereka harus menghargai rakyatnya dan mendahulukan pernyataan mereka.",
   },
   {
     name: "Yamko Rambe Yamko",
@@ -154,7 +163,8 @@ const songs = [
     creator: "Dr. Yusuf Hartono",
     song: "yamkoRambeYamko.mp3",
     history:
-      "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini. Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Lagu-lagu tradisional seperti Tokecang merupakan bagian penting dari warisan budaya Indonesia. Mereka mencerminkan kekayaan budaya dan keindahan tradisi yang telah dijaga dan dilestarikan oleh masyarakat setempat selama bertahun-tahun. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
+      "Lagu ini belum diketahui asal usul nya. tetapi jika dilihat dari ketukan dan musiknya lagu ini Papua, tetapi untuk lirik dari lagu ini belum diketahui berasal bahasa mana",
+    mean: "Meski memiliki irama yang bahagia dan energik, lagu “Yamko Rambe Yamko” menceritakan tentang daerah-daerah di Papua yang mengalami perang suku. Walaupun begitu, asal usul lagu ini masih diperdebatkan. <br/><br/> Beberapa orang asal Papua, Arie Kriting salah satunya, menyatakan bahwa lagu ini bukan berasal dari salah satu bahasa Papua. Namun, menurut musisi senior, Yan Petrus Tagai, “Yamko Rambe Yamko” berasal dari Lembah Grime, Kabupaten Jayapura, Provinsi Papua. <br/> Dia juga yang menyatakan jika “Yamko Rambe Yamko” adalah lagu pengiring permainan sakral bernama “Kasep”. Terlepas dari perdebatan di masyarakat, The Resonanz Children’s Choir pada tahun 2017 berhasil membawakan lagu ini dan memenangkan juara umum dalam kompetisi paduan suara di Roma.",
   },
   {
     name: "Sajojo",
@@ -163,8 +173,8 @@ const songs = [
     from: "Papua",
     creator: "David Rumagesan",
     song: "sajojo.mp3",
-    history:
-      "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini. Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Lagu-lagu tradisional seperti Tokecang merupakan bagian penting dari warisan budaya Indonesia. Mereka mencerminkan kekayaan budaya dan keindahan tradisi yang telah dijaga dan dilestarikan oleh masyarakat setempat selama bertahun-tahun. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
+    history: "-",
+    mean: "“Sajojo” adalah salah satu lagu daerah populer yang berasal dari provinsi Papua. Ini adalah lagu yang berkisah mengenai seorang perempuan desa yang begitu cantik, ia dicintai oleh kedua orang tuanya dan banyak laki-laki yang mendambakannya. <br/><br/> Biasanya masyarakat Papua akan menyanyikan lagu ini sambil menari dengan penuh ceria. Gerakan tari ini cukup mudah, ada loncatan, kemudian bergerak ke depan, belakang, ke kiri, ke kanan, dengan ritme yang kompak dengan penari lainnya.",
   },
   {
     name: "Apuse",
@@ -174,7 +184,8 @@ const songs = [
     creator: "Tete Mandosir Sarumi",
     song: "apuse.mp3",
     history:
-      "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini. Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Lagu-lagu tradisional seperti Tokecang merupakan bagian penting dari warisan budaya Indonesia. Mereka mencerminkan kekayaan budaya dan keindahan tradisi yang telah dijaga dan dilestarikan oleh masyarakat setempat selama bertahun-tahun. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
+      "Saat itu, Korinus yang sedang menjalani masa-masa awal karier sebagai guru, sangat ingin untuk membagikan semangat dalam menuntut ilmu setinggi mungkin kepada anak-anak yang mendiami kampung itu. <br /> <br/> Lagu itu sebenarnya mau mengajak anak-anak yang mau pergi sekolah ke Manokwari, atau anak-anak pada saat itu menyebutnya Doreri, supaya mereka pergi sekolah harus ingat orang tua.",
+    mean: "Apuse adalah lagu daerah asal Papua tentang seorang cucu yang hendak berpamitan kepada kakek dan neneknya karena dia akan merantau ke Teluk Doreri, Kabupaten Manokwari, Provinsi Papua Barat. <br /> Lirik 'apuse kokon dao yarabe soren doreri' menyatakan momen ketika pemuda tersebut berpamitan dengan kakek neneknya. 'Wuf lenso bani nema baki pase' memiliki arti pegang sapu tangan dan melambaikan tangan. <br /><br /> Hingga kemudian kakek dan neneknya menjawab 'Arafabye aswarakwar' yang artinya 'kasihan aku, selamat jalan cucuku'.",
   },
 ];
 
@@ -241,7 +252,8 @@ export default function App() {
     creator: "R.C Hardjosubroto",
     song: "tokecang.mp3",
     history:
-      "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini. Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Lagu-lagu tradisional seperti Tokecang merupakan bagian penting dari warisan budaya Indonesia. Mereka mencerminkan kekayaan budaya dan keindahan tradisi yang telah dijaga dan dilestarikan oleh masyarakat setempat selama bertahun-tahun. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
+      "Lagu Tokecang merupakan salah satu lagu tradisional dari Sunda, Jawa Barat, Indonesia. Meskipun tidak ada catatan yang pasti tentang sejarah lagu ini, lagu tradisional seperti Tokecang umumnya diwariskan secara lisan dari generasi ke generasi. Oleh karena itu, seringkali sulit untuk menentukan asal usul atau pencipta yang tepat untuk lagu-lagu tradisional seperti ini.<br /><br /> Lagu Tokecang biasanya dinyanyikan dalam bahasa Sunda, dan liriknya menggambarkan suasana yang riang dan ceria. Lagu ini sering diiringi oleh tarian tradisional atau disertai dengan alat musik tradisional Sunda seperti angklung. Meskipun mungkin sulit untuk menelusuri sejarah tepatnya, keberadaan lagu-lagu seperti Tokecang memainkan peran penting dalam memperkaya warisan budaya Indonesia.",
+    mean: "Lagu Tokecang adalah anjuran agar manusia tidak berlebihan dalam mengambil makanan, hingga tidak menyisakan untuk orang lain. <br/> Hal ini menjadi pengingat agar manusia tidak serakah, supaya nantinya tidak merugikan diri sendiri dan orang di sekitar.<br/> Selain itu, manusia harus selalu berbagi dan peduli dan tidak terjebak dengan hanya memikirkan diri sendiri.",
   });
 
   const [selectedAlatMusik, setSelectedAlatMusik] = useState({
@@ -260,7 +272,7 @@ export default function App() {
     }, 500);
   };
 
-  const [expanded, setExpanded] = React.useState<string | false>(false);
+  const [expanded, setExpanded] = React.useState<string | false>("panel1");
 
   const handleChangeAccordionItem =
     (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
@@ -561,16 +573,16 @@ export default function App() {
         </section>
         {/*  */}
         <section className="mt-20">
-          <div className="flex gap-10 items-center mb-10">
+          <div className="md:flex gap-10 items-center mb-10">
             <div className="shadow py-4 w-[100px] text-center rounded bg-purple-500 text-white">
               <GiMusicalScore className="mx-auto" size={30} />
             </div>
             <div className="flex justify-between">
               <div>
-                <h2 className="font-bold text-3xl mb-3">
+                <h2 className="font-bold text-3xl mb-3 md:mt-0 mt-5">
                   LAGU DAERAH INDONESIA
                 </h2>
-                <p className="w-[700px]">
+                <p className="xl:w-[700px] md:w-[500px] w-full">
                   Indonesia dengan kekayaan budaya yang luar biasa memiliki
                   lebih dari 439 lagu tradisional. Setiap lagu menceritakan
                   kisah unik dan memikat, menjadi simbol keanekaragaman seni dan
@@ -585,8 +597,8 @@ export default function App() {
             </div>
           </div>
           <hr />
-          <div className="grid grid-cols-4 gap-10 mt-10">
-            <div className="h-[500px] overflow-auto rounded shadow">
+          <div className="md:grid xl:grid-cols-4 md:grid-cols-2 gap-10 mt-10">
+            <div className="md:h-[500px] h-[200px] md:mb-0 mb-5 overflow-auto rounded shadow">
               {songs.map((song) => (
                 <div
                   className={
@@ -611,7 +623,7 @@ export default function App() {
                 </div>
               ))}
             </div>
-            <div>
+            <div className="md:mb-0 mb-5">
               <div className="mb-5">
                 <h5 className="font-semibold text-xl mb-3 uppercase">
                   LAGU {selectedSong.name}
@@ -689,17 +701,22 @@ export default function App() {
                 onChange={handleChangeAccordionItem("panel1")}
               >
                 <AccordionSummary
-                  // expandIcon={<ExpandMoreIcon />}
+                  expandIcon={<FaChevronDown />}
                   aria-controls="panel1a-content"
                   id="panel1a-header"
                 >
-                  <Typography>Makna Lagu</Typography>
+                  <Typography>
+                    <div className="flex items-center gap-3">
+                      <MdInventory size={25} />
+                      <p>Makna Lagu</p>
+                    </div>
+                  </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse malesuada lacus ex, sit amet blandit leo
-                    lobortis eget.
+                    <p
+                      dangerouslySetInnerHTML={{ __html: selectedSong.mean }}
+                    ></p>
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -708,14 +725,23 @@ export default function App() {
                 onChange={handleChangeAccordionItem("panel2")}
               >
                 <AccordionSummary
-                  // expandIcon={<ExpandMoreIcon />}
+                  expandIcon={<FaChevronDown />}
                   aria-controls="panel2a-content"
                   id="panel2a-header"
                 >
-                  <Typography>Sejarah</Typography>
+                  <Typography>
+                    <div className="flex items-center gap-3">
+                      <MdOutlineHistoryEdu size={30} />
+                      <p>Sejarah</p>
+                    </div>
+                  </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography>{selectedSong.history}</Typography>
+                  <Typography>
+                    <p
+                      dangerouslySetInnerHTML={{ __html: selectedSong.history }}
+                    ></p>
+                  </Typography>
                 </AccordionDetails>
               </Accordion>
             </div>
