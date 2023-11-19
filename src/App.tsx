@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { FaBeer, FaChevronDown, FaHome, FaPause, FaPlay } from "react-icons/fa";
+import { FaBeer, FaChevronDown, FaHome, FaPlay } from "react-icons/fa";
 import Button from "@mui/material/Button";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -279,7 +279,6 @@ export default function App() {
       setExpanded(isExpanded ? panel : false);
     };
 
-  const [recentAlatMusik, setRecentAlatMusik] = useState<string | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   // Gunakan useRef untuk menyimpan referensi ke objek audio
@@ -296,7 +295,6 @@ export default function App() {
 
     // Mulai pemutaran musik baru
     const audioAlatMusikBaru = new Audio(alatMusik);
-    setRecentAlatMusik(alatMusik);
 
     audioAlatMusikBaru.addEventListener("ended", () => {
       // Setelah musik selesai, atur state isPlaying ke false
@@ -602,7 +600,7 @@ export default function App() {
               {songs.map((song) => (
                 <div
                   className={
-                    song.name == selectedSong.name
+                    song.name === selectedSong.name
                       ? "bg-purple-500/20 px-5 py-3"
                       : "px-5 py-3 hover:bg-purple-500/10 cursor-pointer"
                   }
@@ -629,12 +627,12 @@ export default function App() {
                   LAGU {selectedSong.name}
                 </h5>
 
-                {musicPlayer == "tokecang.mp3" ? (
+                {musicPlayer === "tokecang.mp3" ? (
                   <audio controls>
                     <source src={`/songs/tokecang.mp3`} type="audio/mpeg" />
                     Your browser does not support the audio element.
                   </audio>
-                ) : musicPlayer == "amparAmparPisang.mp3" ? (
+                ) : musicPlayer === "amparAmparPisang.mp3" ? (
                   <audio controls>
                     <source
                       src={`/songs/amparAmparPisang.mp3`}
@@ -642,17 +640,17 @@ export default function App() {
                     />
                     Your browser does not support the audio element.
                   </audio>
-                ) : musicPlayer == "apuse.mp3" ? (
+                ) : musicPlayer === "apuse.mp3" ? (
                   <audio controls>
                     <source src={`/songs/apuse.mp3`} type="audio/mpeg" />
                     Your browser does not support the audio element.
                   </audio>
-                ) : musicPlayer == "bungongJumpa.mp3" ? (
+                ) : musicPlayer === "bungongJumpa.mp3" ? (
                   <audio controls>
                     <source src={`/songs/bungongJumpa.mp3`} type="audio/mpeg" />
                     Your browser does not support the audio element.
                   </audio>
-                ) : musicPlayer == "gundulGundulPacul.mp3" ? (
+                ) : musicPlayer === "gundulGundulPacul.mp3" ? (
                   <audio controls>
                     <source
                       src={`/songs/gundulGundulPacul.mp3`}
@@ -660,17 +658,17 @@ export default function App() {
                     />
                     Your browser does not support the audio element.
                   </audio>
-                ) : musicPlayer == "rasaSayange.mp3" ? (
+                ) : musicPlayer === "rasaSayange.mp3" ? (
                   <audio controls>
                     <source src={`/songs/rasaSayange.mp3`} type="audio/mpeg" />
                     Your browser does not support the audio element.
                   </audio>
-                ) : musicPlayer == "sajojo.mp3" ? (
+                ) : musicPlayer === "sajojo.mp3" ? (
                   <audio controls>
                     <source src={`/songs/sajojo.mp3`} type="audio/mpeg" />
                     Your browser does not support the audio element.
                   </audio>
-                ) : musicPlayer == "yamkoRambeYamko.mp3" ? (
+                ) : musicPlayer === "yamkoRambeYamko.mp3" ? (
                   <audio controls>
                     <source
                       src={`/songs/yamkoRambeYamko.mp3`}
@@ -777,6 +775,7 @@ export default function App() {
               <img
                 src={`/images/alatMusik/${selectedAlatMusik.image}`}
                 className="w-full h-[400px] object-cover rounded"
+                alt="gambarAlatMusik"
               />
             </div>
             <div className="grid grid-cols-3 col-span-3 gap-5">
@@ -784,7 +783,7 @@ export default function App() {
                 <div
                   key={row.name} // Add a unique key for each item
                   className={
-                    row.name == selectedAlatMusik.name
+                    row.name === selectedAlatMusik.name
                       ? "bg-indigo-500 text-white shadow p-4 rounded flex justify-between items-center cursor-pointer"
                       : "shadow p-4 rounded flex justify-between items-center cursor-pointer"
                   }
@@ -906,7 +905,11 @@ export default function App() {
       </nav> */}
 
       <section className="relative">
-        <img src="/images/indonesia.png" className="w-screen h-[600px]" />
+        <img
+          src="/images/indonesia.png"
+          className="w-screen h-[600px]"
+          alt="indonesia"
+        />
         <span className="w-[20px] h-[20px] bg-white rounded-full absolute top-[130px] left-[50px]"></span>
       </section>
 
