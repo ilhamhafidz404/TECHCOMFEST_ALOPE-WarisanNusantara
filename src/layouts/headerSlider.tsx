@@ -63,7 +63,7 @@ export default function HeaderSlider() {
           id="slider1"
           className="transition-all duration-500 left-0 h-full flex justify-between bg-cover bg-center relative text-white after:content-[''] after:bg-black/50 after:absolute after:inset-0"
         >
-          <div className="flex justify-between items-center left-0 right-0 absolute top-1/2 -translate-y-1/2 ml-40 z-10">
+          <div className="flex justify-between items-center left-0 right-0 absolute top-1/2 -translate-y-1/2 lg:ml-40 ml-10 z-10">
             <div>
               <h1 className="text-4xl font-bold uppercase">TARI Jaipong</h1>
               <p className="max-w-[600px]">
@@ -108,7 +108,7 @@ export default function HeaderSlider() {
                 </button>
               </div>
             </div>
-            <div className="mr-40">
+            <div className="mr-40 lg:block hidden">
               <div className="font-bold text-xl mb-4  relative">
                 <h4 className="flex gap-2 items-center relative z-50">
                   <svg

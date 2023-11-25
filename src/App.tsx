@@ -10,6 +10,7 @@ import AlatMusik from "./layouts/alatMusik";
 import HeaderSlider from "./layouts/headerSlider";
 import InfiniteSlider from "./layouts/infiniteSlider";
 import RumahAdat from "./layouts/rumahAdat";
+import Footer from "./layouts/footer";
 
 function Home() {
   return (
@@ -48,7 +49,9 @@ export default function App() {
           </svg>
         </div>
         <div>
-          <h2 className="text-xl font-bold">INDONESIA CULTURE</h2>
+          <h2 className="font-bold text-2xl font-dancing-script">
+            Indonesia Culture
+          </h2>
         </div>
         <div className="flex gap-10">
           <div>
@@ -92,7 +95,9 @@ export default function App() {
       </main>
       <InfiniteSlider />
 
-      <section className="relative">
+      <Footer />
+
+      {/* <section className="relative">
         <img
           src="/images/indonesia.png"
           className="w-screen h-[600px]"
@@ -125,7 +130,7 @@ export default function App() {
 
       <FaBeer />
 
-      <Button variant="contained">Hello world</Button>
+      <Button variant="contained">Hello world</Button> */}
     </>
   );
 }
