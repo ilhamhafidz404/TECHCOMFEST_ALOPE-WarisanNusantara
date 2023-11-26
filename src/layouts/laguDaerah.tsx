@@ -51,10 +51,10 @@ export default function LaguDaerah() {
           </div>
           <div className="flex justify-between">
             <div>
-              <h2 className="font-bold text-3xl mb-3 md:mt-0 mt-5">
+              <h2 className="font-bold text-3xl mb-3 md:mt-0 mt-5 dark:text-gray-100">
                 LAGU DAERAH INDONESIA
               </h2>
-              <p className="xl:w-[700px] md:w-[500px] w-full">
+              <p className="xl:w-[700px] md:w-[500px] w-full dark:text-gray-300 text-gray-700">
                 Indonesia dengan kekayaan budaya yang luar biasa memiliki lebih
                 dari 439 lagu tradisional. Setiap lagu menceritakan kisah unik
                 dan memikat, menjadi simbol keanekaragaman seni dan warisan
@@ -68,9 +68,9 @@ export default function LaguDaerah() {
               /> */}
           </div>
         </div>
-        <hr />
+        <hr className="dark:border-purple-900" />
         <div className="md:grid xl:grid-cols-4 md:grid-cols-2 gap-10 mt-10">
-          <div className="md:h-[500px] h-[200px] md:mb-0 mb-5 overflow-auto rounded shadow">
+          <div className="md:h-[500px] h-[200px] md:mb-0 mb-5 overflow-auto rounded shadow bg-gray-50 dark:bg-gray-950">
             {songs.map((song) => (
               <div
                 className={
@@ -84,11 +84,13 @@ export default function LaguDaerah() {
                 }}
               >
                 <div>
-                  <h6 className="text-xl font-semibold">{song.name}</h6>
-                  <small className="text-gray-500 block">
+                  <h6 className="text-xl font-semibold dark:text-gray-100">
+                    {song.name}
+                  </h6>
+                  <small className="text-gray-500 block dark:text-gray-300">
                     Lagu Daerah {song.from}
                   </small>
-                  <small className="text-gray-500 block">
+                  <small className="text-gray-500 block dark:text-gray-300">
                     Cipt: {song.creator}
                   </small>
                 </div>
@@ -97,7 +99,7 @@ export default function LaguDaerah() {
           </div>
           <div className="md:mb-0 mb-5">
             <div className="mb-5">
-              <h5 className="font-semibold text-xl mb-3 uppercase">
+              <h5 className="font-semibold text-xl mb-3 uppercase dark:text-gray-200">
                 LAGU {selectedSong.name}
               </h5>
 
@@ -155,11 +157,13 @@ export default function LaguDaerah() {
               )}
             </div>
 
-            <h5 className="font-semibold text-xl">LIRIK</h5>
-            <small>Ciptaan: {selectedSong.creator}</small>
+            <h5 className="font-semibold text-xl dark:text-gray-200">LIRIK</h5>
+            <small className="dark:text-gray-300">
+              Ciptaan: {selectedSong.creator}
+            </small>
 
             <p
-              className="mt-5"
+              className="mt-5 dark:text-gray-200"
               dangerouslySetInnerHTML={{ __html: selectedSong.lyric }}
             ></p>
           </div>

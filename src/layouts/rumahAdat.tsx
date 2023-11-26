@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { FaHome } from "react-icons/fa";
 
 import ReactCardSlider from "react-card-slider-component";
@@ -10,6 +10,8 @@ const rumahAdatImage = document.getElementById(
 ) as HTMLImageElement;
 
 const changeImage1 = () => {
+  console.log("fwefwef");
+
   if (rumahAdatImage !== null) {
     rumahAdatName.innerHTML = "RUMAH KRONG BADE";
     rumahAdatDesc.innerHTML =
@@ -143,23 +145,29 @@ export default function RumahAdat() {
           </div>
           <div className="flex justify-between">
             <div>
-              <h2 className="font-bold text-3xl mb-3 md:mt-0 mt-5">
+              <h2 className="font-bold text-3xl mb-3 md:mt-0 mt-5 dark:text-gray-100">
                 RUMAH ADAT INDONESIA
               </h2>
-              <p className="xl:w-[700px] md:w-[500px] w-full">
+              <p className="xl:w-[700px] md:w-[500px] w-full dark:text-gray-300 text-gray-700">
                 Jika dihitung berdasarkan jumlah provinsi, setidaknya ada 34
                 jenis rumah adat
               </p>
             </div>
           </div>
         </div>
-        <hr />
+        <hr className="dark:border-emerald-900" />
         <div className="grid grid-cols-2 mt-5 items-center gap-20 mb-10">
           <div>
-            <h4 id="rumahAdatName" className="text-2xl font-bold">
+            <h4
+              id="rumahAdatName"
+              className="text-2xl font-bold dark:text-gray-200"
+            >
               RUMAH ADAT ACEH
             </h4>
-            <p id="rumahAdatDesc" className="w-[90%] mt-3">
+            <p
+              id="rumahAdatDesc"
+              className="w-[90%] mt-3 dark:text-gray-300 text-gray-700"
+            >
               Rumah Aceh atau yang lebih dikenal dengan nama "Rumoh Aceh"
               merupakan rumah adat dari suku Aceh. Rumah ini bertipe rumah
               panggung dengan 3 bagan utama dan 1 bagian tambahan. Tiga bagian

@@ -3,9 +3,11 @@ import React from "react";
 export default function InfiniteSlider() {
   return (
     <>
-      <section className="mt-20 bg-gray-200 pt-20">
-        <h3 className="text-center text-4xl font-bold">KEGIATAN KAMI</h3>
-        <p className="w-[900px] text-center mx-auto mt-5 mb-10">
+      <section className="mt-20 bg-gray-200 dark:bg-gray-950 pt-20">
+        <h3 className="text-center text-4xl font-bold dark:text-gray-100">
+          KEGIATAN KAMI
+        </h3>
+        <p className="w-[900px] text-center mx-auto mt-5 mb-10 dark:text-gray-300 text-gray-700">
           Kami memiliki dedikasi tinggi untuk melestarikan kekayaan budaya
           Indonesia yang luar biasa. Melalui berbagai kegiatan, kami berupaya
           untuk memahami, merawat, dan menghidupkan kembali warisan budaya yang

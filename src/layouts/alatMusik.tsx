@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import { styled } from "@mui/material/styles";
 import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
@@ -73,10 +73,10 @@ export default function AlatMusik() {
           </div>
           <div className="flex justify-between">
             <div>
-              <h2 className="font-bold text-3xl mb-3 md:mt-0 mt-5">
+              <h2 className="font-bold text-3xl mb-3 md:mt-0 mt-5 dark:text-gray-100">
                 ALAT MUSIK TRADISIONAL INDONESIA
               </h2>
-              <p className="xl:w-[700px] md:w-[500px] w-full">
+              <p className="xl:w-[700px] md:w-[500px] w-full dark:text-gray-300 text-gray-700">
                 Indonesia dengan kekayaan budaya yang luar biasa memiliki lebih
                 dari 439 lagu tradisional. Setiap lagu menceritakan kisah unik
                 dan memikat, menjadi simbol keanekaragaman seni dan warisan
@@ -90,7 +90,7 @@ export default function AlatMusik() {
               /> */}
           </div>
         </div>
-        <hr className="mb-5" />
+        <hr className="mb-5 dark:border-indigo-900" />
         <div className="grid lg:grid-cols-5 gap-20 items-center">
           <div className="lg:col-span-2">
             <img
@@ -105,14 +105,14 @@ export default function AlatMusik() {
                 key={row.name} // Add a unique key for each item
                 className={
                   row.name === selectedAlatMusik.name
-                    ? "bg-gradient-to-r from-indigo-500/70 to-indigo-200/20 text-white shadow p-4 rounded flex justify-between items-center cursor-pointer"
-                    : "shadow p-4 rounded flex justify-between items-center cursor-pointer"
+                    ? "bg-gradient-to-r from-indigo-500/70 to-indigo-200/20 dark:from-indigo-800/70 dark:to-gray-900  text-white shadow p-4 rounded flex justify-between items-center cursor-pointer"
+                    : "shadow p-4 rounded flex justify-between items-center cursor-pointer dark:bg-gray-950"
                 }
                 onClick={() => setSelectedAlatMusik(row)}
               >
                 <div>
-                  <h3>{row.name}</h3>
-                  <small>{row.from}</small>
+                  <h3 className="dark:text-gray-100">{row.name}</h3>
+                  <small className="dark:text-gray-300">{row.from}</small>
                 </div>
                 {selectedAlatMusik.name === row.name ? (
                   <BootstrapTooltip
@@ -125,7 +125,7 @@ export default function AlatMusik() {
                         : playAlatMusik(`/sounds/${row.sound}`);
                     }}
                   >
-                    <span className="bg-white shadow text-indigo-500 flex items-center justify-center w-[30px] h-[30px] rounded-full">
+                    <span className="bg-white dark:bg-gray-800 shadow text-indigo-500 dark:text-white flex items-center justify-center w-[30px] h-[30px] rounded-full">
                       {isPlaying ? <FaPause /> : <FaPlay />}
                     </span>
                   </BootstrapTooltip>

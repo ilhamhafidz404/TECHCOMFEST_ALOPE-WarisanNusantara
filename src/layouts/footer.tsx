@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Footer() {
   return (
     <footer className="bg-black text-white">
@@ -18,13 +16,13 @@ export default function Footer() {
                 </h4>
                 <ul className="text-sm">
                   <li>
-                    <a href="">Tentang Kami</a>
+                    <a href="/">Tentang Kami</a>
                   </li>
                   <li>
-                    <a href="">Hubungi Kami</a>
+                    <a href="/">Hubungi Kami</a>
                   </li>
                   <li>
-                    <a href="">Peraturan dan Ketentuan</a>
+                    <a href="/">Peraturan dan Ketentuan</a>
                   </li>
                 </ul>
               </div>
@@ -34,13 +32,13 @@ export default function Footer() {
                 </h4>
                 <ul className="text-sm">
                   <li>
-                    <a href="">Tentang Kami</a>
+                    <a href="/">Tentang Kami</a>
                   </li>
                   <li>
-                    <a href="">Hubungi Kami</a>
+                    <a href="/">Hubungi Kami</a>
                   </li>
                   <li>
-                    <a href="">Peraturan dan Ketentuan</a>
+                    <a href="/">Peraturan dan Ketentuan</a>
                   </li>
                 </ul>
               </div>
@@ -50,13 +48,13 @@ export default function Footer() {
                 </h4>
                 <ul className="text-sm">
                   <li>
-                    <a href="">Tentang Kami</a>
+                    <a href="/">Tentang Kami</a>
                   </li>
                   <li>
-                    <a href="">Hubungi Kami</a>
+                    <a href="/">Hubungi Kami</a>
                   </li>
                   <li>
-                    <a href="">Peraturan dan Ketentuan</a>
+                    <a href="/">Peraturan dan Ketentuan</a>
                   </li>
                 </ul>
               </div>
@@ -66,13 +64,13 @@ export default function Footer() {
                 </h4>
                 <ul className="text-sm">
                   <li>
-                    <a href="">Tentang Kami</a>
+                    <a href="/">Tentang Kami</a>
                   </li>
                   <li>
-                    <a href="">Hubungi Kami</a>
+                    <a href="/">Hubungi Kami</a>
                   </li>
                   <li>
-                    <a href="">Peraturan dan Ketentuan</a>
+                    <a href="/">Peraturan dan Ketentuan</a>
                   </li>
                 </ul>
               </div>
@@ -82,13 +80,13 @@ export default function Footer() {
                 </h4>
                 <ul className="text-sm">
                   <li>
-                    <a href="">Tentang Kami</a>
+                    <a href="/">Tentang Kami</a>
                   </li>
                   <li>
-                    <a href="">Hubungi Kami</a>
+                    <a href="/">Hubungi Kami</a>
                   </li>
                   <li>
-                    <a href="">Peraturan dan Ketentuan</a>
+                    <a href="/">Peraturan dan Ketentuan</a>
                   </li>
                 </ul>
               </div>
@@ -98,13 +96,13 @@ export default function Footer() {
                 </h4>
                 <ul className="text-sm">
                   <li>
-                    <a href="">Tentang Kami</a>
+                    <a href="/">Tentang Kami</a>
                   </li>
                   <li>
-                    <a href="">Hubungi Kami</a>
+                    <a href="/">Hubungi Kami</a>
                   </li>
                   <li>
-                    <a href="">Peraturan dan Ketentuan</a>
+                    <a href="/">Peraturan dan Ketentuan</a>
                   </li>
                 </ul>
               </div>
