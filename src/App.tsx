@@ -99,6 +99,8 @@ export default function App() {
         </div> */}
       </Router>
 
+      <About />
+
       <Footer />
 
       {/* <section className="relative">
