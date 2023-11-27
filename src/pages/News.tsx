@@ -1,5 +1,5 @@
 import React from "react";
-import { FaEnvelope } from "react-icons/fa";
+import { FaCalendar, FaEnvelope } from "react-icons/fa";
 
 export default function News() {
   return (
@@ -90,6 +90,92 @@ export default function News() {
                 Subscribe
               </button>
             </div>
+          </div>
+        </section>
+        <hr className="my-10" />
+        <section className="grid grid-cols-4 gap-20 mt-10">
+          <div className="col-span-3">
+            <div className="grid grid-cols-5 items-center gap-10 mb-5">
+              <div className="col-span-2">
+                <img
+                  src="https://picsum.photos/id/237/2000/900"
+                  className="w-full h-[250px] rounded object-cover"
+                />
+              </div>
+              <div className="col-span-3">
+                <small className="text-indigo-500 font-semibold">
+                  TRADISI INDONESIA
+                </small>
+                <h3 className="text-xl font-bold mb-3">JUDUL ARTIKEL</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Repudiandae exercitationem magni aut natus similique qui ad
+                  voluptatum beatae veritatis iusto. Aliquam repellendus unde
+                  molestiae necessitatibus soluta illo cum ea magnam!
+                </p>
+
+                <p className="flex gap-2 mt-5">
+                  <FaCalendar />
+                  <span>17 Oktober 2023</span>
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-5 items-center gap-10 mb-5">
+              <div className="col-span-2">
+                <img
+                  src="https://picsum.photos/id/237/2000/900"
+                  className="w-full h-[250px] rounded object-cover"
+                />
+              </div>
+              <div className="col-span-3">
+                <small className="text-indigo-500 font-semibold">
+                  TRADISI INDONESIA
+                </small>
+                <h3 className="text-xl font-bold mb-3">JUDUL ARTIKEL</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Repudiandae exercitationem magni aut natus similique qui ad
+                  voluptatum beatae veritatis iusto. Aliquam repellendus unde
+                  molestiae necessitatibus soluta illo cum ea magnam!
+                </p>
+
+                <p className="flex gap-2 mt-5">
+                  <FaCalendar />
+                  <span>17 Oktober 2023</span>
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-5 items-center gap-10 mb-5">
+              <div className="col-span-2">
+                <img
+                  src="https://picsum.photos/id/237/2000/900"
+                  className="w-full h-[250px] rounded object-cover"
+                />
+              </div>
+              <div className="col-span-3">
+                <small className="text-indigo-500 font-semibold">
+                  TRADISI INDONESIA
+                </small>
+                <h3 className="text-xl font-bold mb-3">JUDUL ARTIKEL</h3>
+                <p>
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Repudiandae exercitationem magni aut natus similique qui ad
+                  voluptatum beatae veritatis iusto. Aliquam repellendus unde
+                  molestiae necessitatibus soluta illo cum ea magnam!
+                </p>
+
+                <p className="flex gap-2 mt-5">
+                  <FaCalendar />
+                  <span>17 Oktober 2023</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="https://websitedemos.net/tech-news-04/wp-content/uploads/sites/903/2021/07/tech-news-promo-potrait-banner-img.jpg"
+              alt=""
+            />
           </div>
         </section>
       </main>

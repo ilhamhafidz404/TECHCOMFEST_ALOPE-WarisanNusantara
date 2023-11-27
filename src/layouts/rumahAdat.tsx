@@ -2,140 +2,127 @@
 import { FaHome } from "react-icons/fa";
 
 import ReactCardSlider from "react-card-slider-component";
+import { useEffect } from "react";
 
-const rumahAdatName = document.getElementById("rumahAdatName") as HTMLElement;
-const rumahAdatDesc = document.getElementById("rumahAdatDesc") as HTMLElement;
-const rumahAdatImage = document.getElementById(
-  "rumahAdatImage"
-) as HTMLImageElement;
+export default function RumahAdat() {
+  let rumahAdatName = document.getElementById("rumahAdatName") as HTMLElement;
+  let rumahAdatDesc = document.getElementById("rumahAdatDesc") as HTMLElement;
+  let rumahAdatImage = document.getElementById(
+    "rumahAdatImage"
+  ) as HTMLImageElement;
 
-const changeImage1 = () => {
-  console.log("fwefwef");
+  useEffect(() => {
+    rumahAdatName = document.getElementById("rumahAdatName") as HTMLElement;
+    rumahAdatDesc = document.getElementById("rumahAdatDesc") as HTMLElement;
+    rumahAdatImage = document.getElementById(
+      "rumahAdatImage"
+    ) as HTMLImageElement;
+  }, []);
 
-  if (rumahAdatImage !== null) {
+  const changeImage1 = () => {
     rumahAdatName.innerHTML = "RUMAH KRONG BADE";
     rumahAdatDesc.innerHTML =
       "Rumah Aceh atau yang lebih dikenal dengan nama 'Rumoh Aceh' merupakan rumah adat dari suku Aceh. Rumah ini bertipe rumah panggung dengan 3 bagan utama dan 1 bagian tambahan. Tiga bagian utama dari rumah Aceh yaitu seuramoë keuë, seuramoë teungoh dan seuramoë likôt. Sedangkan 1 bagian tambahannya yaitu rumoh dap";
     rumahAdatImage.src = "/images/rumahAdat/aceh.png";
-  }
-};
-const changeImage2 = () => {
-  if (rumahAdatImage !== null) {
+  };
+  const changeImage2 = () => {
     rumahAdatName.innerHTML = "RUMAH JOGLO";
     rumahAdatDesc.innerHTML =
       "Rumah adat Joglo ini merupakan rumah adat dari Provinsi Jawa Timur, Jawa Tengah dan Yogyakarta. Walau termasuk budaya dari 3 daerah yang berbeda, tidak banyak perbedaan antara satu sama lainnya. <br /><br/> Dari rumah Joglo ini sendiri memilki fungsi dan bagian-bagian yang berbeda-beda. Ada yang digunakan sebagai tempat untuk bertamu bahkan untuk sekedar bersantai-santai. Terdapat bagian yang bernama pendapa, yaitu sebuah ruangan yang biasanya digunakan untuk acara-acara besar seperti wayang kulit, tari, gamelan dan lain-lain.";
     rumahAdatImage.src = "/images/rumahAdat/jogloJawaTimur.jpg";
-  }
-};
-const changeImage3 = () => {
-  if (rumahAdatImage !== null) {
+  };
+  const changeImage3 = () => {
     rumahAdatName.innerHTML = "RUMAH ADAT KASEPUH";
     rumahAdatDesc.innerHTML =
       "Rumah adat kasepuhan ini berasal dari Jawa Barat, tepatnya di kota Cirebon. <br/><br/> Rumah Adat Kasepuhan dianggap sebagai perluasan wilayah dari Keraton Pakungwati yang didirikan pada 1452. Dulunya, Keraton Kasepuhan Cirebon dibangun sebagai pusat pelatihan tentara kerajaan. Ditambah, fungsi dari keraton ini juga sebagai tempat pengadilan perkara hukum adat. <br/><br/> Diketahui, dalam keraton ini, terdapat beberapa ruangan khusus, seperti ruang pengadilan, ruang pendopo atau jinem, ruang Pringgodani yang ditempati sultan, dan ruang prabayasa untuk menerima tamu.";
     rumahAdatImage.src = "/images/rumahAdat/keratonJakarta.jpg";
-  }
-};
-const changeImage4 = () => {
-  if (rumahAdatImage !== null) {
+  };
+  const changeImage4 = () => {
     rumahAdatName.innerHTML = "SULAH NYANDA";
     rumahAdatDesc.innerHTML =
       "Rumah ini merupakan rumah adat suku Baduy di Provinsi Banten.  adat Joglo ini merupakan rumah adat dari Provinsi Jawa Timur, Jawa Tengah dan Yogyakarta. Walau termasuk budaya dari 3 daerah yang berbeda, tidak banyak perbedaan antara satu sama lainnya. <br /><br/> Dari rumah Joglo ini sendiri memilki fungsi dan bagian-bagian yang berbeda-beda. Ada yang digunakan sebagai tempat untuk bertamu bahkan untuk sekedar bersantai-santai. Terdapat bagian yang bernama pendapa, yaitu sebuah ruangan yang biasanya digunakan untuk acara-acara besar seperti wayang kulit, tari, gamelan dan lain-lain.";
     rumahAdatImage.src = "/images/rumahAdat/badui.jpg";
-  }
-};
-const changeImage5 = () => {
-  if (rumahAdatImage !== null) {
+  };
+  const changeImage5 = () => {
     rumahAdatName.innerHTML = "GADANG";
     rumahAdatDesc.innerHTML =
       "Rumah adat Joglo ini merupakan rumah adat dari Provinsi Jawa Timur, Jawa Tengah dan Yogyakarta. Walau termasuk budaya dari 3 daerah yang berbeda, tidak banyak perbedaan antara satu sama lainnya. <br /><br/> Dari rumah Joglo ini sendiri memilki fungsi dan bagian-bagian yang berbeda-beda. Ada yang digunakan sebagai tempat untuk bertamu bahkan untuk sekedar bersantai-santai. Terdapat bagian yang bernama pendapa, yaitu sebuah ruangan yang biasanya digunakan untuk acara-acara besar seperti wayang kulit, tari, gamelan dan lain-lain.";
     rumahAdatImage.src = "/images/rumahAdat/gadang.jpg";
-  }
-};
-const changeImage6 = () => {
-  if (rumahAdatImage !== null) {
+  };
+  const changeImage6 = () => {
     rumahAdatName.innerHTML = "HONAI";
     rumahAdatDesc.innerHTML =
       "Rumah adat Joglo ini merupakan rumah adat dari Provinsi Jawa Timur, Jawa Tengah dan Yogyakarta. Walau termasuk budaya dari 3 daerah yang berbeda, tidak banyak perbedaan antara satu sama lainnya. <br /><br/> Dari rumah Joglo ini sendiri memilki fungsi dan bagian-bagian yang berbeda-beda. Ada yang digunakan sebagai tempat untuk bertamu bahkan untuk sekedar bersantai-santai. Terdapat bagian yang bernama pendapa, yaitu sebuah ruangan yang biasanya digunakan untuk acara-acara besar seperti wayang kulit, tari, gamelan dan lain-lain.";
     rumahAdatImage.src = "/images/rumahAdat/honai.jpg";
-  }
-};
-const changeImage7 = () => {
-  if (rumahAdatImage !== null) {
+  };
+  const changeImage7 = () => {
     rumahAdatName.innerHTML = "MUSALAKI";
     rumahAdatDesc.innerHTML =
       "Rumah adat Joglo ini merupakan rumah adat dari Provinsi Jawa Timur, Jawa Tengah dan Yogyakarta. Walau termasuk budaya dari 3 daerah yang berbeda, tidak banyak perbedaan antara satu sama lainnya. <br /><br/> Dari rumah Joglo ini sendiri memilki fungsi dan bagian-bagian yang berbeda-beda. Ada yang digunakan sebagai tempat untuk bertamu bahkan untuk sekedar bersantai-santai. Terdapat bagian yang bernama pendapa, yaitu sebuah ruangan yang biasanya digunakan untuk acara-acara besar seperti wayang kulit, tari, gamelan dan lain-lain.";
     rumahAdatImage.src = "/images/rumahAdat/musalaki.webp";
-  }
-};
-const changeImage8 = () => {
-  if (rumahAdatImage !== null) {
+  };
+  const changeImage8 = () => {
     rumahAdatName.innerHTML = "RUMAH PANJANG";
     rumahAdatDesc.innerHTML =
       "Rumah adat Joglo ini merupakan rumah adat dari Provinsi Jawa Timur, Jawa Tengah dan Yogyakarta. Walau termasuk budaya dari 3 daerah yang berbeda, tidak banyak perbedaan antara satu sama lainnya. <br /><br/> Dari rumah Joglo ini sendiri memilki fungsi dan bagian-bagian yang berbeda-beda. Ada yang digunakan sebagai tempat untuk bertamu bahkan untuk sekedar bersantai-santai. Terdapat bagian yang bernama pendapa, yaitu sebuah ruangan yang biasanya digunakan untuk acara-acara besar seperti wayang kulit, tari, gamelan dan lain-lain.";
     rumahAdatImage.src = "/images/rumahAdat/panjang.jpg";
-  }
-};
-const changeImage9 = () => {
-  if (rumahAdatImage !== null) {
+  };
+  const changeImage9 = () => {
     rumahAdatName.innerHTML = "RAKIT";
     rumahAdatDesc.innerHTML =
       "Rumah adat Joglo ini merupakan rumah adat dari Provinsi Jawa Timur, Jawa Tengah dan Yogyakarta. Walau termasuk budaya dari 3 daerah yang berbeda, tidak banyak perbedaan antara satu sama lainnya. <br /><br/> Dari rumah Joglo ini sendiri memilki fungsi dan bagian-bagian yang berbeda-beda. Ada yang digunakan sebagai tempat untuk bertamu bahkan untuk sekedar bersantai-santai. Terdapat bagian yang bernama pendapa, yaitu sebuah ruangan yang biasanya digunakan untuk acara-acara besar seperti wayang kulit, tari, gamelan dan lain-lain.";
     rumahAdatImage.src = "/images/rumahAdat/rakit.jpg";
-  }
-};
-const changeImage10 = () => {
-  if (rumahAdatImage !== null) {
+  };
+  const changeImage10 = () => {
     rumahAdatName.innerHTML = "RUMAH SUNDA";
     rumahAdatDesc.innerHTML =
       "Rumah adat Joglo ini merupakan rumah adat dari Provinsi Jawa Timur, Jawa Tengah dan Yogyakarta. Walau termasuk budaya dari 3 daerah yang berbeda, tidak banyak perbedaan antara satu sama lainnya. <br /><br/> Dari rumah Joglo ini sendiri memilki fungsi dan bagian-bagian yang berbeda-beda. Ada yang digunakan sebagai tempat untuk bertamu bahkan untuk sekedar bersantai-santai. Terdapat bagian yang bernama pendapa, yaitu sebuah ruangan yang biasanya digunakan untuk acara-acara besar seperti wayang kulit, tari, gamelan dan lain-lain.";
     rumahAdatImage.src = "/images/rumahAdat/sunda.jpg";
-  }
-};
+  };
 
-const slides = [
-  {
-    image: "/images/rumahAdat/aceh.png",
-    clickEvent: changeImage1,
-  },
-  {
-    image: "/images/rumahAdat/jogloJawaTimur.jpg",
-    clickEvent: changeImage2,
-  },
-  {
-    image: "/images/rumahAdat/keratonJakarta.jpg",
-    clickEvent: changeImage3,
-  },
-  {
-    image: "/images/rumahAdat/badui.jpg",
-    clickEvent: changeImage4,
-  },
-  {
-    image: "/images/rumahAdat/gadang.jpg",
-    clickEvent: changeImage5,
-  },
-  {
-    image: "/images/rumahAdat/honai.jpg",
-    clickEvent: changeImage6,
-  },
-  {
-    image: "/images/rumahAdat/musalaki.webp",
-    clickEvent: changeImage7,
-  },
-  {
-    image: "/images/rumahAdat/panjang.jpg",
-    clickEvent: changeImage8,
-  },
-  {
-    image: "/images/rumahAdat/rakit.jpg",
-    clickEvent: changeImage9,
-  },
-  {
-    image: "/images/rumahAdat/sunda.jpg",
-    clickEvent: changeImage10,
-  },
-];
+  const slides = [
+    {
+      image: "/images/rumahAdat/aceh.png",
+      clickEvent: changeImage1,
+    },
+    {
+      image: "/images/rumahAdat/jogloJawaTimur.jpg",
+      clickEvent: changeImage2,
+    },
+    {
+      image: "/images/rumahAdat/keratonJakarta.jpg",
+      clickEvent: changeImage3,
+    },
+    {
+      image: "/images/rumahAdat/badui.jpg",
+      clickEvent: changeImage4,
+    },
+    {
+      image: "/images/rumahAdat/gadang.jpg",
+      clickEvent: changeImage5,
+    },
+    {
+      image: "/images/rumahAdat/honai.jpg",
+      clickEvent: changeImage6,
+    },
+    {
+      image: "/images/rumahAdat/musalaki.webp",
+      clickEvent: changeImage7,
+    },
+    {
+      image: "/images/rumahAdat/panjang.jpg",
+      clickEvent: changeImage8,
+    },
+    {
+      image: "/images/rumahAdat/rakit.jpg",
+      clickEvent: changeImage9,
+    },
+    {
+      image: "/images/rumahAdat/sunda.jpg",
+      clickEvent: changeImage10,
+    },
+  ];
 
-export default function RumahAdat() {
   return (
     <>
       <section className="mt-20">
