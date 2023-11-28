@@ -128,7 +128,7 @@ export default function App() {
         </Routes>
       </Router>
 
-      <header className="grid lg:grid-cols-2">
+      <header className="grid lg:grid-cols-2 relative z-10">
         <span
           className="w-[1000px] h-[1000px] rounded-full absolute -left-[500px] -top-[500px] -rotate-[60deg]"
           style={{
@@ -165,7 +165,7 @@ export default function App() {
               modern Indonesia.
             </p>
           </div>
-          <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-3 lg:gap-5 gap-3">
+          <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-3 lg:gap-5 gap-3 sm:order-2 order-1">
             <div
               className="cursor-pointer transition-all hover:scale-110 after:transition-all relative after:content-[''] after:inset-0 after:absolute after:bg-black/30 after:rounded-md hover:after:scale-0 after:scale-100 lg:col-span-1 sm:col-span-2"
               onClick={() => setOpen(true)}
@@ -254,6 +254,172 @@ export default function App() {
           </h1>
         </section>
       </header>
+
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <section className="container mx-auto grid grid-cols-2 px-20 gap-28 items-center mt-20 relative">
+        <span
+          className="w-[1000px] h-[1000px] rounded-full absolute -right-[250px] -top-[500px] -rotate-[0deg]"
+          style={{
+            backgroundImage:
+              "radial-gradient(169.40% 89.55% at 94.76% 6.29%, rgba(239, 68, 68, 0.70) 0%, rgba(239, 68, 68, 0.0) 100%)",
+          }}
+        ></span>
+
+        <img
+          src="/images/plane.png"
+          alt=""
+          className="absolute w-[200px] -top-[100px]"
+        />
+
+        <div>
+          <h2 className="font-bold text-3xl mb-5">
+            EXPLORASI KEINDAHAN DAN KEUNIKAN BUDAYA{" "}
+            <span className="relative pe-32">
+              NUSANTARA
+              <img
+                src="/images/Decore.png"
+                className="absolute bottom-[10px] h-[23px] left-[-25px] w-full -z-10"
+              />
+            </span>
+          </h2>
+          <p className="text-sm text-gray-800 mb-10">
+            Jangan lewatkan pesona luar biasa dari keberagaman budaya Nusantara!
+            Mari kita sambut dan abadikan kekayaan ini, mulai dari kebiasaan
+            yang unik hingga seni yang memukau. Rasakan pengalaman tak
+            terlupakan dengan menjaga dan merayakan kebudayaan Nusantara
+            bersama-sama. Ayo, mari jaga dan lestarikan warisan budaya kita
+            untuk masa depan yang lebih berwarna!
+          </p>
+          <a
+            href=""
+            className="px-5 py-2 bg-red-500 rounded-full text-white text-sm"
+          >
+            Explorasi Sekarang
+          </a>
+        </div>
+        <div className="h-[400px] flex gap-5">
+          <div className="h-full w-[40%] -translate-y-10">
+            <img
+              src="/images/gallery/11.jpg"
+              alt=""
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div className="h-full w-[40%] translate-y-10">
+            <img
+              src="/images/gallery/11.jpg"
+              alt=""
+              className="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="grid lg:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-2">
+        <div className="row-span-2 md:order-1 md:block hidden">
+          <img
+            src="/images/gallery/11.jpg"
+            alt="gallery11"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="md:order-2 md:block hidden">
+          <img
+            src="/images/gallery/1.jpg"
+            alt="gallery1"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="md:order-3 md:block hidden">
+          <img
+            src="/images/gallery/2.jpg"
+            alt="gallery2"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="md:order-4 order-1">
+          <img
+            src="/images/gallery/3.jpg"
+            alt="gallery3"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="lg:order-5 md:order-7 order-2">
+          <img
+            src="/images/gallery/4.jpg"
+            alt="gallery4"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/*  */}
+
+        <div className="lg:order-6 md:order-8 md:block hidden">
+          <img
+            src="/images/gallery/5.jpg"
+            alt="gallery5"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="border-2 border-red-500 border-dashed p-5 flex flex-col justify-center lg:order-7 md:order-5  order-3  lg:col-span-1 md:col-span-2">
+          <h2 className="font-semibold text-xl">
+            INDONESIA KAYA AKAN KERAGAMAN BUDAYA
+          </h2>
+          <p className="text-sm mt-3 text-gray-700">
+            Keragaman ini tidak hanya sekadar warisan, melainkan sumber
+            inspirasi yang tak terbatas untuk terus dijelajahi dan dikembangkan.
+          </p>
+        </div>
+        <div className="lg:order-8  order-5 lg:block md:hidden">
+          <img
+            src="/images/gallery/6.jpg"
+            alt="gallery6"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="row-span-2 lg:order-9 md:order-6  order-4">
+          <img
+            src="/images/gallery/12.jpg"
+            alt="gallery12"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/*  */}
+
+        <div className="lg:order-10 md:block hidden order-9">
+          <img
+            src="/images/gallery/7.jpg"
+            alt="gallery7"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="lg:order-11 lg:block hidden">
+          <img
+            src="/images/gallery/8.jpg"
+            alt="gallery8"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="lg:order-12 lg:block hidden">
+          <img
+            src="/images/gallery/9.jpg"
+            alt="gallery9"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="lg:order-last lg:block hidden">
+          <img
+            src="/images/gallery/10.jpg"
+            alt="gallery10"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </section>
 
       <Footer />
     </>
