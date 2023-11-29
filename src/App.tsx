@@ -11,6 +11,8 @@ import {
   FaFacebookF,
   FaHome,
   FaInstagram,
+  FaMapMarker,
+  FaMapMarkerAlt,
   FaNewspaper,
   FaTags,
   FaYoutube,
@@ -260,9 +262,9 @@ export default function App() {
       <br />
       <br />
 
-      <section className="container mx-auto grid grid-cols-2 px-20 gap-28 items-center mt-20 relative">
+      <section className="grid lg:grid-cols-2 lg:px-20 md:px-14 sm:px-12 px-8 gap-28 items-center lg:mt-20 mt-10 relative">
         <span
-          className="w-[1000px] h-[1000px] rounded-full absolute -right-[250px] -top-[500px] -rotate-[0deg]"
+          className="lg:w-[1000px] lg:h-[1000px] w-[500px] h-[500px] lg:rounded-full absolute lg:-right-[250px] lg:-top-[500px] lg:-rotate-[0deg] -right-[200px] rotate-90"
           style={{
             backgroundImage:
               "radial-gradient(169.40% 89.55% at 94.76% 6.29%, rgba(239, 68, 68, 0.70) 0%, rgba(239, 68, 68, 0.0) 100%)",
@@ -272,17 +274,17 @@ export default function App() {
         <img
           src="/images/plane.png"
           alt=""
-          className="absolute w-[200px] -top-[100px]"
+          className="absolute w-[200px] lg:-top-[100px] -top-[150px]"
         />
 
-        <div>
-          <h2 className="font-bold text-3xl mb-5">
+        <div className="md:text-left text-center">
+          <h2 className="font-bold sm:text-3xl text-2xl mb-5">
             EXPLORASI KEINDAHAN DAN KEUNIKAN BUDAYA{" "}
-            <span className="relative pe-32">
+            <span className="relative md:pe-32 pe-16 md:pl-0 pl-16">
               NUSANTARA
               <img
                 src="/images/Decore.png"
-                className="absolute bottom-[10px] h-[23px] left-[-25px] w-full -z-10"
+                className="absolute bottom-[10px] h-[23px] left-[-25px] w-full -z-10 sm:block hidden"
               />
             </span>
           </h2>
@@ -296,12 +298,13 @@ export default function App() {
           </p>
           <a
             href=""
-            className="px-5 py-2 bg-red-500 rounded-full text-white text-sm"
+            className="px-7 py-3 inline-flex gap-3 items-center bg-red-500 hover:bg-red-400 rounded-full text-white text-sm"
           >
+            <FaMapMarkerAlt size={20} />
             Explorasi Sekarang
           </a>
         </div>
-        <div className="h-[400px] flex gap-5">
+        <div className="h-[400px] lg:flex hidden lg:justify-start gap-5">
           <div className="h-full w-[40%] -translate-y-10">
             <img
               src="/images/gallery/11.jpg"
@@ -315,6 +318,179 @@ export default function App() {
               alt=""
               className="h-full w-full object-cover"
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="grid lg:grid-cols-4 md:grid-cols-2 md:gap-10 gap-5 lg:px-20 md:px-14 sm:px-12 px-8 mt-36 relative">
+        {/* <span
+          className="lg:w-[1200px] lg:h-[1200px] w-[500px] h-[500px] lg:rounded-full absolute lg:-left-[500px] lg:bottom-[-500px] lg:rotate-[-150deg] -left-[200px] rotate-90"
+          style={{
+            backgroundImage:
+              "radial-gradient(169.40% 89.55% at 94.76% 6.29%, rgba(239, 68, 68, 0.70) 0%, rgba(239, 68, 68, 0.0) 100%)",
+          }}
+        ></span> */}
+
+        <div className="lg:col-span-4 md:col-span-2">
+          <h3 className="font-bold text-3xl md:text-left text-center">
+            ASPEK BUDAYA DI <span className="text-red-500">INDONESIA</span>
+          </h3>
+          <p className="text-gray-800 lg:w-2/3 md:w-3/4 w-full md:mx-0 mx-auto md:text-left text-center text-sm mt-5">
+            Budaya Indonesia merupakan salah satu budaya yang paling beragam di
+            dunia. Hal ini disebabkan oleh faktor geografis Indonesia yang
+            terdiri dari ribuan pulau dengan berbagai suku bangsa, agama, dan
+            bahasa. Keanekaragaman budaya Indonesia ini tercermin dalam berbagai
+            aspek kehidupan masyarakat, mulai dari bahasa, adat istiadat,
+            kesenian, hingga kuliner.
+          </p>
+        </div>
+        <div
+          className="lg:h-[500px] md:h-[400px] h-[200px] rounded-md overflow-hidden relative after:content-[''] after:absolute after:inset-0 after:bg-black/40 bg-cover bg-center p-5 md:hover:scale-110 transition-all"
+          style={{
+            backgroundImage: "url(/images/card/musik.jpg)",
+          }}
+        >
+          <div className="relative z-10 flex flex-col justify-between h-full">
+            <div>
+              <p className="text-white flex items-center gap-2">
+                <FaMapMarkerAlt />
+                <small>Seren Taun, Jawa Barat</small>
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold text-xl text-white mb-5">
+                LAGU & MUSIK
+              </h4>
+              <p className="text-gray-200 text-sm">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Distinctio earum dolore
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="lg:h-[500px] md:h-[400px] h-[200px] rounded-md overflow-hidden relative after:content-[''] after:absolute after:inset-0 after:bg-black/40 bg-cover bg-center p-5 md:hover:scale-110 transition-all"
+          style={{
+            backgroundImage: "url(/images/card/arsitektur.jpg)",
+          }}
+        >
+          <div className="relative z-10 flex flex-col justify-between h-full">
+            <div>
+              <p className="text-white flex items-center gap-2">
+                <FaMapMarkerAlt />
+                <small>Rumah Panggung, Sulawesi Selatan</small>
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold text-xl text-white mb-5">
+                ARSITEKTUR BANGUNAN
+              </h4>
+              <p className="text-gray-200 text-sm">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Distinctio earum dolore
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="lg:h-[500px] md:h-[400px] h-[200px] rounded-md overflow-hidden relative after:content-[''] after:absolute after:inset-0 after:bg-black/40 bg-cover bg-center p-5 md:hover:scale-110 transition-all"
+          style={{
+            backgroundImage: "url(/images/card/upacara.jpg)",
+          }}
+        >
+          <div className="relative z-10 flex flex-col justify-between h-full">
+            <div>
+              <p className="text-white flex items-center gap-2">
+                <FaMapMarkerAlt />
+                <small>Bonang, Jawa Timur</small>
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold text-xl text-white mb-5">UPACARA</h4>
+              <p className="text-gray-200 text-sm">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Distinctio earum dolore
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="lg:h-[500px] md:h-[400px] h-[200px] rounded-md overflow-hidden relative after:content-[''] after:absolute after:inset-0 after:bg-black/40 bg-cover bg-center p-5 md:hover:scale-110 transition-all"
+          style={{
+            backgroundImage: "url(/images/card/pakaian.jpg)",
+          }}
+        >
+          <div className="relative z-10 flex flex-col justify-between h-full">
+            <div>
+              <p className="text-white flex items-center gap-2">
+                <FaMapMarkerAlt />
+                <small>Sunda, Jawa Barat</small>
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold text-xl text-white mb-5">PAKAIAN</h4>
+              <p className="text-gray-200 text-sm">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Distinctio earum dolore
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="lg:col-span-4 md:col-span-2 text-center mt-8">
+          <button className="bg-red-500 hover:bg-red-400 text-white py-3 px-10 text-sm rounded-full">
+            Lihat Lebih Banyak
+          </button>
+        </div>
+      </section>
+
+      <section
+        className="grid grid-cols-2 mt-28 gap-10 container mx-auto px-20 items-center py-20 relative bg-cover bg-fixed after:content-[''] after:absolute after:inset-0 after:bg-white/60"
+        style={{
+          backgroundImage: "url(/images/redIndonesia.png)",
+        }}
+      >
+        <div className="relative z-10">
+          <h3 className="font-bold text-5xl">
+            <span className="text-red-500">INDONESIA</span> DIMATA DUNIA
+          </h3>
+        </div>
+        <div className="bg-white/70 shadow p-5 rounded-lg flex items-center gap-7 relative z-10">
+          <div className="border p-3 rounded-lg">
+            <img src="/images/globe.png" className="w-[100px]" />
+          </div>
+          <div>
+            <h6 className="font-semibold text-1xl mb-3">
+              NEGARA KEPULAUAN TERBESAR DENGAN <br /> RAGAM SUKU BUDAYA{" "}
+            </h6>
+            <p className="text-gray-700 text-sm">
+              Tercatat bahwa indonesia mempunyai 742 Suku
+            </p>
+          </div>
+        </div>
+        <div className="bg-white/70 shadow p-5 rounded-lg flex items-center gap-7 relative z-10">
+          <div className="border p-3 rounded-lg">
+            <img src="/images/globe.png" className="w-[100px]" />
+          </div>
+          <div>
+            <h6 className="font-semibold text-1xl mb-3">
+              Pemilik Bahasa Terbanyak di Dunia DENGAN JUMLAH SEKITAR 707
+            </h6>
+            <p className="text-gray-700 text-sm">
+              Tercatat bahwa indonesia mempunyai 742 Suku
+            </p>
+          </div>
+        </div>
+        <div className="bg-white/70 shadow p-5 rounded-lg flex items-center gap-7 relative z-10">
+          <div className="border p-3 rounded-lg">
+            <img src="/images/globe.png" className="w-[100px]" />
+          </div>
+          <div>
+            <h6 className="font-semibold text-1xl mb-3">
+              Pemilik Bahasa Terbanyak di Dunia DENGAN JUMLAH SEKITAR 707
+            </h6>
+            <p className="text-gray-700 text-sm">
+              Tercatat bahwa indonesia mempunyai 742 Suku
+            </p>
           </div>
         </div>
       </section>
