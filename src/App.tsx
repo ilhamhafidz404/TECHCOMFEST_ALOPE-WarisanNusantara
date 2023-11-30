@@ -8,7 +8,12 @@ import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 // icons
 import {
   FaBars,
+  FaChevronLeft,
+  FaChevronRight,
+  FaComment,
+  FaEye,
   FaFacebookF,
+  FaHeart,
   FaHome,
   FaInstagram,
   FaMapMarker,
@@ -28,6 +33,7 @@ import News from "./pages/News";
 import Switcher from "./components/swicher";
 import Footer from "./layouts/footer";
 import { useState } from "react";
+import InfiniteSlider from "./layouts/infiniteSlider";
 
 const BootstrapTooltip = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} arrow classes={{ popper: className }} />
@@ -323,13 +329,13 @@ export default function App() {
       </section>
 
       <section className="grid lg:grid-cols-4 md:grid-cols-2 md:gap-10 gap-5 lg:px-20 md:px-14 sm:px-12 px-8 mt-36 relative">
-        {/* <span
+        <span
           className="lg:w-[1200px] lg:h-[1200px] w-[500px] h-[500px] lg:rounded-full absolute lg:-left-[500px] lg:bottom-[-500px] lg:rotate-[-150deg] -left-[200px] rotate-90"
           style={{
             backgroundImage:
               "radial-gradient(169.40% 89.55% at 94.76% 6.29%, rgba(239, 68, 68, 0.70) 0%, rgba(239, 68, 68, 0.0) 100%)",
           }}
-        ></span> */}
+        ></span>
 
         <div className="lg:col-span-4 md:col-span-2">
           <h3 className="font-bold text-3xl md:text-left text-center">
@@ -443,59 +449,7 @@ export default function App() {
         </div>
       </section>
 
-      <section
-        className="grid grid-cols-2 mt-28 gap-10 container mx-auto px-20 items-center py-20 relative bg-cover bg-fixed after:content-[''] after:absolute after:inset-0 after:bg-white/60"
-        style={{
-          backgroundImage: "url(/images/redIndonesia.png)",
-        }}
-      >
-        <div className="relative z-10">
-          <h3 className="font-bold text-5xl">
-            <span className="text-red-500">INDONESIA</span> DIMATA DUNIA
-          </h3>
-        </div>
-        <div className="bg-white/70 shadow p-5 rounded-lg flex items-center gap-7 relative z-10">
-          <div className="border p-3 rounded-lg">
-            <img src="/images/globe.png" className="w-[100px]" />
-          </div>
-          <div>
-            <h6 className="font-semibold text-1xl mb-3">
-              NEGARA KEPULAUAN TERBESAR DENGAN <br /> RAGAM SUKU BUDAYA{" "}
-            </h6>
-            <p className="text-gray-700 text-sm">
-              Tercatat bahwa indonesia mempunyai 742 Suku
-            </p>
-          </div>
-        </div>
-        <div className="bg-white/70 shadow p-5 rounded-lg flex items-center gap-7 relative z-10">
-          <div className="border p-3 rounded-lg">
-            <img src="/images/globe.png" className="w-[100px]" />
-          </div>
-          <div>
-            <h6 className="font-semibold text-1xl mb-3">
-              Pemilik Bahasa Terbanyak di Dunia DENGAN JUMLAH SEKITAR 707
-            </h6>
-            <p className="text-gray-700 text-sm">
-              Tercatat bahwa indonesia mempunyai 742 Suku
-            </p>
-          </div>
-        </div>
-        <div className="bg-white/70 shadow p-5 rounded-lg flex items-center gap-7 relative z-10">
-          <div className="border p-3 rounded-lg">
-            <img src="/images/globe.png" className="w-[100px]" />
-          </div>
-          <div>
-            <h6 className="font-semibold text-1xl mb-3">
-              Pemilik Bahasa Terbanyak di Dunia DENGAN JUMLAH SEKITAR 707
-            </h6>
-            <p className="text-gray-700 text-sm">
-              Tercatat bahwa indonesia mempunyai 742 Suku
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="grid lg:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-2">
+      <section className="grid lg:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-2 relative mt-20">
         <div className="row-span-2 md:order-1 md:block hidden">
           <img
             src="/images/gallery/11.jpg"
@@ -596,6 +550,193 @@ export default function App() {
           />
         </div>
       </section>
+
+      {/* <section className="grid grid-cols-2 mt-20 gap-10 container mx-auto px-20 items-center py-20 relative">
+        <div className="relative z-10">
+          <h3 className="font-bold text-5xl">
+            <span className="text-red-500">INDONESIA</span> DIMATA DUNIA
+          </h3>
+        </div>
+        <div className="bg-white/70 shadow p-5 rounded-lg flex items-center gap-7 relative z-10">
+          <div className="border p-3 rounded-lg">
+            <img src="/images/globe.png" className="w-[100px]" />
+          </div>
+          <div>
+            <h6 className="font-semibold text-1xl mb-3">
+              NEGARA KEPULAUAN TERBESAR DENGAN <br /> RAGAM SUKU BUDAYA{" "}
+            </h6>
+            <p className="text-gray-700 text-sm">
+              Tercatat bahwa indonesia mempunyai 742 Suku
+            </p>
+          </div>
+        </div>
+        <div className="bg-white/70 shadow p-5 rounded-lg flex items-center gap-7 relative z-10">
+          <div className="border p-3 rounded-lg">
+            <img src="/images/globe.png" className="w-[100px]" />
+          </div>
+          <div>
+            <h6 className="font-semibold text-1xl mb-3">
+              Pemilik Bahasa Terbanyak di Dunia DENGAN JUMLAH SEKITAR 707
+            </h6>
+            <p className="text-gray-700 text-sm">
+              Tercatat bahwa indonesia mempunyai 742 Suku
+            </p>
+          </div>
+        </div>
+        <div className="bg-white/70 shadow p-5 rounded-lg flex items-center gap-7 relative z-10">
+          <div className="border p-3 rounded-lg">
+            <img src="/images/globe.png" className="w-[100px]" />
+          </div>
+          <div>
+            <h6 className="font-semibold text-1xl mb-3">
+              Pemilik Bahasa Terbanyak di Dunia DENGAN JUMLAH SEKITAR 707
+            </h6>
+            <p className="text-gray-700 text-sm">
+              Tercatat bahwa indonesia mempunyai 742 Suku
+            </p>
+          </div>
+        </div>
+      </section> */}
+
+      <section className="mt-20 dark:bg-gray-950 pt-20">
+        <h3 className="text-center text-4xl font-bold dark:text-gray-100">
+          INDONESIA DIMATA DUNIA
+        </h3>
+        <p className="w-[900px] text-center mx-auto mt-5 mb-10 dark:text-gray-300 text-gray-700">
+          Kami memiliki dedikasi tinggi untuk melestarikan kekayaan budaya
+          Indonesia yang luar biasa. Melalui berbagai kegiatan, kami berupaya
+          untuk memahami, merawat, dan menghidupkan kembali warisan budaya yang
+          berharga ini.
+        </p>
+        <div className="slider h-[500px] overflow-x-hidden py-10 relative">
+          <div className="slide-track flex gap-20 items-center">
+            <div className="slide">
+              <img
+                src="/images/gallery/1.jpg"
+                className="w-[500px] h-[300px] object-cover rounded-lg"
+                alt=""
+              />
+            </div>
+            <div className="slide">
+              <img
+                src="/images/gallery/8.jpg"
+                className="w-[500px] h-[300px] object-cover rounded-lg"
+                alt=""
+              />
+            </div>
+            <div className="slide">
+              <img
+                src="/images/gallery/3.jpg"
+                className="w-[500px] h-[300px] object-cover rounded-lg"
+                alt=""
+              />
+            </div>
+            <div className="slide">
+              <img
+                src="/images/gallery/4.jpg"
+                className="w-[500px] h-[300px] object-cover rounded-lg"
+                alt=""
+              />
+            </div>
+            <div className="slide">
+              <img
+                src="/images/gallery/5.jpg"
+                className="w-[500px] h-[300px] object-cover rounded-lg"
+                alt=""
+              />
+            </div>
+            <div className="slide">
+              <img
+                src="/images/gallery/10.jpg"
+                className="w-[500px] h-[300px] object-cover rounded-lg"
+                alt=""
+              />
+            </div>
+            <div className="slide">
+              <img
+                src="/images/gallery/6.jpg"
+                className="w-[500px] h-[300px] object-cover rounded-lg"
+                alt=""
+              />
+            </div>
+            <div className="slide">
+              <img
+                src="/images/gallery/7.jpg"
+                className="w-[500px] h-[300px] object-cover rounded-lg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-20">
+        <div className="bg-red-200 py-12 text-center rounded-md px-20">
+          <h4 className="text-gray-800">INDONESIA DIMATA DUNIA</h4>
+          <h3 className="font-bold text-3xl mt-5">
+            "Sopan Santun dalam Keanekaragaman🤝✨, 👣Jejak Budaya yang
+            Membahana di Seluruh Dunia🌍🇮🇩"
+          </h3>
+        </div>
+      </section>
+
+      <section>
+        <div className="grid grid-cols-5 gap-10 items-center px-20 mt-10">
+          <div className="h-[350px] rounded-md overflow-hidden col-span-2">
+            <img
+              src="/images/header/3.jpg"
+              alt=""
+              className="object-cover h-full w-full"
+            />
+          </div>
+          <div className="col-span-3">
+            <h5 className="text-red-500 font-semibold mb-5">RAGAM BERITA</h5>
+            <h2 className="font-bold text-3xl">
+              INDONESIA DENGAN KEBERAGAMAN BUDAYA INDONESIA
+            </h2>
+            <p className="text-gray-800 mt-5">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo nisi
+              recusandae itaque atque doloremque. Veniam animi, distinctio
+              blanditiis nesciunt similique doloremque expedita excepturi
+              laborum esse fugit unde quis nobis suscipit.
+            </p>
+            <div className="flex gap-5 mt-10 text-gray-600">
+              <span className="flex gap-2">
+                <FaEye />
+                <small>2.000 views</small>
+              </span>
+              <span className="flex gap-2">
+                <FaHeart />
+                <small>2.000 suka</small>
+              </span>
+              <span className="flex gap-2">
+                <FaComment />
+                <small>2.000 komentar</small>
+              </span>
+            </div>
+
+            <div className="flex gap-5 justify-end">
+              <button className="flex items-center justify-center rounded-full w-[30px] h-[30px] bg-gray-300">
+                <FaChevronLeft />
+              </button>
+              <button className="flex items-center justify-center rounded-full w-[30px] h-[30px] bg-gray-300">
+                <FaChevronRight />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
 
       <Footer />
     </>

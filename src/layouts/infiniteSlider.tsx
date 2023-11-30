@@ -3,7 +3,7 @@ import React from "react";
 export default function InfiniteSlider() {
   return (
     <>
-      <section className="mt-20 bg-gray-200 dark:bg-gray-950 pt-20">
+      <section className="mt-20 dark:bg-gray-950 pt-20">
         <h3 className="text-center text-4xl font-bold dark:text-gray-100">
           KEGIATAN KAMI
         </h3>
