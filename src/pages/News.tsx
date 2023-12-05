@@ -1,25 +1,22 @@
 import React from "react";
-import { FaCalendar, FaEnvelope } from "react-icons/fa";
+import { FaArrowRight, FaCalendar, FaEnvelope, FaFire } from "react-icons/fa";
 
 export default function News() {
   return (
     <>
-      <header className="container mx-auto grid grid-cols-4 gap-10 pt-20">
+      <header className="container mx-auto grid lg:grid-cols-4 gap-10 pt-20 lg:px-20 md:px-5">
         <div
-          className="col-span-3 h-[600px] bg-cover bg-center relative z-10 flex items-end p-10 after:content-[''] after:absolute after:inset-0 after:bg-black/40 after:-z-10"
+          className="lg:col-span-3 lg:h-[600px] md:h-[400px] bg-cover relative z-10 flex items-end p-10 after:content-[''] after:absolute after:inset-0 after:bg-black/40 after:-z-10 bg-bottom"
           style={{
-            backgroundImage:
-              "url(" + "https://picsum.photos/id/237/2000/900" + ")",
+            backgroundImage: "url(" + "/images/news/serenTaun.jpg" + ")",
           }}
         >
           <div className="w-[80%]">
-            <h6 className="text-emerald-500 mb-3 font-semibold">
-              RAGAM BUDAYA
-            </h6>
-            <h2 className="text-3xl font-bold text-white ">
+            <h6 className="text-red-500 mb-3 font-semibold">UPACARA</h6>
+            <h2 className="lg:text-3xl text-2xl font-bold text-white ">
               UPACARA SEREN TAUN DI CIGUGUR UNTUK MENSYUKURI HASIL PANEN
             </h2>
-            <p className="text-gray-200 mt-3 text-sm">
+            <p className="text-gray-200 mt-3 text-sm lg:block hidden">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam
               praesentium ratione commodi at quibusdam ipsa cum reiciendis
               tempore, error a fugiat eum impedit et doloribus qui omnis nihil
@@ -27,57 +24,81 @@ export default function News() {
             </p>
           </div>
         </div>
-        <div>
+        <div className="grid lg:grid-cols-1 grid-cols-2 lg:gap-0 gap-10">
           <div>
-            <img
-              src="https://picsum.photos/id/237/2000/900"
-              className="w-full h-[250px] rounded object-cover"
-            />
+            <div className="lg:h-[250px] h-[230px] after:rounded relative after:ontent-[''] after:bg-black/40 after:absolute after:inset-0">
+              <img
+                src="/images/news/borobudur.jpg"
+                className="w-full lg:h-[250px] h-[230px] rounded object-cover"
+              />
+            </div>
           </div>
-          <br />
-          <div className="my-5">
-            <small className="text-red-500">Indonesia Kaya</small>
-            <h5 className="font-bold text-2xl">Judul Artikel</h5>
-          </div>
-          <div className="my-5">
-            <small className="text-indigo-500">Indonesia Kaya</small>
-            <h5 className="font-bold text-2xl">Judul Artikel</h5>
-          </div>
-          <div className="my-5">
-            <small className="text-yellow-500">Indonesia Kaya</small>
-            <h5 className="font-bold text-2xl">Judul Artikel</h5>
+          {/* <br /> */}
+          <div>
+            <div className="lg:my-5 my-3">
+              <small className="text-red-500">UPACARA</small>
+              <h5 className="font-semibold lg:text-2xl text-base text-gray-800">
+                Peringati 32 Tahun Candi Borobudur
+              </h5>
+            </div>
+            <div className="lg:my-5 my-3">
+              <small className="text-indigo-500">FUN EVENT</small>
+              <h5 className="font-semibold lg:text-2xl tex-base text-gray-800">
+                2.000 Pelari Meriahkan "Borobudur Fun Run"
+              </h5>
+            </div>
+            <div className="lg:my-5 my-3">
+              <small className="text-yellow-500 uppercase">
+                Indonesia Dimata Dunia
+              </small>
+              <h5 className="font-semibold lg:text-2xl tex-base text-gray-800">
+                Candi Borobudur Situs Warisan Dunia
+              </h5>
+            </div>
           </div>
         </div>
       </header>
 
-      <main className="mx-auto container mt-20">
+      <main className="mx-auto container mt-20 lg:px-20 px-10">
         <section>
-          <div className="grid grid-cols-4 gap-10">
-            <div className="col-span-3">
+          <div className="grid lg:grid-cols-4 gap-10">
+            <div className="lg:col-span-3">
               <div className="flex justify-between items-center mb-5">
-                <h2>TRENDING</h2>
-                <a href="">View More</a>
+                <span className="flex gap-2 items-center text-red-500 text-xl font-semibold">
+                  <FaFire />
+                  <h2>TRENDING</h2>
+                </span>
+                <span className="flex items-center gap-2 text-sm hover:underline">
+                  <a href="">View More</a>
+                  <FaArrowRight size={13} />
+                </span>
               </div>
-              <div className="grid grid-cols-3 gap-10">
+              <div className="grid lg:grid-cols-3 grid-cols-2 gap-10">
                 <div>
-                  <img src="https://picsum.photos/id/237/2000/900" alt="" />
-                  <h3 className="text-xl font-bold mt-2">Judul Artikel</h3>
+                  <img src="/images/news/unesco.jpeg" alt="" />
+                  <h3 className="font-bold mt-2">
+                    Bahasa Indonesia Menjadi Bahasa Resmi ke-10 di UNIESCO
+                  </h3>
                 </div>
                 <div>
-                  <img src="https://picsum.photos/id/237/2000/900" alt="" />
-                  <h3 className="text-xl font-bold mt-2">Judul Artikel</h3>
+                  <img src="/images/news/unesco.jpeg" alt="" />
+                  <h3 className="font-bold mt-2">
+                    Bahasa Indonesia Menjadi Bahasa Resmi ke-10 di UNIESCO
+                  </h3>
                 </div>
-                <div>
-                  <img src="https://picsum.photos/id/237/2000/900" alt="" />
-                  <h3 className="text-xl font-bold mt-2">Judul Artikel</h3>
+                <div className="lg:block hidden">
+                  <img src="/images/news/unesco.jpeg" alt="" />
+                  <h3 className="font-bold mt-2">
+                    Bahasa Indonesia Menjadi Bahasa Resmi ke-10 di UNIESCO
+                  </h3>
                 </div>
               </div>
             </div>
-            <div className="border p-10 relative">
-              <div className="bg-purple-500 w-[50px] h-[50px] text-white flex items-center justify-center absolute top-0 left-[20px] -translate-y-1/2">
+            <div className="border p-7 relative">
+              <div className="bg-red-500 w-[50px] h-[50px] text-white flex items-center justify-center absolute top-0 left-[20px] lg:-translate-y-1/2">
                 <FaEnvelope size={20} />
               </div>
-              <h3 className="mb-5 mt-6">
+              <h3 className="mb-5 lg:mt-6 mt-12">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Veritatis,
               </h3>
@@ -86,7 +107,7 @@ export default function News() {
                 className="border w-full py-3 px-3"
                 placeholder="Email Address"
               />
-              <button className="bg-purple-500 px-5 py-2 rounded-full text-white mt-5">
+              <button className="bg-red-500 px-10 py-2 rounded-full text-white mt-5 text-sm">
                 Subscribe
               </button>
             </div>
@@ -98,7 +119,7 @@ export default function News() {
             <div className="grid grid-cols-5 items-center gap-10 mb-5">
               <div className="col-span-2">
                 <img
-                  src="https://picsum.photos/id/237/2000/900"
+                  src="/images/news/serenTaun.jpg"
                   className="w-full h-[250px] rounded object-cover"
                 />
               </div>
