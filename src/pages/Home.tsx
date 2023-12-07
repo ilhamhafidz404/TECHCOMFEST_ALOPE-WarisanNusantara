@@ -94,7 +94,7 @@ export default function Home(language: any) {
               data-aos-delay="900"
             >
               <img
-                src="/images/header/subheader2.jpg"
+                src="/images/header/subheader2_thumb.jpg"
                 alt="subheader1"
                 className="lg:w-[170px] w-full lg:h-[170px] h-[100px] rounded-md object-cover"
               />
@@ -106,7 +106,7 @@ export default function Home(language: any) {
               data-aos-delay="600"
             >
               <img
-                src="/images/header/subheader1.jpg"
+                src="/images/header/subheader1_thumb.jpg"
                 alt="subheader1"
                 className="lg:w-[170px] w-full lg:h-[170px] h-[100px] rounded-md object-cover"
               />
@@ -118,7 +118,7 @@ export default function Home(language: any) {
               data-aos-delay="300"
             >
               <img
-                src="/images/header/subheader3.jpg"
+                src="/images/header/subheader3_thumb.jpg"
                 alt="subheader1"
                 className="lg:w-[170px] w-full lg:h-[170px] h-[100px] rounded-md object-cover"
               />
@@ -251,7 +251,7 @@ export default function Home(language: any) {
         <div className="h-[400px] lg:flex hidden lg:justify-start gap-5">
           <div className="h-full w-[40%] -translate-y-10">
             <img
-              src="/images/gallery/11.jpg"
+              src="/images/explore/2.jpg"
               alt=""
               className="h-full w-full object-cover"
               data-aos="fade-up"
@@ -260,7 +260,7 @@ export default function Home(language: any) {
           </div>
           <div className="h-full w-[40%] translate-y-10">
             <img
-              src="/images/gallery/11.jpg"
+              src="/images/explore/1.jpg"
               alt=""
               className="h-full w-full object-cover"
               data-aos="fade-down"
