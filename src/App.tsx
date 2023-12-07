@@ -13,7 +13,7 @@ import News from "./pages/News";
 // components
 import Switcher from "./components/swicher";
 import Footer from "./layouts/footer";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 // importing aos
 import AOS from "aos";
@@ -32,8 +32,18 @@ const BootstrapTooltip = styled(({ className, ...props }: TooltipProps) => (
 }));
 
 export default function App() {
+  const [language, setLanguage] = useState("ID");
+
   const toggleNavigation = () => {
     document.getElementById("navigation")?.classList.toggle("hidden");
+  };
+
+  const switchLanguage = () => {
+    if (language == "ID") {
+      setLanguage("EN");
+    } else {
+      setLanguage("ID");
+    }
   };
 
   useEffect(() => {
@@ -98,6 +108,9 @@ export default function App() {
                 <span
                   id="changeLanguage"
                   className="text-red-500 bg-white dark:bg-gray-900 dark:text-gray-100 hover:text-white hover:bg-red-500 transition-all cursor-pointer  w-[30px] h-[30px] flex items-center justify-center rounded-full"
+                  onClick={() => {
+                    switchLanguage();
+                  }}
                 >
                   <IoLanguage size={20} />
                 </span>
@@ -133,7 +146,7 @@ export default function App() {
           </section>
         </nav>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home language={language} />} />
           <Route path="/ragam-indonesia" element={<RagamIndonesia />} />
           <Route path="/news" element={<News />} />
         </Routes>

@@ -1,13 +1,10 @@
-import { useState } from "react";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
+
+import content from "./../data/content.json";
 
 // icons
 import {
@@ -28,7 +25,13 @@ import {
   MdKeyboardDoubleArrowUp,
 } from "react-icons/md";
 
-export default function Home() {
+export default function Home(language: any) {
+  const [lang, setLang] = useState("ID");
+
+  useEffect(() => {
+    setLang(language.language);
+  }, [language]);
+
   const [open, setOpen] = useState(false);
 
   const changeHeaderImg = (img: any) => {
@@ -80,10 +83,7 @@ export default function Home() {
               data-aos="fade-right"
               data-aos-delay="100"
             >
-              Indonesia, dengan 300 suku lebih, menyimpan kekayaan budaya unik
-              dalam bahasa, adat, seni, dan kuliner. Warisan ini tidak hanya
-              tanggung jawab kita, tapi juga peluang emas untuk merajut kisah
-              modern Indonesia.
+              {lang == "ID" ? content.header.id : content.header.en}
             </p>
           </div>
           <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-3 lg:gap-5 gap-3 sm:order-2 order-1">
@@ -214,14 +214,20 @@ export default function Home() {
             data-aos="fade-right"
             data-aos-once="true"
           >
-            EXPLORASI KEINDAHAN DAN KEUNIKAN BUDAYA{" "}
-            <span className="relative md:pe-32 pe-16 md:pl-0 pl-16">
-              NUSANTARA
-              <img
-                src="/images/Decore.png"
-                className="absolute bottom-[10px] h-[23px] left-[-25px] w-full -z-10 sm:block hidden"
-              />
-            </span>
+            {lang == "ID" ? (
+              <>
+                {content.explore.header.id}
+                <span className="relative md:pe-32 pe-16 md:pl-0 pl-16">
+                  NUSANTARA
+                  <img
+                    src="/images/Decore.png"
+                    className="absolute bottom-[10px] h-[23px] left-[-25px] w-full -z-10 sm:block hidden"
+                  />
+                </span>
+              </>
+            ) : (
+              content.explore.header.en
+            )}
           </h2>
           <p
             className="text-sm text-gray-800 dark:text-gray-300 mb-10"
@@ -229,12 +235,7 @@ export default function Home() {
             data-aos-once="true"
             data-aos-delay="200"
           >
-            Jangan lewatkan pesona luar biasa dari keberagaman budaya Nusantara!
-            Mari kita sambut dan abadikan kekayaan ini, mulai dari kebiasaan
-            yang unik hingga seni yang memukau. Rasakan pengalaman tak
-            terlupakan dengan menjaga dan merayakan kebudayaan Nusantara
-            bersama-sama. Ayo, mari jaga dan lestarikan warisan budaya kita
-            untuk masa depan yang lebih berwarna!
+            {lang == "ID" ? content.explore.body.id : content.explore.body.en}
           </p>
           <Link
             to="/ragam-indonesia"
@@ -244,7 +245,7 @@ export default function Home() {
             data-aos-delay="500"
           >
             <FaMapMarkerAlt size={20} />
-            Explorasi Sekarang
+            {lang == "ID" ? "Explorasi Sekarang" : "Explore Now"}
           </Link>
         </div>
         <div className="h-[400px] lg:flex hidden lg:justify-start gap-5">
@@ -284,7 +285,8 @@ export default function Home() {
             data-aos="fade-right"
             data-aos-once="true"
           >
-            ASPEK BUDAYA DI <span className="text-red-500">INDONESIA</span>
+            {lang == "ID" ? "ASPEK BUDAYA DI " : "CULTURAL ASPECTS IN "}{" "}
+            <span className="text-red-500">INDONESIA</span>
           </h3>
           <p
             className="text-gray-800 dark:text-gray-300 lg:w-2/3 md:w-3/4 w-full md:mx-0 mx-auto md:text-left text-center text-sm mt-5"
@@ -292,12 +294,7 @@ export default function Home() {
             data-aos-delay="300"
             data-aos-once="true"
           >
-            Budaya Indonesia merupakan salah satu budaya yang paling beragam di
-            dunia. Hal ini disebabkan oleh faktor geografis Indonesia yang
-            terdiri dari ribuan pulau dengan berbagai suku bangsa, agama, dan
-            bahasa. Keanekaragaman budaya Indonesia ini tercermin dalam berbagai
-            aspek kehidupan masyarakat, mulai dari bahasa, adat istiadat,
-            kesenian, hingga kuliner.
+            {lang == "ID" ? content.cultureAspect.id : content.cultureAspect.en}
           </p>
         </div>
         <div data-aos="flip-left" data-aos-delay="250" data-aos-once="true">
@@ -316,7 +313,7 @@ export default function Home() {
               </div>
               <div>
                 <h4 className="font-bold text-xl text-white mb-5">
-                  LAGU & MUSIK
+                  {lang == "ID" ? "LAGU & MUSIK" : "SONG & MUSIC"}
                 </h4>
                 <p className="text-gray-200 text-sm">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -341,8 +338,10 @@ export default function Home() {
                 </p>
               </div>
               <div>
-                <h4 className="font-bold text-xl text-white mb-5">
-                  ARSITEKTUR BANGUNAN
+                <h4 className="font-bold text-xl uppercase text-white mb-5">
+                  {lang == "ID"
+                    ? "ARSITEKTUR BANGUNAN"
+                    : "building architecture"}
                 </h4>
                 <p className="text-gray-200 text-sm">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -367,7 +366,9 @@ export default function Home() {
                 </p>
               </div>
               <div>
-                <h4 className="font-bold text-xl text-white mb-5">UPACARA</h4>
+                <h4 className="font-bold text-xl text-white mb-5">
+                  {lang == "ID" ? "UPACARA" : "CEREMONY"}
+                </h4>
                 <p className="text-gray-200 text-sm">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Distinctio earum dolore
@@ -391,7 +392,9 @@ export default function Home() {
                 </p>
               </div>
               <div>
-                <h4 className="font-bold text-xl text-white mb-5">PAKAIAN</h4>
+                <h4 className="font-bold text-xl text-white mb-5">
+                  {lang == "ID" ? "PAKAIAN" : "CLOTHES"}
+                </h4>
                 <p className="text-gray-200 text-sm">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Distinctio earum dolore
@@ -402,7 +405,7 @@ export default function Home() {
         </div>
         <div className="lg:col-span-4 md:col-span-2 text-center mt-8">
           <button className="bg-red-500 hover:bg-red-400 text-white py-3 px-10 text-sm rounded-full">
-            Lihat Lebih Banyak
+            {lang == "ID" ? "Lihat Lebih Banyak" : "View More"}
           </button>
         </div>
       </section>
@@ -478,11 +481,10 @@ export default function Home() {
           data-aos-delay="800"
         >
           <h2 className="font-semibold text-xl dark:text-gray-200">
-            INDONESIA KAYA AKAN KERAGAMAN BUDAYA
+            {lang == "ID" ? content.gallery.id : content.gallery.en}
           </h2>
           <p className="text-sm mt-3 text-gray-700 dark:text-gray-300">
-            Keragaman ini tidak hanya sekadar warisan, melainkan sumber
-            inspirasi yang tak terbatas untuk terus dijelajahi dan dikembangkan.
+            {lang == "ID" ? content.gallery.body.id : content.gallery.body.en}
           </p>
         </div>
         <div className="lg:order-8  order-5 lg:block md:hidden">
@@ -556,17 +558,16 @@ export default function Home() {
           data-aos-once="true"
           data-aos="fade-down"
         >
-          INDONESIA DIMATA DUNIA
+          {lang == "ID"
+            ? "GALERI KERAGAMAN INDONESIA"
+            : "INDONESIAN DIVERSITY GALLERY"}
         </h3>
         <p
           className="lg:w-[900px] w-[90%] text-center mx-auto md:text-base text-sm mt-5 mb-10 dark:text-gray-300 text-gray-700"
           data-aos-once="true"
           data-aos="fade-up"
         >
-          Kami memiliki dedikasi tinggi untuk melestarikan kekayaan budaya
-          Indonesia yang luar biasa. Melalui berbagai kegiatan, kami berupaya
-          untuk memahami, merawat, dan menghidupkan kembali warisan budaya yang
-          berharga ini.
+          {lang == "ID" ? content.slider.id : content.slider.en}
         </p>
         <div
           className="slider h-[500px] overflow-x-hidden py-10 relative"
@@ -642,11 +643,14 @@ export default function Home() {
       >
         <div className="bg-red-200 dark:bg-red-400 py-12 text-center rounded-md px-20">
           <h4 className="text-gray-800 dark:text-gray-300">
-            INDONESIA DIMATA DUNIA
+            {lang == "ID"
+              ? "INDONESIA DIMATA DUNIA"
+              : "Indonesia in the eyes of the world"}
           </h4>
           <h3 className="font-bold md:text-3xl text-xl mt-5 dark:text-gray-200">
-            "Sopan Santun dalam Keanekaragaman🤝✨, 👣Jejak Budaya yang
-            Membahana di Seluruh Dunia🌍🇮🇩"
+            {lang == "ID"
+              ? content.indonesiaAndWorld.id
+              : content.indonesiaAndWorld.en}
           </h3>
         </div>
       </section>
