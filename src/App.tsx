@@ -36,6 +36,7 @@ export default function App() {
 
   const toggleNavigation = () => {
     document.getElementById("navigation")?.classList.toggle("hidden");
+    document.querySelector("nav")?.classList.add("!bg-black");
   };
 
   const switchLanguage = () => {

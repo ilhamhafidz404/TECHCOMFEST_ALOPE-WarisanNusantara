@@ -46,6 +46,10 @@ export default function Home(language: any) {
 
   const [moreNews, setMoreNews] = useState(false);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <header className="grid lg:grid-cols-2 relative z-10">

@@ -117,3 +117,21 @@ header:hover #sliderControlArrow #prev {
   box-shadow: none !important;
   cursor: pointer;
 }
+
+#blink {
+  animation: blink 6s infinite;
+}
+
+@keyframes blink {
+  0% {
+    left: -500px;
+  }
+
+  50% {
+    left: 1000px;
+  }
+
+  100% {
+    left: -500px;
+  }
+}
