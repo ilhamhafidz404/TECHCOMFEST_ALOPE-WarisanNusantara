@@ -9,6 +9,7 @@ import { IoLanguage } from "react-icons/io5";
 // pages
 import Home from "./pages/Home";
 import News from "./pages/News";
+import Detail from "./pages/Detail";
 
 // components
 import Switcher from "./components/swicher";
@@ -150,6 +151,7 @@ export default function App() {
           <Route path="/" element={<Home language={language} />} />
           <Route path="/ragam-indonesia" element={<RagamIndonesia />} />
           <Route path="/news" element={<News />} />
+          <Route path="/news/read" element={<Detail />} />
         </Routes>
         <Footer />
       </Router>
