@@ -43,6 +43,24 @@ export default function Detail() {
             kwintal sebagai benih. Angka 20 mencerminkan unsur anatomi tubuh
             manusia.
           </p>
+          <p className="text-medium mb-3">
+            Baik laki-aki ataupun perempuan memiliki 20 sifat wujud manusia,
+            adalah : 1. getih atau darah, 2. daging, 3. bulu, 4. kuku, 5.
+            rambut, 6. kulit, 7. urat, 8. polo atau otak, 9. bayah atau paru,
+            10. ari atau hati, 11. kalilipa atau limpa, 12. mamaras atau maras,
+            13. hamperu ataun empedu, 14. tulang, 15. sumsum, 16. lamad atau
+            lemak, 17. gegembung atau lambung. 18. peujit atau usus. 19. ginjal
+            dan 20. jantung.
+          </p>
+          <p className="text-medium mb-3">
+            Ke 20 sifat diatas menyatukan organ dan sel tubuh dengan fungsi yang
+            beraneka ragam, atau dengan kata lain tubuh atau jasmani dipandang
+            sebagai suatu struktur hidup yang memiliki proses seperti hukum
+            adikodrati. Hukum adikodrati ini kemudian menjelma menjadi jirim (
+            raga ), jisim ( nurani ) dan pengakuan ( aku ). Sedangkan bilangan 2
+            mengacu pada pengertian bahwa kehidupan siang dan malam, suka duka,
+            baik buruk dan sebaginya.
+          </p>
         </div>
         {/* <div className="">
           <p className="text-medium mb-3">
