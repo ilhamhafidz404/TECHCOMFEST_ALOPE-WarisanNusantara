@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 
 // icons
-import { FaBars, FaHome, FaNewspaper } from "react-icons/fa";
+import { FaBars, FaBell, FaGlobe, FaHome, FaNewspaper } from "react-icons/fa";
 import { IoLanguage } from "react-icons/io5";
 
 // pages
@@ -19,6 +19,7 @@ import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import RagamIndonesia from "./pages/RagamIndoneisa";
+import Subscription from "./pages/subscription";
 
 const BootstrapTooltip = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} arrow classes={{ popper: className }} />
@@ -33,10 +34,14 @@ const BootstrapTooltip = styled(({ className, ...props }: TooltipProps) => (
 
 export default function App() {
   const [language, setLanguage] = useState("ID");
+  let navOpen: boolean = false;
 
   const toggleNavigation = () => {
     document.getElementById("navigation")?.classList.toggle("hidden");
     document.querySelector("nav")?.classList.add("!bg-black");
+    document.querySelector("nav section div h2")?.classList.add("!text-white");
+
+    navOpen = !navOpen;
   };
 
   const switchLanguage = () => {
@@ -55,19 +60,27 @@ export default function App() {
     const changeLanguage = document.querySelector(
       "#changeLanguage"
     ) as HTMLElement;
+    const h2Nav = document.querySelector("nav section div h2") as HTMLElement;
 
     const handleScroll = () => {
-      nav.classList.toggle("!bg-black", window.scrollY > 200);
+      console.log(navOpen);
       nav.classList.toggle("!py-5", window.scrollY > 200);
-      nav.classList.toggle("!px-20", window.scrollY > 200);
-      nav.classList.toggle("!text-white", window.scrollY > 200);
+      nav.classList.toggle("!px-5", window.scrollY > 200);
+      nav.classList.toggle("lg:!px-20", window.scrollY > 200);
+      nav.classList.toggle("md:!px-16", window.scrollY > 200);
 
-      //
-      modeToggle.classList.toggle("bg-white", window.scrollY < 200);
-      modeToggle.classList.toggle("!text-white", window.scrollY > 200);
-      //
-      changeLanguage.classList.toggle("bg-white", window.scrollY < 200);
-      changeLanguage.classList.toggle("!text-white", window.scrollY > 200);
+      if (!navOpen) {
+        nav.classList.toggle("!bg-black", window.scrollY > 200);
+        nav.classList.toggle("!text-white", window.scrollY > 200);
+        //
+        modeToggle.classList.toggle("bg-white", window.scrollY < 200);
+        modeToggle.classList.toggle("!text-white", window.scrollY > 200);
+        //
+        changeLanguage.classList.toggle("bg-white", window.scrollY < 200);
+        changeLanguage.classList.toggle("!text-white", window.scrollY > 200);
+
+        h2Nav.classList.toggle("!text-white", window.scrollY > 200);
+      }
     };
 
     // Attach the event listener
@@ -78,17 +91,18 @@ export default function App() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <>
       <Router>
-        <nav className="fixed left-0 right-0 bg-transparent z-50 text-black py-10 px-24 transition-all duration-500">
+        <nav className="fixed left-0 right-0 bg-transparent z-50 lg:text-black text-white lg:py-10 md:py-8 py-6 lg:px-24 md:px-12 px-5 transition-all duration-500">
           <section className="flex justify-between">
             <div className="w-1/2">
-              <h2 className="font-bold text-2xl font-dancing-script w-full dark:text-gray-200">
+              <h2 className="font-bold lg:text-black md:text-2xl text-xl font-dancing-script w-full dark:text-gray-200">
                 <Link to={"/"}>Warisan Nusantara</Link>
               </h2>
             </div>
-            <div className="flex gap-10 items-center justify-end w-1/4">
+            <div className="md:flex hidden gap-10 items-center justify-end w-1/4">
               <BootstrapTooltip
                 title={"Dark Mode"}
                 placement="bottom"
@@ -96,7 +110,7 @@ export default function App() {
               >
                 <span
                   id="changeMode"
-                  className="text-red-500 bg-white dark:bg-gray-900 dark:text-gray-100 hover:text-white hover:bg-red-500 transition-all cursor-pointer  w-[30px] h-[30px] flex items-center justify-center rounded-full"
+                  className="text-red-500 bg-white dark:bg-gray-900 dark:text-gray-100 hover:text-white hover:bg-red-500 transition-all cursor-pointer min-w-[30px] h-[30px] flex items-center justify-center rounded-full"
                 >
                   <Switcher />
                 </span>
@@ -108,7 +122,7 @@ export default function App() {
               >
                 <span
                   id="changeLanguage"
-                  className="text-red-500 bg-white dark:bg-gray-900 dark:text-gray-100 hover:text-white hover:bg-red-500 transition-all cursor-pointer  w-[30px] h-[30px] flex items-center justify-center rounded-full"
+                  className="text-red-500 bg-white dark:bg-gray-900 dark:text-gray-100 hover:text-white hover:bg-red-500 transition-all cursor-pointer min-w-[30px] h-[30px] flex items-center justify-center rounded-full"
                   onClick={() => {
                     switchLanguage();
                   }}
@@ -127,20 +141,43 @@ export default function App() {
                 </button>
               </div>
             </div>
+            <div className="md:hidden flex gap-10 items-center justify-end w-1/4">
+              <div className="w-1/4 text-right text-white">
+                <button
+                  onClick={() => {
+                    toggleNavigation();
+                  }}
+                >
+                  <FaBars />
+                </button>
+              </div>
+            </div>
           </section>
           <section id="navigation" className="hidden gap-12">
             <hr className="my-5 border-gray-800" />
             <div className="flex">
               <Link to="/">
-                <span className="cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black px-3">
-                  <FaHome />
+                <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
+                  <FaHome className="md:inline-block hidden" />
                   Beranda
                 </span>
               </Link>
               <Link to="/news">
-                <span className="cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black px-3">
-                  <FaNewspaper />
+                <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
+                  <FaNewspaper className="md:inline-block hidden" />
                   Berita
+                </span>
+              </Link>
+              <Link to="/ragam-indonesia">
+                <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
+                  <FaGlobe className="md:inline-block hidden" />
+                  Ragam
+                </span>
+              </Link>
+              <Link to="/subscription">
+                <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
+                  <FaBell className="md:inline-block hidden" />
+                  Subscription
                 </span>
               </Link>
             </div>
@@ -150,9 +187,28 @@ export default function App() {
           <Route path="/" element={<Home language={language} />} />
           <Route path="/ragam-indonesia" element={<RagamIndonesia />} />
           <Route path="/news" element={<News />} />
+          <Route path="/subscription" element={<Subscription />} />
         </Routes>
         <Footer />
       </Router>
+
+      <section className="fixed bottom-0 right-0 m-5 block md:hidden">
+        <span
+          id="changeMode"
+          className="text-white bg-red-500 dark:bg-gray-900 dark:text-gray-100 hover:text-white hover:bg-red-500 transition-all cursor-pointer min-w-[30px] h-[30px] flex items-center justify-center rounded-full mb-3"
+        >
+          <Switcher />
+        </span>
+        <span
+          id="changeLanguage"
+          className="text-white bg-red-500 dark:bg-gray-900 dark:text-gray-100 hover:text-white hover:bg-red-500 transition-all cursor-pointer min-w-[30px] h-[30px] flex items-center justify-center rounded-full"
+          onClick={() => {
+            switchLanguage();
+          }}
+        >
+          <IoLanguage size={20} />
+        </span>
+      </section>
     </>
   );
 }

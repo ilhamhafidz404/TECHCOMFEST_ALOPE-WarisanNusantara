@@ -58,7 +58,7 @@ const prevSlider = () => {
 export default function HeaderSlider() {
   return (
     <>
-      <header className="h-[700px] relative bg-[#190e0b] pt-[50px]">
+      <header className="h-[700px] relative">
         <section
           id="slider1"
           className="transition-all duration-500 left-0 h-full flex justify-between bg-cover bg-center relative text-white after:content-[''] after:bg-black/50 after:absolute after:inset-0"

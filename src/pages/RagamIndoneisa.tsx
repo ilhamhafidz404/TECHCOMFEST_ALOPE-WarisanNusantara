@@ -23,7 +23,6 @@ export default function RagamIndonesia() {
         <RumahAdat />
         <MakananKhas />
       </main>
-      <InfiniteSlider />
     </>
   );
 }

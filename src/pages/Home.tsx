@@ -86,6 +86,7 @@ export default function Home(language: any) {
               className="text-sm text-gray-800 dark:text-gray-200 lg:text-right text-left"
               data-aos="fade-right"
               data-aos-delay="100"
+              data-aos-once="true"
             >
               {lang == "ID" ? content.header.id : content.header.en}
             </p>
@@ -96,6 +97,7 @@ export default function Home(language: any) {
               onClick={() => setOpen(true)}
               data-aos="fade-left"
               data-aos-delay="900"
+              data-aos-once="true"
             >
               <img
                 src="/images/header/subheader2_thumb.jpg"
@@ -108,6 +110,7 @@ export default function Home(language: any) {
               onClick={() => setOpen(true)}
               data-aos="fade-left"
               data-aos-delay="600"
+              data-aos-once="true"
             >
               <img
                 src="/images/header/subheader1_thumb.jpg"
@@ -120,6 +123,7 @@ export default function Home(language: any) {
               onClick={() => setOpen(true)}
               data-aos="fade-left"
               data-aos-delay="300"
+              data-aos-once="true"
             >
               <img
                 src="/images/header/subheader3_thumb.jpg"
