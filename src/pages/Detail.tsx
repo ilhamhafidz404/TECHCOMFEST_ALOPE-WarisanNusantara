@@ -26,25 +26,22 @@ export default function Detail() {
       <div className="grid grid-cols-2 m-14">
         <div className="">
           <p className="text-medium mb-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quam
-            repellat porro, et aliquam facilis, ipsum quos possimus sequi
-            corrupti tenetur sit. Molestias necessitatibus, reiciendis
-            asperiores, repellendus laborum velit non error illum similique
-            voluptatem beatae.
+            Upacara seren taun: ungkapan syukur masyarakat Sunda atas pertanian
+            setahun. Dilaksanakan tiap 22 Bulan Rayagung dengan ritual,
+            kesenian, dan hubungan manusia dengan Tuhan, sesama, dan alam.
           </p>
           <p className="text-medium mb-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quam
-            repellat porro, et aliquam facilis, ipsum quos possimus sequi
-            corrupti tenetur sit. Molestias necessitatibus, reiciendis
-            asperiores, repellendus laborum velit non error illum similique
-            voluptatem beatae.
+            Upacara Seren Taun: Ngajayak (Menjemput Padi) dimulai tanggal 18
+            Rayagung, penumbukan padi, puncaknya tanggal 22 Rayagung. Ngajayak
+            pada "dalapan welas" (18) mencerminkan welas asih Tuhan bagi
+            kehidupan umat-Nya di seluruh dunia.
           </p>
           <p className="text-medium mb-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quam
-            repellat porro, et aliquam facilis, ipsum quos possimus sequi
-            corrupti tenetur sit. Molestias necessitatibus, reiciendis
-            asperiores, repellendus laborum velit non error illum similique
-            voluptatem beatae.
+            Puncak Seren Taun pada tanggal 22 Rayagung, diwakili oleh penumbukan
+            22 kwintal padi, memiliki makna khusus. Angka 22 terdiri dari 20
+            kwintal padi yang ditumbuk dan dibagikan ke masyarakat, serta 2
+            kwintal sebagai benih. Angka 20 mencerminkan unsur anatomi tubuh
+            manusia.
           </p>
         </div>
         <div className="ml-64">
