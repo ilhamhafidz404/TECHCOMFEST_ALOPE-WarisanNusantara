@@ -320,8 +320,9 @@ export default function Home(language: any) {
                   {lang == "ID" ? "LAGU & MUSIK" : "SONG & MUSIC"}
                 </h4>
                 <p className="text-gray-200 text-sm">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Distinctio earum dolore
+                  Nikmati keindahan seni musik Bonang di Jawa Timur. Temukan
+                  harmoni yang khas dan cerita yang tersembunyi di setiap
+                  nadanya.
                 </p>
               </div>
             </div>
@@ -348,8 +349,8 @@ export default function Home(language: any) {
                     : "building architecture"}
                 </h4>
                 <p className="text-gray-200 text-sm">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Distinctio earum dolore
+                  Temukan keunikan dan harmoni arsitektur rumah panggung di
+                  Sulawesi Selatan, simbol budaya yang kaya.
                 </p>
               </div>
             </div>
@@ -374,8 +375,8 @@ export default function Home(language: any) {
                   {lang == "ID" ? "UPACARA" : "CEREMONY"}
                 </h4>
                 <p className="text-gray-200 text-sm">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Distinctio earum dolore
+                  Temukan ungkapan syukur atas pertanian setahun. Rasakan
+                  keharmonisan manusia, Tuhan, dan alam dalam budaya unik.
                 </p>
               </div>
             </div>
@@ -400,8 +401,8 @@ export default function Home(language: any) {
                   {lang == "ID" ? "PAKAIAN" : "CLOTHES"}
                 </h4>
                 <p className="text-gray-200 text-sm">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Distinctio earum dolore
+                  Dengan desain dan corak yang beragam, busana tradisional Sunda
+                  mencerminkan kekayaan budaya dan identitas khas masyarakatnya.
                 </p>
               </div>
             </div>
