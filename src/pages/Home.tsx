@@ -312,7 +312,7 @@ export default function Home(language: any) {
               <div>
                 <p className="text-white flex items-center gap-2">
                   <FaMapMarkerAlt />
-                  <small>Seren Taun, Jawa Barat</small>
+                  <small>Bonang, Jawa Timur</small>
                 </p>
               </div>
               <div>
@@ -366,7 +366,7 @@ export default function Home(language: any) {
               <div>
                 <p className="text-white flex items-center gap-2">
                   <FaMapMarkerAlt />
-                  <small>Bonang, Jawa Timur</small>
+                  <small>Seren Taun, Jawa Barat</small>
                 </p>
               </div>
               <div>
