@@ -44,6 +44,27 @@ export default function Detail() {
             manusia.
           </p>
         </div>
+        {/* <div className="">
+          <p className="text-medium mb-3">
+            "Seren Taun Ceremony: The expression of gratitude by the Sundanese
+            community for a year of agriculture. Conducted every 22nd month of
+            Rayagung with rituals, arts, and the relationship between humans,
+            God, fellow beings, and nature."
+          </p>
+          <p className="text-medium mb-3">
+            "Seren Taun Ceremony: Ngajayak (Harvesting) begins on the 18th day
+            of Rayagung, with rice pounding, reaching its peak on the 22nd day
+            of Rayagung. Ngajayak on the "dalapan welas" (18) reflects God's
+            compassion for the lives of His people worldwide."
+          </p>
+          <p className="text-medium mb-3">
+            "The pinnacle of the Seren Taun on the 22nd day of Rayagung is
+            represented by the pounding of 22 quintals of rice, holding special
+            significance. The number 22 comprises 20 quintals of rice that are
+            pounded and distributed to the community, and 2 quintals as seeds.
+            The number 20 reflects the anatomical elements of the human body."
+          </p>
+        </div> */}
         <div className="ml-64">
           <img src="/images/avatar.png" className="w-[100px] rounded" />
           <h1 className="font-bold mt-4">Ilham Hafidz</h1>
