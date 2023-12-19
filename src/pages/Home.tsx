@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Image } from "react-image-and-background-image-fade";
 
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
@@ -685,32 +686,28 @@ export default function Home(language: any) {
             data-aos="fade-right"
           >
             <h5 className="text-red-500 font-semibold mb-5">RAGAM BERITA</h5>
-            <h2 className="font-bold md:text-3xl text-2xl dark:text-gray-200">
-              INDONESIA DENGAN KEBERAGAMAN BUDAYA INDONESIA
-            </h2>
+            <Link to="/news/read">
+              <h2 className="font-bold md:text-3xl text-2xl dark:text-gray-200">
+                {lang == "ID"
+                  ? "INDONESIA DENGAN KEBERAGAMAN BUDAYA NUSANTARA YANG MENDUNIA"
+                  : "INDONESIA WITH THE WORLD'S DIVERSITY OF ARCHIPELAGO CULTURE"}
+              </h2>
+            </Link>
             <p className="text-gray-800 mt-5 md:text-base text-sm dark:text-gray-300">
-              Temukan keindahan ragam budaya di Indonesia, tempat di mana
-              tradisi dan keberagaman menjadi kekuatan bersama. Dari tarian
-              hingga kuliner, setiap elemen mencerminkan kekayaan dan keunikan
-              yang membuat Indonesia istimewa. Mari menjelajahi dan merayakan
-              keberagaman yang memperkaya bumi Nusantara.
-              {/* Discover the beauty of
-              cultural diversity in Indonesia, a place where traditions and
-              variety become a collective strength. From dance to culinary
-              delights, each element reflects the richness and uniqueness that
-              make Indonesia special. Let's explore and celebrate the diversity
-              that enriches the archipelago. */}
+              {lang == "ID"
+                ? content.news.highlight.id
+                : content.news.highlight.en}
             </p>
             <div className="flex gap-5 mt-10 text-gray-600 dark:text-gray-400 md:text-base text-sm">
-              <span className="flex gap-2">
+              <span className="flex gap-2 items-center">
                 <FaEye />
                 <small>2.000 views</small>
               </span>
-              <span className="flex gap-2">
+              <span className="flex gap-2 items-center">
                 <FaHeart />
                 <small>2.000 suka</small>
               </span>
-              <span className="flex gap-2">
+              <span className="flex gap-2 items-center">
                 <FaComment />
                 <small>2.000 komentar</small>
               </span>
@@ -733,11 +730,14 @@ export default function Home(language: any) {
                 <img
                   src="/images/festivalbali.jpeg"
                   alt="news1"
-                  className="h-[300px] object-cover w-full"
+                  className="h-[250px] object-cover w-full rounded"
                 />
-                <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-                  Festival Bali Arts
-                </h3>
+
+                <Link to="/news/read">
+                  <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
+                    {lang == "ID" ? "Festival Bali Arts" : "Bali Arts Festival"}
+                  </h3>
+                </Link>
                 <div className="my-5 flex gap-5">
                   <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
                     <FaUser />
@@ -749,29 +749,24 @@ export default function Home(language: any) {
                   </span>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-                  Setiap tahun, Festival Seni Bali menyoroti kekayaan budaya
-                  dengan durasi sebulan, memamerkan seni, musik, tarian, dan
-                  literatur Bali. Festival Seni Bali 2023 akan digelar dari 18
-                  Juni hingga 16 Juli di Taman Werdhi Budaya Art Centre,
-                  menandai 45 tahun peringatan festival ini.
-                  {/* Every year, the
-                  Bali Arts Festival highlights the cultural richness with a
-                  month-long celebration showcasing the arts, music, dance, and
-                  literature of Bali. The Bali Arts Festival 2023 is scheduled
-                  to take place from June 18 to July 16 at the Taman Werdhi
-                  Budaya Art Centre, marking the 45th anniversary of the
-                  festival. */}
+                  {lang == "ID"
+                    ? content.news.sub.sub1.id
+                    : content.news.sub.sub1.en}
                 </p>
               </div>
               <div>
                 <img
                   src="/images/dalangcilik.jpg"
                   alt="news2"
-                  className="h-[300px] object-cover w-full"
+                  className="h-[250px] object-cover w-full rounded"
                 />
-                <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-                  Festival Dalang Cilik
-                </h3>
+                <Link to="/news/read">
+                  <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
+                    {lang == "ID"
+                      ? "Festival Dalang Cilik"
+                      : "'Dalang Cilik' Festival"}
+                  </h3>
+                </Link>
                 <div className="my-5 flex gap-5">
                   <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
                     <FaUser />
@@ -783,27 +778,22 @@ export default function Home(language: any) {
                   </span>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-                  Sepuluh dalang cilik di Semarang tampil dalam Festival Dalang
-                  Cilik, Rabu (22/11), di Gedung Ki Narto Sabdo, Taman Budaya
-                  Raden Saleh. Festival ini tidak hanya mencari bakat dalang
-                  muda, tetapi juga bertujuan melestarikan seni budaya
-                  nusantara.
-                  {/* Ten young puppeteers in Semarang showcased their skills at the
-                  Puppeteer Festival on Wednesday (22/11) at Ki Narto Sabdo
-                  Building, Raden Saleh Cultural Park. The festival not only
-                  seeks to discover young puppetry talents but also aims to
-                  preserve the cultural arts of the archipelago. */}
+                  {lang == "ID"
+                    ? content.news.sub.sub2.id
+                    : content.news.sub.sub2.en}
                 </p>
               </div>
               <div>
                 <img
                   src="/images/babarit.jpeg"
                   alt="news3"
-                  className="h-[300px] object-cover w-full"
+                  className="h-[250px] object-cover w-full rounded"
                 />
-                <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-                  Festival Babarit
-                </h3>
+                <Link to="/news/read">
+                  <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
+                    {lang == "ID" ? "Festival Babarit" : "Babarit Festival"}
+                  </h3>
+                </Link>
                 <div className="my-5 flex gap-5">
                   <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
                     <FaUser />
@@ -815,16 +805,9 @@ export default function Home(language: any) {
                   </span>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-                  Tradisi Babarit di Kuningan untuk perayaan Milangkala ke-524
-                  (28/8/2022) menonjolkan nilai syukur, pelestarian alam, dan
-                  berbagi. Ciri khasnya termasuk sawer air, Tumpeng, gamelan,
-                  dan tarian.
-                  {/* The Babarit tradition in Kuningan for the celebration of its
-                  524th Milangkala (28/8/2022) emphasizes the values of
-                  gratitude, environmental conservation, and sharing. Its
-                  distinctive features include the pouring of water from four
-                  directions, Tumpeng (cone-shaped rice dish), gamelan music,
-                  and traditional dances. */}
+                  {lang == "ID"
+                    ? content.news.sub.sub3.id
+                    : content.news.sub.sub3.en}
                 </p>
               </div>
             </section>

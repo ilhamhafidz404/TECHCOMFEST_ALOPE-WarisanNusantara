@@ -14,13 +14,13 @@ import Detail from "./pages/Detail";
 // components
 import Switcher from "./components/swicher";
 import Footer from "./layouts/footer";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 // importing aos
 import AOS from "aos";
 import "aos/dist/aos.css";
-import RagamIndonesia from "./pages/RagamIndoneisa";
-import Subscription from "./pages/subscription";
+import RagamIndonesia from "./pages/RagamIndonesia";
+import Subscription from "./pages/Subscription";
 
 const BootstrapTooltip = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} arrow classes={{ popper: className }} />
@@ -208,7 +208,7 @@ export default function App() {
           <Route path="/ragam-indonesia" element={<RagamIndonesia />} />
           <Route path="/news" element={<News />} />
           <Route path="/subscription" element={<Subscription />} />
-          <Route path="/news/read" element={<Detail />} />
+          <Route path="/news/read" element={<Detail language={language} />} />
         </Routes>
         <Footer />
       </Router>
