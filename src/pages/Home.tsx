@@ -690,6 +690,12 @@ export default function Home(language: any) {
               hingga kuliner, setiap elemen mencerminkan kekayaan dan keunikan
               yang membuat Indonesia istimewa. Mari menjelajahi dan merayakan
               keberagaman yang memperkaya bumi Nusantara.
+              {/* Discover the beauty of
+              cultural diversity in Indonesia, a place where traditions and
+              variety become a collective strength. From dance to culinary
+              delights, each element reflects the richness and uniqueness that
+              make Indonesia special. Let's explore and celebrate the diversity
+              that enriches the archipelago. */}
             </p>
             <div className="flex gap-5 mt-10 text-gray-600 dark:text-gray-400 md:text-base text-sm">
               <span className="flex gap-2">
@@ -721,12 +727,12 @@ export default function Home(language: any) {
             <section className="lg:grid hidden grid-cols-3 gap-10 px-20 mt-10">
               <div>
                 <img
-                  src="/images/card/arsitektur.jpg"
+                  src="/images/festivalbali.jpeg"
                   alt="news1"
                   className="h-[300px] object-cover w-full"
                 />
                 <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-                  INI JUDUL BERITA
+                  Festival Bali Arts
                 </h3>
                 <div className="my-5 flex gap-5">
                   <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
@@ -739,18 +745,28 @@ export default function Home(language: any) {
                   </span>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
-                  laborum animi, blanditiis harum repudiandae quaerat ipsum
+                  Setiap tahun, Festival Seni Bali menyoroti kekayaan budaya
+                  dengan durasi sebulan, memamerkan seni, musik, tarian, dan
+                  literatur Bali. Festival Seni Bali 2023 akan digelar dari 18
+                  Juni hingga 16 Juli di Taman Werdhi Budaya Art Centre,
+                  menandai 45 tahun peringatan festival ini. 
+                  {/* Every year, the
+                  Bali Arts Festival highlights the cultural richness with a
+                  month-long celebration showcasing the arts, music, dance, and
+                  literature of Bali. The Bali Arts Festival 2023 is scheduled
+                  to take place from June 18 to July 16 at the Taman Werdhi
+                  Budaya Art Centre, marking the 45th anniversary of the
+                  festival. */}
                 </p>
               </div>
               <div>
                 <img
-                  src="/images/card/arsitektur.jpg"
+                  src="/images/dalangcilik.jpg"
                   alt="news2"
                   className="h-[300px] object-cover w-full"
                 />
                 <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-                  INI JUDUL BERITA
+                  Festival Dalang Cilik
                 </h3>
                 <div className="my-5 flex gap-5">
                   <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
@@ -763,18 +779,26 @@ export default function Home(language: any) {
                   </span>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
-                  laborum animi, blanditiis harum repudiandae quaerat ipsum
+                  Sepuluh dalang cilik di Semarang tampil dalam Festival Dalang
+                  Cilik, Rabu (22/11), di Gedung Ki Narto Sabdo, Taman Budaya
+                  Raden Saleh. Festival ini tidak hanya mencari bakat dalang
+                  muda, tetapi juga bertujuan melestarikan seni budaya
+                  nusantara. 
+                  {/* Ten young puppeteers in Semarang showcased their skills at the
+                  Puppeteer Festival on Wednesday (22/11) at Ki Narto Sabdo
+                  Building, Raden Saleh Cultural Park. The festival not only
+                  seeks to discover young puppetry talents but also aims to
+                  preserve the cultural arts of the archipelago. */}
                 </p>
               </div>
               <div>
                 <img
-                  src="/images/card/arsitektur.jpg"
+                  src="/images/babarit.jpeg"
                   alt="news3"
                   className="h-[300px] object-cover w-full"
                 />
                 <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-                  INI JUDUL BERITA
+                  Festival Babarit
                 </h3>
                 <div className="my-5 flex gap-5">
                   <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
@@ -787,8 +811,16 @@ export default function Home(language: any) {
                   </span>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
-                  laborum animi, blanditiis harum repudiandae quaerat ipsum
+                  Tradisi Babarit di Kuningan untuk perayaan Milangkala ke-524
+                  (28/8/2022) menonjolkan nilai syukur, pelestarian alam, dan
+                  berbagi. Ciri khasnya termasuk sawer air, Tumpeng, gamelan,
+                  dan tarian. 
+                  {/* The Babarit tradition in Kuningan for the celebration of its
+                  524th Milangkala (28/8/2022) emphasizes the values of
+                  gratitude, environmental conservation, and sharing. Its
+                  distinctive features include the pouring of water from four
+                  directions, Tumpeng (cone-shaped rice dish), gamelan music,
+                  and traditional dances. */}
                 </p>
               </div>
             </section>
