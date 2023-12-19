@@ -64,23 +64,41 @@ export default function Detail() {
         </div>
         {/* <div className="">
           <p className="text-medium mb-3">
-            "Seren Taun Ceremony: The expression of gratitude by the Sundanese
-            community for a year of agriculture. Conducted every 22nd month of
-            Rayagung with rituals, arts, and the relationship between humans,
-            God, fellow beings, and nature."
+            Harvest Festival: A Sundanese expression of gratitude for a year of
+            agriculture. Celebrated every 22nd month of the Sundanese calendar
+            with rituals, arts, and the connection between humans and God,
+            fellow beings, and nature.
           </p>
           <p className="text-medium mb-3">
-            "Seren Taun Ceremony: Ngajayak (Harvesting) begins on the 18th day
-            of Rayagung, with rice pounding, reaching its peak on the 22nd day
-            of Rayagung. Ngajayak on the "dalapan welas" (18) reflects God's
-            compassion for the lives of His people worldwide."
+            Harvest Festival: The "Seren Taun" ceremony, specifically the
+            "Ngajayak" (Harvesting Rice), commences on the 18th day of Rayagung,
+            with the rice pounding reaching its peak on the 22nd day of
+            Rayagung. The "Ngajayak" on the eighteenth day signifies God's
+            compassion for the lives of His people worldwide.
           </p>
           <p className="text-medium mb-3">
-            "The pinnacle of the Seren Taun on the 22nd day of Rayagung is
-            represented by the pounding of 22 quintals of rice, holding special
-            significance. The number 22 comprises 20 quintals of rice that are
-            pounded and distributed to the community, and 2 quintals as seeds.
-            The number 20 reflects the anatomical elements of the human body."
+            The peak of Seren Taun on the 22nd day of Rayagung, represented by
+            the pounding of 22 quintals of rice, holds a special meaning. The
+            number 22 comprises 20 quintals of rice that are pounded and
+            distributed to the community, while 2 quintals serve as seeds. The
+            number 20 reflects the anatomical elements of the human body.
+          </p>
+          <p className="text-medium mb-3">
+            Both males and females possess 20 physical characteristics of the
+            human form, namely: 1. blood, 2. flesh, 3. feathers, 4. nails, 5.
+            hair, 6. skin, 7. veins, 8. brain, 9. lungs, 10. liver, 11. spleen,
+            12. pancreas, 13. gall bladder, 14. bones, 15. marrow, 16. fat, 17.
+            stomach, 18. intestines, 19. kidneys, and 20. heart.
+          </p>
+          <p className="text-medium mb-3">
+            The 20 characteristics mentioned above unite the organs and cells of
+            the body with diverse functions, or in other words, the body or the
+            physical form is seen as a living structure that undergoes processes
+            akin to natural laws. These natural laws then transform into the
+            physical body, the spiritual essence, and
+            acknowledgment. Meanwhile, the number 2 refers to the
+            understanding that life involves day and night, joy and sorrow, good
+            and bad, and so on.
           </p>
         </div> */}
         <div className="ml-64">
