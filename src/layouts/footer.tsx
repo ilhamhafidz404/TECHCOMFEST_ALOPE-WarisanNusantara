@@ -1,11 +1,11 @@
 export default function Footer() {
   return (
     <footer className="bg-black text-white">
-      <section className="container px-20 py-12 mx-auto">
+      <section className="container lg:px-20 md:px-10 px-5 py-12 mx-auto">
         <div className="lg:flex">
           <div className="min-w-[300px]">
             <h3 className="text-3xl font-bold mb-20 md:text-left text-center font-dancing-script">
-              Indonesia Culture
+              Warisan Nusantara
             </h3>
           </div>
           <div className="w-full">
@@ -118,7 +118,9 @@ export default function Footer() {
         </div>
         <div className="col-span-3 text-center">
           <hr className="mb-3 my-14 border-gray-600" />
-          <p>&copy; 2023 ALOPE On Techcomfest</p>
+          <p className="md:text-base text-sm">
+            &copy; 2023 ALOPE On Techcomfest
+          </p>
         </div>
       </section>
     </footer>

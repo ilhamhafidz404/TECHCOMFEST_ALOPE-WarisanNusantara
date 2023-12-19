@@ -63,7 +63,6 @@ export default function App() {
     const h2Nav = document.querySelector("nav section div h2") as HTMLElement;
 
     const handleScroll = () => {
-      console.log(navOpen);
       nav.classList.toggle("!py-5", window.scrollY > 200);
       nav.classList.toggle("!px-5", window.scrollY > 200);
       nav.classList.toggle("lg:!px-20", window.scrollY > 200);
@@ -156,25 +155,45 @@ export default function App() {
           <section id="navigation" className="hidden gap-12">
             <hr className="my-5 border-gray-800" />
             <div className="flex">
-              <Link to="/">
+              <Link
+                to="/"
+                onClick={() => {
+                  toggleNavigation();
+                }}
+              >
                 <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
                   <FaHome className="md:inline-block hidden" />
                   Beranda
                 </span>
               </Link>
-              <Link to="/news">
+              <Link
+                to="/news"
+                onClick={() => {
+                  toggleNavigation();
+                }}
+              >
                 <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
                   <FaNewspaper className="md:inline-block hidden" />
                   Berita
                 </span>
               </Link>
-              <Link to="/ragam-indonesia">
+              <Link
+                to="/ragam-indonesia"
+                onClick={() => {
+                  toggleNavigation();
+                }}
+              >
                 <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
                   <FaGlobe className="md:inline-block hidden" />
                   Ragam
                 </span>
               </Link>
-              <Link to="/subscription">
+              <Link
+                to="/subscription"
+                onClick={() => {
+                  toggleNavigation();
+                }}
+              >
                 <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
                   <FaBell className="md:inline-block hidden" />
                   Subscription
@@ -192,7 +211,7 @@ export default function App() {
         <Footer />
       </Router>
 
-      <section className="fixed bottom-0 right-0 m-5 block md:hidden">
+      <section className="fixed bottom-0 right-0 m-5 block md:hidden z-50">
         <span
           id="changeMode"
           className="text-white bg-red-500 dark:bg-gray-900 dark:text-gray-100 hover:text-white hover:bg-red-500 transition-all cursor-pointer min-w-[30px] h-[30px] flex items-center justify-center rounded-full mb-3"

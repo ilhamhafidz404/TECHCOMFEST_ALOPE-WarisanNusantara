@@ -187,7 +187,7 @@ export default function Home(language: any) {
             <div className="w-[1px] lg:h-[200px] h-[100px] rounded-full bg-white/70 cursor-pointer"></div>
           </div>
           <h1
-            className="absolute lg:left-[10px] left-[40px] sm:-translate-x-0 -translate-x-1/2 md:top-[30%] top-1/2 md:text-8xl sm:text-7xl text-6xl sm:text-left text-center font-semibold text-white z-10"
+            className="absolute lg:left-[10px] left-[40px] sm:-translate-x-0 -translate-x-1/2 md:top-[30%] top-1/2 md:text-8xl sm:text-7xl text-5xl sm:text-left text-center font-semibold text-white z-10"
             data-aos="fade-left"
           >
             <span className="text-red-500 block lg:hidden">INDONESIA</span>
@@ -218,7 +218,7 @@ export default function Home(language: any) {
 
         <div className="md:text-left text-center ">
           <h2
-            className="font-bold sm:text-3xl text-2xl mb-5 dark:text-gray-200"
+            className="font-bold md:text-3xl text-2xl mb-5 dark:text-gray-200"
             data-aos="fade-right"
             data-aos-once="true"
           >
@@ -238,7 +238,7 @@ export default function Home(language: any) {
             )}
           </h2>
           <p
-            className="text-sm text-gray-800 dark:text-gray-300 mb-10"
+            className="md:text-sm text-[12px] text-gray-800 dark:text-gray-300 mb-10"
             data-aos="fade-right"
             data-aos-once="true"
             data-aos-delay="200"
@@ -247,7 +247,7 @@ export default function Home(language: any) {
           </p>
           <Link
             to="/ragam-indonesia"
-            className="px-7 py-3 inline-flex gap-3 items-center bg-red-500 hover:bg-red-400 rounded-full text-white text-sm"
+            className="md:px-7 py-3 px-5 inline-flex gap-3 items-center bg-red-500 hover:bg-red-400 rounded-full text-white md:text-sm text-[12px]"
             data-aos="fade-up"
             data-aos-once="true"
             data-aos-delay="500"
@@ -289,7 +289,7 @@ export default function Home(language: any) {
 
         <div className="lg:col-span-4 md:col-span-2">
           <h3
-            className="font-bold text-3xl md:text-left text-center dark:text-gray-200"
+            className="font-bold md:text-3xl text-2xl md:text-left text-center dark:text-gray-200"
             data-aos="fade-right"
             data-aos-once="true"
           >
@@ -297,7 +297,7 @@ export default function Home(language: any) {
             <span className="text-red-500">INDONESIA</span>
           </h3>
           <p
-            className="text-gray-800 dark:text-gray-300 lg:w-2/3 md:w-3/4 w-full md:mx-0 mx-auto md:text-left text-center text-sm mt-5"
+            className="text-gray-800 dark:text-gray-300 lg:w-2/3 md:w-3/4 w-full md:mx-0 mx-auto md:text-left text-center md:text-sm text-[12px] mt-5"
             data-aos="fade-right"
             data-aos-delay="300"
             data-aos-once="true"
@@ -307,7 +307,7 @@ export default function Home(language: any) {
         </div>
         <div data-aos="flip-left" data-aos-delay="250" data-aos-once="true">
           <div
-            className="lg:h-[500px] md:h-[400px] h-[200px] rounded-md overflow-hidden relative after:content-[''] after:absolute after:inset-0 after:bg-black/40 bg-cover bg-center p-5 md:hover:scale-110 transition-all"
+            className="lg:h-[500px] md:h-[400px] h-[250px] rounded-md overflow-hidden relative after:content-[''] after:absolute after:inset-0 after:bg-black/40 bg-cover bg-center p-5 md:hover:scale-110 transition-all"
             style={{
               backgroundImage: "url(/images/card/musik.jpg)",
             }}
@@ -320,10 +320,10 @@ export default function Home(language: any) {
                 </p>
               </div>
               <div>
-                <h4 className="font-bold text-xl text-white mb-5">
+                <h4 className="font-bold text-xl text-white md:mb-5 mb-2">
                   {lang == "ID" ? "LAGU & MUSIK" : "SONG & MUSIC"}
                 </h4>
-                <p className="text-gray-200 text-sm">
+                <p className="text-gray-200 md:text-sm text-[12px]">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Distinctio earum dolore
                 </p>
@@ -333,7 +333,7 @@ export default function Home(language: any) {
         </div>
         <div data-aos="flip-left" data-aos-delay="500" data-aos-once="true">
           <div
-            className="lg:h-[500px] md:h-[400px] h-[200px] rounded-md overflow-hidden relative after:content-[''] after:absolute after:inset-0 after:bg-black/40 bg-cover bg-center p-5 md:hover:scale-110 transition-all"
+            className="lg:h-[500px] md:h-[400px] h-[250px] rounded-md overflow-hidden relative after:content-[''] after:absolute after:inset-0 after:bg-black/40 bg-cover bg-center p-5 md:hover:scale-110 transition-all"
             style={{
               backgroundImage: "url(/images/card/arsitektur.jpg)",
             }}
@@ -346,12 +346,12 @@ export default function Home(language: any) {
                 </p>
               </div>
               <div>
-                <h4 className="font-bold text-xl uppercase text-white mb-5">
+                <h4 className="font-bold text-xl uppercase text-white md:mb-5 mb-2">
                   {lang == "ID"
                     ? "ARSITEKTUR BANGUNAN"
                     : "building architecture"}
                 </h4>
-                <p className="text-gray-200 text-sm">
+                <p className="text-gray-200 md:text-sm text-[12px]">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Distinctio earum dolore
                 </p>
@@ -361,7 +361,7 @@ export default function Home(language: any) {
         </div>
         <div data-aos-once="true" data-aos="flip-left" data-aos-delay="750">
           <div
-            className="lg:h-[500px] md:h-[400px] h-[200px] rounded-md overflow-hidden relative after:content-[''] after:absolute after:inset-0 after:bg-black/40 bg-cover bg-center p-5 md:hover:scale-110 transition-all"
+            className="lg:h-[500px] md:h-[400px] h-[250px] rounded-md overflow-hidden relative after:content-[''] after:absolute after:inset-0 after:bg-black/40 bg-cover bg-center p-5 md:hover:scale-110 transition-all"
             style={{
               backgroundImage: "url(/images/card/upacara.jpg)",
             }}
@@ -374,10 +374,10 @@ export default function Home(language: any) {
                 </p>
               </div>
               <div>
-                <h4 className="font-bold text-xl text-white mb-5">
+                <h4 className="font-bold text-xl text-white md:mb-5 mb-2">
                   {lang == "ID" ? "UPACARA" : "CEREMONY"}
                 </h4>
-                <p className="text-gray-200 text-sm">
+                <p className="text-gray-200 md:text-sm text-[12px]">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Distinctio earum dolore
                 </p>
@@ -387,7 +387,7 @@ export default function Home(language: any) {
         </div>
         <div data-aos-once="true" data-aos="flip-left" data-aos-delay="1000">
           <div
-            className="lg:h-[500px] md:h-[400px] h-[200px] rounded-md overflow-hidden relative after:content-[''] after:absolute after:inset-0 after:bg-black/40 bg-cover bg-center p-5 md:hover:scale-110 transition-all"
+            className="lg:h-[500px] md:h-[400px] h-[250px] rounded-md overflow-hidden relative after:content-[''] after:absolute after:inset-0 after:bg-black/40 bg-cover bg-center p-5 md:hover:scale-110 transition-all"
             style={{
               backgroundImage: "url(/images/card/pakaian.jpg)",
             }}
@@ -400,10 +400,10 @@ export default function Home(language: any) {
                 </p>
               </div>
               <div>
-                <h4 className="font-bold text-xl text-white mb-5">
+                <h4 className="font-bold text-xl text-white md:mb-5 mb-2">
                   {lang == "ID" ? "PAKAIAN" : "CLOTHES"}
                 </h4>
-                <p className="text-gray-200 text-sm">
+                <p className="text-gray-200 md:text-sm text-[12px]">
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Distinctio earum dolore
                 </p>
@@ -412,7 +412,7 @@ export default function Home(language: any) {
           </div>
         </div>
         <div className="lg:col-span-4 md:col-span-2 text-center mt-8">
-          <button className="bg-red-500 hover:bg-red-400 text-white py-3 px-10 text-sm rounded-full">
+          <button className="bg-red-500 hover:bg-red-400 text-white md:py-3 py-2 md:px-10 px-7 md:text-sm text-[12px] rounded-full">
             {lang == "ID" ? "Lihat Lebih Banyak" : "View More"}
           </button>
         </div>
@@ -562,7 +562,7 @@ export default function Home(language: any) {
 
       <section className="mt-20 dark:bg-gray-950 pt-20">
         <h3
-          className="text-center md:text-4xl text-3xl font-bold dark:text-gray-100"
+          className="text-center md:text-4xl text-2xl font-bold dark:text-gray-100"
           data-aos-once="true"
           data-aos="fade-down"
         >
@@ -571,72 +571,72 @@ export default function Home(language: any) {
             : "INDONESIAN DIVERSITY GALLERY"}
         </h3>
         <p
-          className="lg:w-[900px] w-[90%] text-center mx-auto md:text-base text-sm mt-5 mb-10 dark:text-gray-300 text-gray-700"
+          className="lg:w-[900px] w-[90%] text-center mx-auto md:text-base text-[13px] mt-5 mb-10 dark:text-gray-300 text-gray-700"
           data-aos-once="true"
           data-aos="fade-up"
         >
           {lang == "ID" ? content.slider.id : content.slider.en}
         </p>
         <div
-          className="slider h-[500px] overflow-x-hidden py-10 relative"
+          className="slider md:h-[500px] h-[350px] overflow-x-hidden py-10 relative"
           data-aos-once="true"
           data-aos="fade-left"
           data-aos-delay="300"
         >
-          <div className="slide-track flex gap-20 items-center">
-            <div className="slide">
+          <div className="slide-track flex md:gap-20 gap-10 items-center">
+            <div className="md:w-[500px] w-[200px] slide">
               <img
                 src="/images/gallery/1.jpg"
-                className="w-[500px] h-[300px] object-cover rounded-lg"
+                className="md:w-[500px] w-[200px] md:h-[300px] h-[150px] object-cover rounded-lg"
                 alt=""
               />
             </div>
-            <div className="slide">
+            <div className="md:w-[500px] w-[200px] slide">
               <img
                 src="/images/gallery/8.jpg"
-                className="w-[500px] h-[300px] object-cover rounded-lg"
+                className="md:w-[500px] w-[200px] md:h-[300px] h-[150px] object-cover rounded-lg"
                 alt=""
               />
             </div>
-            <div className="slide">
+            <div className="md:w-[500px] w-[200px] slide">
               <img
                 src="/images/gallery/3.jpg"
-                className="w-[500px] h-[300px] object-cover rounded-lg"
+                className="md:w-[500px] w-[200px] md:h-[300px] h-[150px] object-cover rounded-lg"
                 alt=""
               />
             </div>
-            <div className="slide">
+            <div className="md:w-[500px] w-[200px] slide">
               <img
                 src="/images/gallery/4.jpg"
-                className="w-[500px] h-[300px] object-cover rounded-lg"
+                className="md:w-[500px] w-[200px] md:h-[300px] h-[150px] object-cover rounded-lg"
                 alt=""
               />
             </div>
-            <div className="slide">
+            <div className="md:w-[500px] w-[200px] slide">
               <img
                 src="/images/gallery/5.jpg"
-                className="w-[500px] h-[300px] object-cover rounded-lg"
+                className="md:w-[500px] w-[200px] md:h-[300px] h-[150px] object-cover rounded-lg"
                 alt=""
               />
             </div>
-            <div className="slide">
+            <div className="md:w-[500px] w-[200px] slide">
               <img
                 src="/images/gallery/10.jpg"
-                className="w-[500px] h-[300px] object-cover rounded-lg"
+                className="md:w-[500px] w-[200px] md:h-[300px] h-[150px] object-cover rounded-lg"
                 alt=""
               />
             </div>
-            <div className="slide">
+            <div className="md:w-[500px] w-[200px] slide">
               <img
                 src="/images/gallery/6.jpg"
-                className="w-[500px] h-[300px] object-cover rounded-lg"
+                className="md:w-[500px] w-[200px] md:h-[300px] h-[150px] object-cover rounded-lg"
                 alt=""
               />
             </div>
-            <div className="slide">
+            <div className="md:w-[500px] w-[200px] slide">
               <img
                 src="/images/gallery/7.jpg"
-                className="w-[500px] h-[300px] object-cover rounded-lg"
+                className="md:w-[500px] w-[200px] md:h-[300px] h-[150px] object-cover rounded-lg"
                 alt=""
               />
             </div>
@@ -649,7 +649,7 @@ export default function Home(language: any) {
         data-aos-once="true"
         data-aos="zoom-in"
       >
-        <div className="bg-red-200 dark:bg-red-400 py-12 text-center rounded-md px-20">
+        <div className="bg-red-200 dark:bg-red-400 py-12 text-center rounded-md md:px-20 px-5">
           <h4 className="text-gray-800 dark:text-gray-300">
             {lang == "ID"
               ? "INDONESIA DIMATA DUNIA"

@@ -49,7 +49,6 @@ header:hover #sliderControlArrow #prev {
 }
 
 .slide {
-  width: 500px;
   transition: 0.3s;
 }
 

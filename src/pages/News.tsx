@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   FaArrowRight,
   FaCalendar,
@@ -8,6 +8,10 @@ import {
 } from "react-icons/fa";
 
 export default function News() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <header className=" mt-5 mx-auto grid lg:grid-cols-4 gap-10 pt-20 lg:px-20 md:px-5 px-3">
@@ -332,7 +336,7 @@ export default function News() {
             href=""
             className="bg-white px-7 py-3 border-2 border-white rounded-full text-red-500 font-semibold hover:bg-transparent hover:text-white"
           >
-            Registrasi Sekarang
+            Subscription
           </a>
         </div>
       </section>
