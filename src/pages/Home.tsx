@@ -323,6 +323,7 @@ export default function Home(language: any) {
                   Nikmati keindahan seni musik Bonang di Jawa Timur. Temukan
                   harmoni yang khas dan cerita yang tersembunyi di setiap
                   nadanya.
+                  {/* Experience the beauty of Bonang music in East Java. Discover the distinctive harmony and hidden stories within each note. */}
                 </p>
               </div>
             </div>
@@ -351,6 +352,7 @@ export default function Home(language: any) {
                 <p className="text-gray-200 text-sm">
                   Temukan keunikan dan harmoni arsitektur rumah panggung di
                   Sulawesi Selatan, simbol budaya yang kaya.
+                  {/* Discover the uniqueness and harmony of the stilt house architecture in South Sulawesi, a symbol of rich cultural heritage. */}
                 </p>
               </div>
             </div>
@@ -377,6 +379,7 @@ export default function Home(language: any) {
                 <p className="text-gray-200 text-sm">
                   Temukan ungkapan syukur atas pertanian setahun. Rasakan
                   keharmonisan manusia, Tuhan, dan alam dalam budaya unik.
+                  {/* Discover the expression of gratitude for a year of agriculture. Feel the harmony between humans, God, and nature in a unique cultural context. */}
                 </p>
               </div>
             </div>
@@ -403,6 +406,7 @@ export default function Home(language: any) {
                 <p className="text-gray-200 text-sm">
                   Dengan desain dan corak yang beragam, busana tradisional Sunda
                   mencerminkan kekayaan budaya dan identitas khas masyarakatnya.
+                  {/* With diverse designs and patterns, Sundanese traditional clothing reflects the cultural richness and distinctive identity of its community. */}
                 </p>
               </div>
             </div>
