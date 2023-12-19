@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { FaCalendar, FaUser } from "react-icons/fa";
 
 import content from "./../data/content.json";
+import { Link } from "react-router-dom";
 
 export default function Detail(language: any) {
   const [lang, setLang] = useState("ID");
@@ -16,14 +17,16 @@ export default function Detail(language: any) {
 
   return (
     <>
-      <div className="grid grid-cols-5 pt-20 pb-10 px-20 mb-8 items-center bg-gray-100 dark:bg-gray-950 relative">
-        <span className="h-full w-[700px] absolute right-0 bg-gradient-to-l from-red-500/70 to-red-500/0"></span>
-        <div className="text-left col-span-3">
-          <p className="font-semibold mb-2 text-red-500">UPACARA</p>
-          <h1 className="font-bold text-3xl mb-8 text-gray-900 dark:text-gray-200">
+      <div className="grid lg:grid-cols-5 pt-20 pb-10 md:px-20 px-5 mb-8 items-center bg-gray-100 dark:bg-gray-950 relative">
+        <span className="h-full lg:w-[700px] w-full absolute right-0 lg:bg-gradient-to-l bg-gradient-to-b from-red-500/70 to-red-500/0"></span>
+        <div className="lg:col-span-3 order-2 lg:order-1 relative z-10 lg:text-left text-center">
+          <p className="font-semibold mb-2 text-red-500 md:md:text-base text-[13px] text-sm">
+            UPACARA
+          </p>
+          <h1 className="font-bold md:text-3xl text-xl mb-8 text-gray-900 dark:text-gray-200">
             UPACARA SEREN TAUN DI CIGUGUR <br /> UNTUK MENSYUKURI HASIL PANEN
           </h1>
-          <p className="mr-3 text-sm text-gray-800 dark:text-gray-300">
+          <p className="mr-3 md:text-sm text-[12px] text-gray-800 dark:text-gray-300">
             Ditulis oleh{" "}
             <span className="text-red-500 font-semibold">Ilham Hafidz</span> |{" "}
             <span className="text-gray-500 dark:text-gray-400 italic">
@@ -34,7 +37,7 @@ export default function Detail(language: any) {
             Diterbitkan pada 18 Desember 2023 | 10 Menit Baca
           </p>
         </div>
-        <div className="p-8 col-span-2 relative z-10">
+        <div className="py-8 lg:col-span-2 relative z-10 lg:order-2 order-1">
           <img
             src="/images/news/serenTaun.jpg"
             className="w-full h-[350px] rounded object-cover"
@@ -42,27 +45,27 @@ export default function Detail(language: any) {
         </div>
       </div>
 
-      <div className="grid grid-cols-3 px-20 gap-20 mt-20">
-        <div className="col-span-2 text-gray-800 dark:text-gray-200">
-          <p className="text-base mb-10 leading-8">
+      <main className="grid lg:grid-cols-3 md:px-20 px-5 gap-20 mt-20 mb-20">
+        <div className="lg:col-span-2 text-gray-800 dark:text-gray-200">
+          <p className="md:text-base text-[13px] mb-10 leading-8">
             Upacara seren taun: ungkapan syukur masyarakat Sunda atas pertanian
             setahun. Dilaksanakan tiap 22 Bulan Rayagung dengan ritual,
             kesenian, dan hubungan manusia dengan Tuhan, sesama, dan alam.
           </p>
-          <p className="text-base mb-10 leading-8">
+          <p className="md:text-base text-[13px] mb-10 leading-8">
             Upacara Seren Taun: Ngajayak (Menjemput Padi) dimulai tanggal 18
             Rayagung, penumbukan padi, puncaknya tanggal 22 Rayagung. Ngajayak
             pada "dalapan welas" (18) mencerminkan welas asih Tuhan bagi
             kehidupan umat-Nya di seluruh dunia.
           </p>
-          <p className="text-base mb-10 leading-8">
+          <p className="md:text-base text-[13px] mb-10 leading-8">
             Puncak Seren Taun pada tanggal 22 Rayagung, diwakili oleh penumbukan
             22 kwintal padi, memiliki makna khusus. Angka 22 terdiri dari 20
             kwintal padi yang ditumbuk dan dibagikan ke masyarakat, serta 2
             kwintal sebagai benih. Angka 20 mencerminkan unsur anatomi tubuh
             manusia.
           </p>
-          <p className="text-base mb-10 leading-8">
+          <p className="md:text-base text-[13px] mb-10 leading-8">
             Baik laki-aki ataupun perempuan memiliki 20 sifat wujud manusia,
             adalah : 1. getih atau darah, 2. daging, 3. bulu, 4. kuku, 5.
             rambut, 6. kulit, 7. urat, 8. polo atau otak, 9. bayah atau paru,
@@ -71,7 +74,7 @@ export default function Detail(language: any) {
             lemak, 17. gegembung atau lambung. 18. peujit atau usus. 19. ginjal
             dan 20. jantung.
           </p>
-          <p className="text-base mb-10 leading-8">
+          <p className="md:text-base text-[13px] mb-10 leading-8">
             Ke 20 sifat diatas menyatukan organ dan sel tubuh dengan fungsi yang
             beraneka ragam, atau dengan kata lain tubuh atau jasmani dipandang
             sebagai suatu struktur hidup yang memiliki proses seperti hukum
@@ -120,35 +123,37 @@ export default function Detail(language: any) {
             and bad, and so on.
           </p>
         </div> */}
-        <div className="">
-          <img src="/images/avatar.png" className="w-[70px] rounded" />
-          <h1 className="font-bold mt-4 text-gray-800 dark:text-gray-300">
-            Ilham Hafidz
-          </h1>
-          <p className="text-sm mt-2 text-gray-700 dark:text-gray-400">
-            Ilham Hafidz merupakan penulis aktif mengenai kebudayaan indonesia
-            pada website Warisan Nusantara.
-          </p>
-          <div className="mt-12">
-            <span className="bg-red-500/20 text-red-500 font-semibold px-2 py-1 rounded text-[12px] mx-1 mb-2 inline-block">
-              UPACARA
-            </span>
-            <span className="bg-yellow-500/20 text-yellow-500 font-semibold px-2 py-1 rounded text-[12px] mx-1 mb-2 inline-block">
-              INDONESIA DIMATA DUNIA
-            </span>
-            <br />
-            <span className="bg-emerald-500/20 text-emerald-500 font-semibold px-2 py-1 rounded text-[12px] mx-1 mb-2 inline-block">
-              MUSIK & LAGU
-            </span>
-            <span className="bg-indigo-500/20 text-indigo-500 font-semibold px-2 py-1 rounded text-[12px] mx-1 mb-2 inline-block">
-              FUN EVENT
-            </span>
-            <span className="bg-purple-500/20 text-purple-500 font-semibold px-2 py-1 rounded text-[12px] mx-1 mb-2 inline-block">
-              MAKANAN
-            </span>
+        <div>
+          <div className="bg-gray-50 dark:bg-gray-950 p-10 rounded">
+            <img src="/images/avatar.png" className="w-[70px] rounded" />
+            <h1 className="font-bold mt-4 text-gray-800 dark:text-gray-300">
+              Ilham Hafidz
+            </h1>
+            <p className="text-sm mt-2 text-gray-700 dark:text-gray-400">
+              Ilham Hafidz merupakan penulis aktif mengenai kebudayaan indonesia
+              pada website Warisan Nusantara.
+            </p>
+            <div className="mt-12">
+              <span className="bg-red-500/20 text-red-500 font-semibold px-2 py-1 rounded text-[12px] mx-1 mb-2 inline-block">
+                UPACARA
+              </span>
+              <span className="bg-yellow-500/20 text-yellow-500 font-semibold px-2 py-1 rounded text-[12px] mx-1 mb-2 inline-block">
+                INDONESIA DIMATA DUNIA
+              </span>
+              <br />
+              <span className="bg-emerald-500/20 text-emerald-500 font-semibold px-2 py-1 rounded text-[12px] mx-1 mb-2 inline-block">
+                MUSIK & LAGU
+              </span>
+              <span className="bg-indigo-500/20 text-indigo-500 font-semibold px-2 py-1 rounded text-[12px] mx-1 mb-2 inline-block">
+                FUN EVENT
+              </span>
+              <span className="bg-purple-500/20 text-purple-500 font-semibold px-2 py-1 rounded text-[12px] mx-1 mb-2 inline-block">
+                MAKANAN
+              </span>
+            </div>
           </div>
         </div>
-      </div>
+      </main>
 
       <hr className="w-[90%] mx-auto dark:border-gray-900" />
 
@@ -234,7 +239,7 @@ export default function Detail(language: any) {
       <br />
       <br />
       <br />
-      <section className="lg:px-20 md:px-10 px-3 md:py-14 py-10 md:flex md:justify-between md:items-center bg-gradient-to-r from-red-500/90 to-red-400/90 text-white relative overflow-hidden">
+      <section className="lg:px-20 md:px-10 px-3 md:py-14 py-10 lg:flex lg:justify-between lg:items-center bg-gradient-to-r from-red-500/90 to-red-400/90 text-white relative overflow-hidden">
         <span
           id="blink"
           className="w-[1000px] h-[1000px] rounded-full absolute -rotate-[60deg]"
@@ -245,21 +250,21 @@ export default function Detail(language: any) {
         ></span>
 
         <div className="relative z-10">
-          <h3 className="font-bold md:text-2xl text-xl">
+          <h3 className="font-bold md:text-2xl text-xl lg:text-left text-center">
             LOGIN UNTUK MENDAPATKAN NOTIFIKASI BERITA BARU
           </h3>
-          <p className="text-gray-200 mt-2 md:text-base text-sm md:mb-0 mb-10">
+          <p className="text-gray-200 mt-2 md:md:text-base text-[13px] text-sm md:mb-0 mb-10 lg:text-left text-center">
             Setiap ada berita, event serta konten baru akan diberitahu lewat
             email
           </p>
         </div>
-        <div className="relative z-10">
-          <a
-            href=""
-            className="bg-white px-7 py-3 border-2 border-white rounded-full text-red-500 font-semibold hover:bg-transparent hover:text-white"
+        <div className="relative z-10 lg:mt-0 mt-10 flex justify-center">
+          <Link
+            to={"/subcription"}
+            className="bg-white md:px-7 px-5 md:py-3 py-2 md:text-base text-sm border-2 border-white rounded-full text-red-500 font-semibold hover:bg-transparent hover:text-white"
           >
             Subscription
-          </a>
+          </Link>
         </div>
       </section>
     </>

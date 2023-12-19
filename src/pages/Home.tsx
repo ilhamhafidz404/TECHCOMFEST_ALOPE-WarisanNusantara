@@ -23,6 +23,7 @@ import {
 } from "react-icons/fa";
 import {
   MdKeyboardDoubleArrowDown,
+  MdKeyboardDoubleArrowRight,
   MdKeyboardDoubleArrowUp,
 } from "react-icons/md";
 
@@ -685,15 +686,17 @@ export default function Home(language: any) {
             data-aos-once="true"
             data-aos="fade-right"
           >
-            <h5 className="text-red-500 font-semibold mb-5">RAGAM BERITA</h5>
+            <h5 className="text-red-500 font-semibold md:mb-5 mb-3 md:text-base text-sm">
+              RAGAM BERITA
+            </h5>
             <Link to="/news/read">
-              <h2 className="font-bold md:text-3xl text-2xl dark:text-gray-200">
+              <h2 className="font-bold md:text-3xl text-xl dark:text-gray-200">
                 {lang == "ID"
                   ? "INDONESIA DENGAN KEBERAGAMAN BUDAYA NUSANTARA YANG MENDUNIA"
                   : "INDONESIA WITH THE WORLD'S DIVERSITY OF ARCHIPELAGO CULTURE"}
               </h2>
             </Link>
-            <p className="text-gray-800 mt-5 md:text-base text-sm dark:text-gray-300">
+            <p className="text-gray-800 mt-5 md:text-base text-[12px] dark:text-gray-300">
               {lang == "ID"
                 ? content.news.highlight.id
                 : content.news.highlight.en}
@@ -713,7 +716,7 @@ export default function Home(language: any) {
               </span>
             </div>
 
-            <div className="flex gap-5 md:justify-end justify-center mt-5">
+            <div className="lg:flex hidden gap-5 md:justify-end justify-center mt-5">
               <button className="flex items-center justify-center rounded-full w-[30px] h-[30px] dark:bg-gray-700 dark:hover:bg-gray-800 ">
                 <FaChevronLeft />
               </button>
@@ -813,14 +816,21 @@ export default function Home(language: any) {
             </section>
             <div className="lg:block hidden text-center ">
               <button
-                className="bg-red-500 hover:bg-red-400 text-white mx-auto text-sm px-5 py-2 mt-10 rounded-full inline-flex items-center gap-2"
+                className="bg-red-500 border-2 border-red-500 hover:bg-red-400 hover:border-red-400 text-white mx-auto text-sm px-5 py-2 mt-10 rounded-full inline-flex items-center gap-2 mr-5"
                 onClick={() => {
                   setMoreNews(false);
                 }}
               >
-                Show Less
+                {lang == "ID" ? "Selih Sedikit" : "Show More"}
                 <MdKeyboardDoubleArrowUp />
               </button>
+              <Link
+                to={"/news"}
+                className="border-2 border-red-500 hover:bg-red-500 text-red-500 hover:text-white mx-auto text-sm px-5 py-2 mt-10 rounded-full inline-flex items-center gap-2"
+              >
+                {lang == "ID" ? "Semua Berita" : "Show All News"}
+                <MdKeyboardDoubleArrowRight />
+              </Link>
             </div>
           </>
         ) : (
@@ -831,7 +841,7 @@ export default function Home(language: any) {
                 setMoreNews(true);
               }}
             >
-              Show More
+              {lang == "ID" ? "Lihat Lainnya" : "Show More"}
               <MdKeyboardDoubleArrowDown />
             </button>
           </div>
