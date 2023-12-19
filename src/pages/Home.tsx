@@ -681,10 +681,11 @@ export default function Home(language: any) {
               INDONESIA DENGAN KEBERAGAMAN BUDAYA INDONESIA
             </h2>
             <p className="text-gray-800 mt-5 md:text-base text-sm dark:text-gray-300">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo nisi
-              recusandae itaque atque doloremque. Veniam animi, distinctio
-              blanditiis nesciunt similique doloremque expedita excepturi
-              laborum esse fugit unde quis nobis suscipit.
+              Temukan keindahan ragam budaya di Indonesia, tempat di mana
+              tradisi dan keberagaman menjadi kekuatan bersama. Dari tarian
+              hingga kuliner, setiap elemen mencerminkan kekayaan dan keunikan
+              yang membuat Indonesia istimewa. Mari menjelajahi dan merayakan
+              keberagaman yang memperkaya bumi Nusantara.
             </p>
             <div className="flex gap-5 mt-10 text-gray-600 dark:text-gray-400 md:text-base text-sm">
               <span className="flex gap-2">
