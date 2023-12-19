@@ -316,7 +316,7 @@ export default function Home(language: any) {
               <div>
                 <p className="text-white flex items-center gap-2">
                   <FaMapMarkerAlt />
-                  <small>Seren Taun, Jawa Barat</small>
+                  <small>Bonang, Jawa Timur</small>
                 </p>
               </div>
               <div>
@@ -324,8 +324,10 @@ export default function Home(language: any) {
                   {lang == "ID" ? "LAGU & MUSIK" : "SONG & MUSIC"}
                 </h4>
                 <p className="text-gray-200 md:text-sm text-[12px]">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Distinctio earum dolore
+                  Nikmati keindahan seni musik Bonang di Jawa Timur. Temukan
+                  harmoni yang khas dan cerita yang tersembunyi di setiap
+                  nadanya.
+                  {/* Experience the beauty of Bonang music in East Java. Discover the distinctive harmony and hidden stories within each note. */}
                 </p>
               </div>
             </div>
@@ -352,8 +354,9 @@ export default function Home(language: any) {
                     : "building architecture"}
                 </h4>
                 <p className="text-gray-200 md:text-sm text-[12px]">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Distinctio earum dolore
+                  Temukan keunikan dan harmoni arsitektur rumah panggung di
+                  Sulawesi Selatan, simbol budaya yang kaya.
+                  {/* Discover the uniqueness and harmony of the stilt house architecture in South Sulawesi, a symbol of rich cultural heritage. */}
                 </p>
               </div>
             </div>
@@ -370,7 +373,7 @@ export default function Home(language: any) {
               <div>
                 <p className="text-white flex items-center gap-2">
                   <FaMapMarkerAlt />
-                  <small>Bonang, Jawa Timur</small>
+                  <small>Seren Taun, Jawa Barat</small>
                 </p>
               </div>
               <div>
@@ -378,8 +381,9 @@ export default function Home(language: any) {
                   {lang == "ID" ? "UPACARA" : "CEREMONY"}
                 </h4>
                 <p className="text-gray-200 md:text-sm text-[12px]">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Distinctio earum dolore
+                  Temukan ungkapan syukur atas pertanian setahun. Rasakan
+                  keharmonisan manusia, Tuhan, dan alam dalam budaya unik.
+                  {/* Discover the expression of gratitude for a year of agriculture. Feel the harmony between humans, God, and nature in a unique cultural context. */}
                 </p>
               </div>
             </div>
@@ -404,8 +408,9 @@ export default function Home(language: any) {
                   {lang == "ID" ? "PAKAIAN" : "CLOTHES"}
                 </h4>
                 <p className="text-gray-200 md:text-sm text-[12px]">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Distinctio earum dolore
+                  Dengan desain dan corak yang beragam, busana tradisional Sunda
+                  mencerminkan kekayaan budaya dan identitas khas masyarakatnya.
+                  {/* With diverse designs and patterns, Sundanese traditional clothing reflects the cultural richness and distinctive identity of its community. */}
                 </p>
               </div>
             </div>
@@ -684,10 +689,17 @@ export default function Home(language: any) {
               INDONESIA DENGAN KEBERAGAMAN BUDAYA INDONESIA
             </h2>
             <p className="text-gray-800 mt-5 md:text-base text-sm dark:text-gray-300">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo nisi
-              recusandae itaque atque doloremque. Veniam animi, distinctio
-              blanditiis nesciunt similique doloremque expedita excepturi
-              laborum esse fugit unde quis nobis suscipit.
+              Temukan keindahan ragam budaya di Indonesia, tempat di mana
+              tradisi dan keberagaman menjadi kekuatan bersama. Dari tarian
+              hingga kuliner, setiap elemen mencerminkan kekayaan dan keunikan
+              yang membuat Indonesia istimewa. Mari menjelajahi dan merayakan
+              keberagaman yang memperkaya bumi Nusantara.
+              {/* Discover the beauty of
+              cultural diversity in Indonesia, a place where traditions and
+              variety become a collective strength. From dance to culinary
+              delights, each element reflects the richness and uniqueness that
+              make Indonesia special. Let's explore and celebrate the diversity
+              that enriches the archipelago. */}
             </p>
             <div className="flex gap-5 mt-10 text-gray-600 dark:text-gray-400 md:text-base text-sm">
               <span className="flex gap-2">
@@ -719,12 +731,12 @@ export default function Home(language: any) {
             <section className="lg:grid hidden grid-cols-3 gap-10 px-20 mt-10">
               <div>
                 <img
-                  src="/images/card/arsitektur.jpg"
+                  src="/images/festivalbali.jpeg"
                   alt="news1"
                   className="h-[300px] object-cover w-full"
                 />
                 <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-                  INI JUDUL BERITA
+                  Festival Bali Arts
                 </h3>
                 <div className="my-5 flex gap-5">
                   <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
@@ -737,18 +749,28 @@ export default function Home(language: any) {
                   </span>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
-                  laborum animi, blanditiis harum repudiandae quaerat ipsum
+                  Setiap tahun, Festival Seni Bali menyoroti kekayaan budaya
+                  dengan durasi sebulan, memamerkan seni, musik, tarian, dan
+                  literatur Bali. Festival Seni Bali 2023 akan digelar dari 18
+                  Juni hingga 16 Juli di Taman Werdhi Budaya Art Centre,
+                  menandai 45 tahun peringatan festival ini.
+                  {/* Every year, the
+                  Bali Arts Festival highlights the cultural richness with a
+                  month-long celebration showcasing the arts, music, dance, and
+                  literature of Bali. The Bali Arts Festival 2023 is scheduled
+                  to take place from June 18 to July 16 at the Taman Werdhi
+                  Budaya Art Centre, marking the 45th anniversary of the
+                  festival. */}
                 </p>
               </div>
               <div>
                 <img
-                  src="/images/card/arsitektur.jpg"
+                  src="/images/dalangcilik.jpg"
                   alt="news2"
                   className="h-[300px] object-cover w-full"
                 />
                 <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-                  INI JUDUL BERITA
+                  Festival Dalang Cilik
                 </h3>
                 <div className="my-5 flex gap-5">
                   <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
@@ -761,18 +783,26 @@ export default function Home(language: any) {
                   </span>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
-                  laborum animi, blanditiis harum repudiandae quaerat ipsum
+                  Sepuluh dalang cilik di Semarang tampil dalam Festival Dalang
+                  Cilik, Rabu (22/11), di Gedung Ki Narto Sabdo, Taman Budaya
+                  Raden Saleh. Festival ini tidak hanya mencari bakat dalang
+                  muda, tetapi juga bertujuan melestarikan seni budaya
+                  nusantara.
+                  {/* Ten young puppeteers in Semarang showcased their skills at the
+                  Puppeteer Festival on Wednesday (22/11) at Ki Narto Sabdo
+                  Building, Raden Saleh Cultural Park. The festival not only
+                  seeks to discover young puppetry talents but also aims to
+                  preserve the cultural arts of the archipelago. */}
                 </p>
               </div>
               <div>
                 <img
-                  src="/images/card/arsitektur.jpg"
+                  src="/images/babarit.jpeg"
                   alt="news3"
                   className="h-[300px] object-cover w-full"
                 />
                 <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-                  INI JUDUL BERITA
+                  Festival Babarit
                 </h3>
                 <div className="my-5 flex gap-5">
                   <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
@@ -785,8 +815,16 @@ export default function Home(language: any) {
                   </span>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim
-                  laborum animi, blanditiis harum repudiandae quaerat ipsum
+                  Tradisi Babarit di Kuningan untuk perayaan Milangkala ke-524
+                  (28/8/2022) menonjolkan nilai syukur, pelestarian alam, dan
+                  berbagi. Ciri khasnya termasuk sawer air, Tumpeng, gamelan,
+                  dan tarian.
+                  {/* The Babarit tradition in Kuningan for the celebration of its
+                  524th Milangkala (28/8/2022) emphasizes the values of
+                  gratitude, environmental conservation, and sharing. Its
+                  distinctive features include the pouring of water from four
+                  directions, Tumpeng (cone-shaped rice dish), gamelan music,
+                  and traditional dances. */}
                 </p>
               </div>
             </section>
