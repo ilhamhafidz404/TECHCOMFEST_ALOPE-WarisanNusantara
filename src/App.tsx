@@ -41,7 +41,6 @@ export default function App() {
   };
   const handleChangePage = (page: any) => {
     setpage(page);
-    console.log(page);
   };
 
   return (
