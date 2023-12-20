@@ -151,3 +151,12 @@ html.dark .accordion .accordion-item .title {
 .accordion .accordion-item .title:after {
   color: rgb(248 113 113) !important;
 }
+
+html.dark
+  .MuiButtonBase-root.MuiAccordionSummary-root.Mui-expanded.MuiAccordionSummary-gutters.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root,
+html.dark
+  .MuiButtonBase-root.MuiAccordionSummary-root.MuiAccordionSummary-gutters.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root,
+html.dark .MuiAccordionDetails-root.css-15v22id-MuiAccordionDetails-root {
+  background-color: #0d131f !important;
+  color: rgb(229 231 235);
+}

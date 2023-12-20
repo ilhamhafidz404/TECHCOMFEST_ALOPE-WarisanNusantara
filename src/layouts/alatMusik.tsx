@@ -109,10 +109,10 @@ export default function AlatMusik() {
                 onClick={() => setSelectedAlatMusik(row)}
               >
                 <div>
-                  <h3 className="dark:text-gray-100 md:text-base text-sm">
+                  <h3 className="dark:text-gray-100 md:text-base text-sm font-semibold">
                     {row.name}
                   </h3>
-                  <small className="dark:text-gray-300 md:text-base text-[12px]">
+                  <small className="dark:text-gray-300 md:text-sm text-[12px]">
                     {row.from}
                   </small>
                 </div>
