@@ -51,14 +51,13 @@ export default function LaguDaerah() {
           </div>
           <div className="flex justify-between">
             <div>
-              <h2 className="font-bold text-3xl mb-3 md:mt-0 mt-5 dark:text-gray-100">
+              <h2 className="font-bold md:text-3xl text-2xl mb-3 md:mt-0 mt-5 dark:text-gray-100">
                 LAGU DAERAH INDONESIA
               </h2>
-              <p className="xl:w-[700px] md:w-[500px] w-full dark:text-gray-300 text-gray-700">
-                Indonesia dengan kekayaan budaya yang luar biasa memiliki lebih
-                dari 439 lagu tradisional. Setiap lagu menceritakan kisah unik
-                dan memikat, menjadi simbol keanekaragaman seni dan warisan
-                budaya yang memperkaya bangsa ini.
+              <p className="xl:w-[700px] md:w-[500px] w-full dark:text-gray-300 text-gray-700 md:text-sm text-[12px]">
+                Indonesia punya lebih dari 439 lagu tradisional, masing-masing
+                menceritakan kisah unik sebagai simbol keanekaragaman seni dan
+                warisan budaya yang memperkaya bangsa.
               </p>
             </div>
             {/* <img

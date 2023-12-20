@@ -73,14 +73,12 @@ export default function AlatMusik() {
           </div>
           <div className="flex justify-between">
             <div>
-              <h2 className="font-bold text-3xl mb-3 md:mt-0 mt-5 dark:text-gray-100">
+              <h2 className="font-bold md:text-3xl text-2xl mb-3 md:mt-0 mt-5 dark:text-gray-100">
                 ALAT MUSIK TRADISIONAL INDONESIA
               </h2>
-              <p className="xl:w-[700px] md:w-[500px] w-full dark:text-gray-300 text-gray-700">
-                Indonesia dengan kekayaan budaya yang luar biasa memiliki lebih
-                dari 439 lagu tradisional. Setiap lagu menceritakan kisah unik
-                dan memikat, menjadi simbol keanekaragaman seni dan warisan
-                budaya yang memperkaya bangsa ini.
+              <p className="xl:w-[700px] md:w-[500px] w-full dark:text-gray-300 text-gray-700 md:text-sm text-[12px]">
+                Indonesia kaya budaya dengan 439 lagu tradisional, masing-masing
+                sebagai simbol keanekaragaman seni dan warisan bangsa.
               </p>
             </div>
             {/* <img
@@ -99,7 +97,7 @@ export default function AlatMusik() {
               alt="gambarAlatMusik"
             />
           </div>
-          <div className="grid md:grid-cols-3 grid-cols-2 lg:col-span-3 gap-5">
+          <div className="grid md:grid-cols-3 grid-cols-2 lg:col-span-3 md:gap-5 gap-2">
             {musics.map((row) => (
               <div
                 key={row.name} // Add a unique key for each item
@@ -111,8 +109,12 @@ export default function AlatMusik() {
                 onClick={() => setSelectedAlatMusik(row)}
               >
                 <div>
-                  <h3 className="dark:text-gray-100">{row.name}</h3>
-                  <small className="dark:text-gray-300">{row.from}</small>
+                  <h3 className="dark:text-gray-100 md:text-base text-sm">
+                    {row.name}
+                  </h3>
+                  <small className="dark:text-gray-300 md:text-base text-[12px]">
+                    {row.from}
+                  </small>
                 </div>
                 {selectedAlatMusik.name === row.name ? (
                   <BootstrapTooltip

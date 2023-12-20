@@ -16,7 +16,7 @@ export default function RagamIndonesia() {
     <>
       <HeaderSlider />
 
-      <main className="container mx-auto sm:px-10 px-4 dark:bg-black">
+      <main className="lg:px-20 md:px-10 px-5 dark:bg-black">
         <IndonesiaKaya />
         <LaguDaerah />
         <AlatMusik />

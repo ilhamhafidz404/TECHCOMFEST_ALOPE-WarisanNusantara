@@ -821,7 +821,7 @@ export default function Home(language: any) {
                   setMoreNews(false);
                 }}
               >
-                {lang == "ID" ? "Selih Sedikit" : "Show More"}
+                {lang == "ID" ? "Lebih Sedikit" : "Show More"}
                 <MdKeyboardDoubleArrowUp />
               </button>
               <Link

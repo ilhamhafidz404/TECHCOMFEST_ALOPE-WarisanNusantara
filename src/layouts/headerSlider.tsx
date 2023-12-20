@@ -61,20 +61,22 @@ export default function HeaderSlider() {
       <header className="h-[700px] relative">
         <section
           id="slider1"
-          className="transition-all duration-500 left-0 h-full flex justify-between bg-cover bg-center relative text-white after:content-[''] after:bg-black/50 after:absolute after:inset-0"
+          className="transition-all duration-500 left-0 h-full flex justify-between bg-cover md:bg-center relative text-white after:content-[''] after:bg-black/50 after:absolute after:inset-0 bg-[-200px]"
         >
-          <div className="flex justify-between items-center left-0 right-0 absolute top-1/2 -translate-y-1/2 lg:ml-40 ml-10 z-10">
+          <div className="flex justify-between items-center left-0 right-0 absolute top-1/2 -translate-y-1/2 lg:ml-40 md:ml-10 z-10 md:px-0 px-5 md:text-left text-center">
             <div>
-              <h1 className="text-4xl font-bold uppercase">TARI Jaipong</h1>
-              <p className="max-w-[600px]">
+              <h1 className="md:text-4xl text-2xl font-bold uppercase">
+                TARI Jaipong
+              </h1>
+              <p className="md:max-w-[600px] md:text-base text-[12px] max-w-full">
                 Tari Jaipong merupakan sebuah tarian tradisional yang berasal
                 dari daerah Karawang, Jawa Barat. Awalnya tari ini dikenal
                 masyarakat dengan nama Tari Banjet. Tarian jaipong adalah sebuah
                 inovasi yang dibuat oleh seorang seniman yang berasal dari
                 daerah Karawang bernama H. Suanda.
               </p>
-              <div className="flex items-center mt-10">
-                <button className="border-2 border-red-500 px-5 py-2 rounded mr-5 inline-flex items-center gap-2 hover:bg-red-500">
+              <div className="md:flex md:items-center mt-10">
+                <button className="border-2 border-red-500 px-5 py-2 rounded mr-5 inline-flex items-center gap-2 hover:bg-red-500 md:text-base text-sm">
                   Lihat Selengkapnya
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -91,7 +93,7 @@ export default function HeaderSlider() {
                     />
                   </svg>
                 </button>
-                <button className="inline-flex gap-2 border-2 border-red-500 bg-red-500 hover:bg-red-400 px-5 py-2 rounded">
+                <button className="inline-flex gap-2 border-2 border-red-500 bg-red-500 hover:bg-red-400 px-5 py-2 rounded md:mt-0 mt-3 md:text-base text-sm">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -144,18 +146,20 @@ export default function HeaderSlider() {
           id="slider2"
           className="transition-all duration-500 -right-[100vw] hidden h-full justify-between bg-cover bg-center relative text-white after:content-[''] after:bg-black/50 after:absolute after:inset-0"
         >
-          <div className="flex justify-between items-center left-0 right-0 absolute top-1/2 -translate-y-1/2 ml-40 z-10">
+          <div className="flex justify-between items-center left-0 right-0 absolute top-1/2 -translate-y-1/2 lg:ml-40 lg:px-0 md:px-10 px-5 z-10 md:text-left text-center">
             <div>
-              <h1 className="text-4xl font-bold uppercase">ANGKLUNG</h1>
-              <p className="max-w-[700px]">
+              <h1 className="md:text-4xl text-2xl font-bold uppercase">
+                ANGKLUNG
+              </h1>
+              <p className="md:max-w-[700px] md:text-base text-[12px]">
                 Alat musik angklung berasal dari Jawa Barat ini terbuat dari
                 bambu dan dimainkan dengan cara digoyangkan. Angklung terdiri
                 dari dua hingga empat tabung bambu yang digantung dalam bingkai
                 bambu pula. Keduanya diikat dengan tali rotan, lalu dipangkas
                 atau dipotong sampai menghasilkan nada tertentu.
               </p>
-              <div className="flex items-center mt-10">
-                <button className="border-2 border-red-500 px-5 py-2 rounded mr-5 inline-flex items-center gap-2 hover:bg-red-500">
+              <div className="md:flex md:items-center mt-10">
+                <button className="border-2 border-red-500 px-5 py-2 rounded mr-5 inline-flex items-center gap-2 hover:bg-red-500 md:text-base text-sm">
                   Lihat Selengkapnya
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +176,7 @@ export default function HeaderSlider() {
                     />
                   </svg>
                 </button>
-                <button className="inline-flex gap-2 border-2 border-red-500 bg-red-500 hover:bg-red-400 px-5 py-2 rounded">
+                <button className="inline-flex gap-2 border-2 border-red-500 bg-red-500 hover:bg-red-400 px-5 py-2 rounded md:text-base text-sm md:mt-0 mt-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -192,7 +196,7 @@ export default function HeaderSlider() {
           </div>
         </section>
 
-        <section className="absolute bottom-0 ml-40 mb-5 flex gap-2">
+        <section className="absolute bottom-0 lg:ml-40 ml-10 mb-5 md:flex hidden gap-2">
           <span
             id="dot1"
             className="w-[15px] h-[15px] bg-white/80 block rounded-full"
@@ -203,7 +207,7 @@ export default function HeaderSlider() {
           ></span>
         </section>
 
-        <section id="sliderControlArrow" className="">
+        <section id="sliderControlArrow" className="md:block hidden">
           <button
             id="next"
             className="absolute top-1/2 -right-[20px] duration-300 -translate-y-1/2 opacity-0 cursor-pointer z-10"
