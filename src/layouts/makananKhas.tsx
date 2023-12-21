@@ -5,6 +5,14 @@ import { FaBowlFood, FaMapLocation } from "react-icons/fa6";
 export default function MakananKhas() {
   const [modalDetail, setModalDetail] = useState(false);
 
+  const [contentModal, setContentModal] = useState({
+    title: "",
+    body: "",
+    resep: "",
+    location: "",
+    img: "",
+  });
+
   return (
     <>
       <section className="mt-20 mb-20">
@@ -50,6 +58,14 @@ export default function MakananKhas() {
             <button
               onClick={() => {
                 setModalDetail(true);
+                setContentModal({
+                  title: "Gudeg",
+                  body: "Gudeg adalah hidangan khas Provinsi Daerah Istimewa Yogyakarta yang terbuat dari nangka muda yang dimasak dengan santan. Perlu waktu berjam-jam untuk membuat hidangan ini. Warna cokelat biasanya dihasilkan oleh daun jati yang dimasak bersamaan.",
+                  resep:
+                    "Nangka muda, santan, gula aren, cabai, aneka bumbu, ayam, telur, tempe (opsional)",
+                  location: "DIY Yogyakarta",
+                  img: "./images/card/gudeg.jpeg",
+                });
               }}
               className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
             >
@@ -75,6 +91,14 @@ export default function MakananKhas() {
             <button
               onClick={() => {
                 setModalDetail(true);
+                setContentModal({
+                  title: "Karedok",
+                  body: "Karedok adalah salah satu makanan khas Sunda di Indonesia. Karedok sekilas mirip dengan lotek. Karedok dibuat dengan bahan-bahan sayuran mentah.",
+                  resep:
+                    "mentimun, taoge, kol, kacang panjang, ubi, labu siam daun kemangi, dan terong atau leunca, sedangkan sausnya adalah bumbu kacang yang dibuat dari cabai merah, bawang putih, kencur, kacang tanah, air asam, gula kawung, garam, dan terasi.",
+                  location: "Jawa Barat",
+                  img: "./images/card/karedok.jpeg",
+                });
               }}
               className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
             >
@@ -100,6 +124,14 @@ export default function MakananKhas() {
             <button
               onClick={() => {
                 setModalDetail(true);
+                setContentModal({
+                  title: "Kerak Telor",
+                  body: "Kerak telur adalah makanan asli daerah Jakarta (Betawi). Anda bisa menemukan kerak telor di sekitar Kota Tua, Jakarta Barat. Menurut sejarah, Kerak Telor sudah ada dari zaman kolonial Belanda, kerak telor diciptakan oleh masyarakat Betawi secara tak sengaja Pada tahun 1920-an.",
+                  resep:
+                    "Beras ketan putih, telur ayam atau bebek, ebi (udang kering yang diasinkan) yang disangrai kering ditambah bawang merah goreng, lalu diberi bumbu yang dihaluskan berupa kelapa sangrai, cabai merah, kencur, jahe, kunyit,sereh halus, merica butiran, garam dan gula pasir.",
+                  location: "DKI Jakarta",
+                  img: "./images/card/keraktelor.jpg",
+                });
               }}
               className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
             >
@@ -125,6 +157,14 @@ export default function MakananKhas() {
             <button
               onClick={() => {
                 setModalDetail(true);
+                setContentModal({
+                  title: "Mie Aceh",
+                  body: "Mi aceh adalah masakan mi pedas khas Aceh di Indonesia. Mi aceh biasanya ditaburi dengan bawang goreng dan disajikan bersama emping, potongan bawang merah, mentimun, dan jeruk nipis. Mi aceh biasanya disajikan dalam tiga bentuk yaitu mi kuah, mi goreng basah, dan mi goreng kering.",
+                  resep:
+                    "Mi kuning tebal dengan irisan daging sapi, daging kambing atau makanan laut (udang dan cumi) disajikan dalam sup sejenis kari yang gurih dan pedas.",
+                  location: "Aceh Darussalam",
+                  img: "./images/card/mieaceh.jpg",
+                });
               }}
               className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
             >
@@ -148,6 +188,14 @@ export default function MakananKhas() {
             <button
               onClick={() => {
                 setModalDetail(true);
+                setContentModal({
+                  title: "Papeda",
+                  body: "Papeda adalah makanan berupa bubur sagu khas Maluku dan Papua yang biasanya disajikan dengan ikan tongkol atau bubara yang dibumbui dengan kunyit. Papeda berwarna putih dan bertekstur lengket menyerupai lem dengan rasa yang tawar.Papeda merupakan makanan yang kaya serat, rendah kolesterol, dan cukup bernutrisi.",
+                  resep:
+                    "1/4 kg tepung tapioka, 15 sdm tepung terigu, 3 batang Bawang godong (iris cincang), 1 penyedap rasa, 1 garam secukupnya, secukupnya Air, 1 telor",
+                  location: "Papua",
+                  img: "./images/card/papeda.jpg",
+                });
               }}
               className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
             >
@@ -171,6 +219,14 @@ export default function MakananKhas() {
             <button
               onClick={() => {
                 setModalDetail(true);
+                setContentModal({
+                  title: "Pempek",
+                  body: "Pempek adalah makanan yang dibuat dari daging ikan yang digiling lembut yang dicampur tepung kanji atau tepung sagu, serta komposisi beberapa bahan lain seperti telur, bawang putih yang dihaluskan, penyedap rasa, dan garam. Pempek biasanya disajikan dengan kuah yang disebut cuko yang memiliki rasa asam, manis, dan pedas. Pempek merupakan makanan khas Palembang.",
+                  resep:
+                    "daging ikan giling, tepung kanji atau tepung sagu, serta telur",
+                  location: "Palembang",
+                  img: "./images/card/pempek.jpg",
+                });
               }}
               className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
             >
@@ -196,6 +252,13 @@ export default function MakananKhas() {
             <button
               onClick={() => {
                 setModalDetail(true);
+                setContentModal({
+                  title: "Rendang",
+                  body: "Rendang adalah hidangan berbahan dasar daging yang dihasilkan dari proses memasak suhu rendah dalam waktu lama dengan menggunakan aneka rempah-rempah dan santan. Proses memasaknya memakan waktu berjam-jam hingga yang tinggal hanyalah potongan daging berwarna hitam pekat dan dedak.",
+                  resep: "Daging sapi, santan kelapa, cabai, bumbu",
+                  location: "Sumatra Barat",
+                  img: "./images/card/rendang.jpg",
+                });
               }}
               className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
             >
@@ -243,30 +306,29 @@ export default function MakananKhas() {
             >
               <FaTimes />
             </button>
-            <h1 className="text-2xl font-bold dark:text-gray-200">GUDEG</h1>
+            <h1 className="text-2xl font-bold dark:text-gray-200">
+              {" "}
+              {contentModal.title}
+            </h1>
             <hr className="my-3 dark:border-gray-700" />
             <div>
               <img
-                src="./images/card/gudeg.jpeg"
+                src={contentModal.img}
                 className="rounded h-[200px] object-cover w-full"
               />
               <p className="md:text-sm text-[13px] mt-5 dark:text-gray-300">
-                Gudeg adalah hidangan khas Provinsi Daerah Istimewa Yogyakarta
-                yang terbuat dari nangka muda yang dimasak dengan santan. Perlu
-                waktu berjam-jam untuk membuat hidangan ini. Warna cokelat
-                biasanya dihasilkan oleh daun jati yang dimasak bersamaan.
+                {contentModal.body}
               </p>
               <p className="md:text-sm text-[13px] mt-5 dark:text-gray-300">
-                <b className="text-orange-500">Bahan utama:</b> Nangka muda,
-                santan, gula aren, cabai, aneka bumbu, ayam, telur, tempe
-                (opsional)
+                <b className="text-orange-500">Bahan utama:</b>{" "}
+                {contentModal.resep}
               </p>
 
               <hr className="my-5 dark:border-gray-700" />
               <div className="flex items-center justify-between">
                 <p className="flex gap-2 items-center text-gray-700 dark:text-gray-400 text-sm">
                   <FaMapLocation />
-                  DIY Yogyakarta
+                  {contentModal.location}
                 </p>
                 <button className="text-sm text-orange-500 flex items-center gap-2">
                   Detail Lainnya
