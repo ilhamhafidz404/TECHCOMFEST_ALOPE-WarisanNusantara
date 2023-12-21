@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // pages
 import Home from "./pages/Home";
@@ -25,7 +25,7 @@ export default function App() {
   const [page, setpage] = useState("home");
 
   const switchLanguage = () => {
-    if (language == "ID") {
+    if (language === "ID") {
       setLanguage("EN");
     } else {
       setLanguage("ID");
@@ -46,7 +46,7 @@ export default function App() {
   return (
     <>
       <Router>
-        {page == "home" ? (
+        {page === "home" ? (
           <LightNavbar
             changeLanguage={handleChangeLanguage}
             changePage={handleChangePage}

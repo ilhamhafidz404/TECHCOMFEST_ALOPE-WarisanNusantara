@@ -13,7 +13,7 @@ export default function Switcher() {
 
   return (
     <>
-      {colorTheme == "dark" ? (
+      {colorTheme === "dark" ? (
         <MdLightMode
           // checked={darkSide}
           // onChange={toggleDarkMode}

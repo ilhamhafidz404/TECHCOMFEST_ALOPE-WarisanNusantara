@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link, Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { styled } from "@mui/material/styles";
 import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 
 import Switcher from "./../components/swicher";
-import { IoLanguage } from "react-icons/io5";
 // icons
 import { FaBars, FaBell, FaGlobe, FaHome, FaNewspaper } from "react-icons/fa";
 
@@ -105,7 +104,7 @@ const LightNavbar: React.FC<LightNavbarProps> = ({
           </div>
           <div className="md:flex hidden gap-10 items-center justify-end w-1/4">
             <BootstrapTooltip
-              title={"Dark Mode"}
+              title={"Ganti Mode"}
               placement="bottom"
               className="pr-2"
             >
@@ -117,7 +116,7 @@ const LightNavbar: React.FC<LightNavbarProps> = ({
               </span>
             </BootstrapTooltip>
             <BootstrapTooltip
-              title={"Inggris"}
+              title={"Ganti Bahasa"}
               placement="bottom"
               className="pr-2"
             >

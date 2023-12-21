@@ -46,7 +46,7 @@ export default function MakananKhas() {
             <img
               className="w-full h-48 object-cover"
               src="./images/card/gudeg.jpeg"
-              alt="Card Image 1"
+              alt="Card 1"
             />
             <div className="px-6 py-4">
               <div className="font-bold text-xl dark:text-gray-300">Gudeg</div>
@@ -77,7 +77,7 @@ export default function MakananKhas() {
             <img
               className="w-full h-48 object-cover"
               src="./images/card/karedok.jpeg"
-              alt="Card Image 2"
+              alt="Card 2"
             />
             <div className="px-6 py-4">
               <div className="font-bold text-xl dark:text-gray-300">
@@ -95,7 +95,7 @@ export default function MakananKhas() {
                   title: "Karedok",
                   body: "Karedok adalah salah satu makanan khas Sunda di Indonesia. Karedok sekilas mirip dengan lotek. Karedok dibuat dengan bahan-bahan sayuran mentah.",
                   resep:
-                    "mentimun, taoge, kol, kacang panjang, ubi, labu siam daun kemangi, dan terong atau leunca, sedangkan sausnya adalah bumbu kacang yang dibuat dari cabai merah, bawang putih, kencur, kacang tanah, air asam, gula kawung, garam, dan terasi.",
+                    "mentimun, taoge, kol, kacang panjang, ubi, labu siam daun kemangi, dan terong atau leunca.",
                   location: "Jawa Barat",
                   img: "./images/card/karedok.jpeg",
                 });
@@ -110,7 +110,7 @@ export default function MakananKhas() {
             <img
               className="w-full h-48 object-cover"
               src="./images/card/keraktelor.jpg"
-              alt="Card Image 3"
+              alt="Card 3"
             />
             <div className="px-6 py-4">
               <div className="font-bold text-xl dark:text-gray-300">
@@ -126,9 +126,9 @@ export default function MakananKhas() {
                 setModalDetail(true);
                 setContentModal({
                   title: "Kerak Telor",
-                  body: "Kerak telur adalah makanan asli daerah Jakarta (Betawi). Anda bisa menemukan kerak telor di sekitar Kota Tua, Jakarta Barat. Menurut sejarah, Kerak Telor sudah ada dari zaman kolonial Belanda, kerak telor diciptakan oleh masyarakat Betawi secara tak sengaja Pada tahun 1920-an.",
+                  body: "Kerak telur adalah makanan asli daerah Jakarta (Betawi). Anda bisa menemukan kerak telor di sekitar Kota Tua, Jakarta Barat. Menurut sejarah, Kerak Telor sudah ada dari zaman kolonial Belanda..",
                   resep:
-                    "Beras ketan putih, telur ayam atau bebek, ebi (udang kering yang diasinkan) yang disangrai kering ditambah bawang merah goreng, lalu diberi bumbu yang dihaluskan berupa kelapa sangrai, cabai merah, kencur, jahe, kunyit,sereh halus, merica butiran, garam dan gula pasir.",
+                    "Beras ketan putih, telur ayam atau bebek, ebi (udang kering yang diasinkan) yang disangrai kering ditambah bawang merah goreng, lalu diberi bumbu yang dihaluskan berupa kelapa sangrai..",
                   location: "DKI Jakarta",
                   img: "./images/card/keraktelor.jpg",
                 });
@@ -143,7 +143,7 @@ export default function MakananKhas() {
             <img
               className="w-full h-48 object-cover"
               src="./images/card/mieaceh.jpg"
-              alt="Card Image 4"
+              alt="Card 4"
             />
             <div className="px-6 py-4">
               <div className="font-bold text-xl dark:text-gray-300">
@@ -159,7 +159,7 @@ export default function MakananKhas() {
                 setModalDetail(true);
                 setContentModal({
                   title: "Mie Aceh",
-                  body: "Mi aceh adalah masakan mi pedas khas Aceh di Indonesia. Mi aceh biasanya ditaburi dengan bawang goreng dan disajikan bersama emping, potongan bawang merah, mentimun, dan jeruk nipis. Mi aceh biasanya disajikan dalam tiga bentuk yaitu mi kuah, mi goreng basah, dan mi goreng kering.",
+                  body: "Mi aceh adalah masakan mi pedas khas Aceh di Indonesia. Mi aceh biasanya ditaburi dengan bawang goreng dan disajikan bersama emping, potongan bawang merah, mentimun, dan jeruk nipis.",
                   resep:
                     "Mi kuning tebal dengan irisan daging sapi, daging kambing atau makanan laut (udang dan cumi) disajikan dalam sup sejenis kari yang gurih dan pedas.",
                   location: "Aceh Darussalam",
@@ -176,7 +176,7 @@ export default function MakananKhas() {
             <img
               className="w-full h-48 object-cover"
               src="./images/card/papeda.jpg"
-              alt="Card Image 5"
+              alt="Card 5"
             />
             <div className="px-6 py-4">
               <div className="font-bold text-xl dark:text-gray-300">Papeda</div>
@@ -190,7 +190,7 @@ export default function MakananKhas() {
                 setModalDetail(true);
                 setContentModal({
                   title: "Papeda",
-                  body: "Papeda adalah makanan berupa bubur sagu khas Maluku dan Papua yang biasanya disajikan dengan ikan tongkol atau bubara yang dibumbui dengan kunyit. Papeda berwarna putih dan bertekstur lengket menyerupai lem dengan rasa yang tawar.Papeda merupakan makanan yang kaya serat, rendah kolesterol, dan cukup bernutrisi.",
+                  body: "Papeda adalah makanan berupa bubur sagu khas Maluku dan Papua yang biasanya disajikan dengan ikan tongkol atau bubara yang dibumbui dengan kunyit. Papeda berwarna putih dan bertekstur lengket menyerupai lem dengan rasa yang tawar.",
                   resep:
                     "1/4 kg tepung tapioka, 15 sdm tepung terigu, 3 batang Bawang godong (iris cincang), 1 penyedap rasa, 1 garam secukupnya, secukupnya Air, 1 telor",
                   location: "Papua",
@@ -207,7 +207,7 @@ export default function MakananKhas() {
             <img
               className="w-full h-48 object-cover"
               src="./images/card/pempek.jpg"
-              alt="Card Image 6"
+              alt="Card 6"
             />
             <div className="px-6 py-4">
               <div className="font-bold text-xl dark:text-gray-300">Pempek</div>
@@ -221,7 +221,7 @@ export default function MakananKhas() {
                 setModalDetail(true);
                 setContentModal({
                   title: "Pempek",
-                  body: "Pempek adalah makanan yang dibuat dari daging ikan yang digiling lembut yang dicampur tepung kanji atau tepung sagu, serta komposisi beberapa bahan lain seperti telur, bawang putih yang dihaluskan, penyedap rasa, dan garam. Pempek biasanya disajikan dengan kuah yang disebut cuko yang memiliki rasa asam, manis, dan pedas. Pempek merupakan makanan khas Palembang.",
+                  body: "Pempek adalah makanan yang dibuat dari daging ikan yang digiling lembut yang dicampur tepung kanji atau tepung sagu, serta komposisi beberapa bahan lain seperti telur, bawang putih yang dihaluskan, penyedap rasa, dan garam.",
                   resep:
                     "daging ikan giling, tepung kanji atau tepung sagu, serta telur",
                   location: "Palembang",
@@ -238,7 +238,7 @@ export default function MakananKhas() {
             <img
               className="w-full h-48 object-cover"
               src="./images/card/rendang.jpg"
-              alt="Card Image "
+              alt="Card "
             />
             <div className="px-6 py-4">
               <div className="font-bold text-xl dark:text-gray-300">
@@ -270,22 +270,22 @@ export default function MakananKhas() {
               <img
                 className="w-full h-[125px] object-cover"
                 src="./images/card/gudeg.jpeg"
-                alt="Card Image "
+                alt="Card "
               />
               <img
                 className="w-full h-[125px] object-cover"
                 src="./images/card/papeda.jpg"
-                alt="Card Image "
+                alt="Card "
               />
               <img
                 className="w-full h-[125px] object-cover"
                 src="./images/card/rendang.jpg"
-                alt="Card Image "
+                alt="Card "
               />
               <img
                 className="w-full h-[125px] object-cover"
                 src="./images/card/pempek.jpg"
-                alt="Card Image "
+                alt="Card "
               />
             </div>
             <button className="block w-full border-2 border-orange-500 hover:bg-orange-500 text-orange-500 hover:text-white text-center py-2 px-4 mt-4 rounded">

@@ -41,6 +41,7 @@ export default function Detail(language: any) {
           <img
             src="/images/news/serenTaun.jpg"
             className="w-full h-[350px] rounded object-cover"
+            alt="seren taun"
           />
         </div>
       </div>
@@ -125,7 +126,11 @@ export default function Detail(language: any) {
         </div> */}
         <div>
           <div className="bg-gray-50 dark:bg-gray-950 p-10 rounded">
-            <img src="/images/avatar.png" className="w-[70px] rounded" />
+            <img
+              src="/images/avatar.png"
+              className="w-[70px] rounded"
+              alt="avatar"
+            />
             <h1 className="font-bold mt-4 text-gray-800 dark:text-gray-300">
               Ilham Hafidz
             </h1>
@@ -170,7 +175,7 @@ export default function Detail(language: any) {
             className="h-[250px] object-cover w-full rounded"
           />
           <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-            {lang == "ID" ? "Festival Bali Arts" : "Bali Arts Festival"}
+            {lang === "ID" ? "Festival Bali Arts" : "Bali Arts Festival"}
           </h3>
           <div className="my-5 flex gap-5">
             <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
@@ -183,7 +188,9 @@ export default function Detail(language: any) {
             </span>
           </div>
           <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-            {lang == "ID" ? content.news.sub.sub1.id : content.news.sub.sub1.en}
+            {lang === "ID"
+              ? content.news.sub.sub1.id
+              : content.news.sub.sub1.en}
           </p>
         </div>
         <div>
@@ -193,7 +200,9 @@ export default function Detail(language: any) {
             className="h-[250px] object-cover w-full rounded"
           />
           <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-            {lang == "ID" ? "Festival Dalang Cilik" : "'Dalang Cilik' Festival"}
+            {lang === "ID"
+              ? "Festival Dalang Cilik"
+              : "'Dalang Cilik' Festival"}
           </h3>
           <div className="my-5 flex gap-5">
             <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
@@ -206,7 +215,9 @@ export default function Detail(language: any) {
             </span>
           </div>
           <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-            {lang == "ID" ? content.news.sub.sub2.id : content.news.sub.sub2.en}
+            {lang === "ID"
+              ? content.news.sub.sub2.id
+              : content.news.sub.sub2.en}
           </p>
         </div>
         <div>
@@ -216,7 +227,7 @@ export default function Detail(language: any) {
             className="h-[250px] object-cover w-full rounded"
           />
           <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-            {lang == "ID" ? "Festival Babarit" : "Babarit Festival"}
+            {lang === "ID" ? "Festival Babarit" : "Babarit Festival"}
           </h3>
           <div className="my-5 flex gap-5">
             <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
@@ -229,7 +240,9 @@ export default function Detail(language: any) {
             </span>
           </div>
           <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-            {lang == "ID" ? content.news.sub.sub3.id : content.news.sub.sub3.en}
+            {lang === "ID"
+              ? content.news.sub.sub3.id
+              : content.news.sub.sub3.en}
           </p>
         </div>
       </section>

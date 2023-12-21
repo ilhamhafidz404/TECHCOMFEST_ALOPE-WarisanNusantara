@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { FaBell, FaCalendarAlt } from "react-icons/fa";
+import { FaBell } from "react-icons/fa";
 import { Accordion, AccordionItem } from "react-light-accordion";
 import "react-light-accordion/demo/css/index.css";
 import { Link } from "react-router-dom";

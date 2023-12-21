@@ -1,12 +1,8 @@
 import React, { useState } from "react";
-import { FaChevronDown } from "react-icons/fa";
 import { GiMusicalScore } from "react-icons/gi";
-import { MdInventory, MdOutlineHistoryEdu } from "react-icons/md";
-//
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
+
+import { Accordion, AccordionItem } from "react-light-accordion";
+import "react-light-accordion/demo/css/index.css";
 
 import songs from "./../data/songs.json";
 
@@ -177,7 +173,25 @@ export default function LaguDaerah() {
               INFORMASI LAINNYA
             </h5>
 
-            <Accordion
+            <Accordion atomic={true}>
+              <AccordionItem title="Makna Lagu">
+                <p className="p-5 text-sm text-gray-800 dark:text-gray-200">
+                  <p
+                    dangerouslySetInnerHTML={{ __html: selectedSong.mean }}
+                  ></p>
+                </p>
+              </AccordionItem>
+
+              <AccordionItem title="Sejarah">
+                <p className="p-5 text-sm text-gray-800 dark:text-gray-200">
+                  <p
+                    dangerouslySetInnerHTML={{ __html: selectedSong.history }}
+                  ></p>
+                </p>
+              </AccordionItem>
+            </Accordion>
+
+            {/* <Accordion
               expanded={expanded === "panel1"}
               onChange={handleChangeAccordionItem("panel1")}
             >
@@ -224,7 +238,7 @@ export default function LaguDaerah() {
                   ></p>
                 </Typography>
               </AccordionDetails>
-            </Accordion>
+            </Accordion> */}
           </div>
         </div>
       </section>

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link, Router } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { styled } from "@mui/material/styles";
 import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 
 import Switcher from "./../components/swicher";
-import { IoLanguage } from "react-icons/io5";
 // icons
 import { FaBars, FaBell, FaGlobe, FaHome, FaNewspaper } from "react-icons/fa";
 
@@ -41,7 +40,7 @@ const DarkNavbar: React.FC<DarkNavbarProps> = ({
   };
 
   const switchLanguage = () => {
-    if (language == "ID") {
+    if (language === "ID") {
       changeLanguage("EN");
       setLanguage("EN");
     } else {
@@ -105,7 +104,7 @@ const DarkNavbar: React.FC<DarkNavbarProps> = ({
           </div>
           <div className="md:flex hidden gap-10 items-center justify-end w-1/4">
             <BootstrapTooltip
-              title={"Dark Mode"}
+              title={"Ganti Mode"}
               placement="bottom"
               className="pr-2"
             >
@@ -117,7 +116,7 @@ const DarkNavbar: React.FC<DarkNavbarProps> = ({
               </span>
             </BootstrapTooltip>
             <BootstrapTooltip
-              title={"Inggris"}
+              title={"Ganti Bahasa"}
               placement="bottom"
               className="pr-2"
             >
@@ -128,7 +127,7 @@ const DarkNavbar: React.FC<DarkNavbarProps> = ({
                   switchLanguage();
                 }}
               >
-                {language == "ID" ? (
+                {language === "ID" ? (
                   <img
                     src="./images/icons/indonesia.png"
                     className="w-[30px]"

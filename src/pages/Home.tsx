@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Image } from "react-image-and-background-image-fade";
 
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
@@ -95,7 +94,7 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
               data-aos-delay="100"
               data-aos-once="true"
             >
-              {lang == "ID" ? content.header.id : content.header.en}
+              {lang === "ID" ? content.header.id : content.header.en}
             </p>
           </div>
           <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-3 lg:gap-5 gap-3 sm:order-2 order-1">
@@ -229,7 +228,7 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
             data-aos="fade-right"
             data-aos-once="true"
           >
-            {lang == "ID" ? (
+            {lang === "ID" ? (
               <>
                 {content.explore.header.id}
                 <span className="relative md:pe-32 pe-16 md:pl-0 pl-16">
@@ -250,7 +249,7 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
             data-aos-once="true"
             data-aos-delay="200"
           >
-            {lang == "ID" ? content.explore.body.id : content.explore.body.en}
+            {lang === "ID" ? content.explore.body.id : content.explore.body.en}
           </p>
 
           <span
@@ -266,7 +265,7 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
               data-aos-delay="500"
             >
               <FaMapMarkerAlt size={20} />
-              {lang == "ID" ? "Explorasi Sekarang" : "Explore Now"}
+              {lang === "ID" ? "Explorasi Sekarang" : "Explore Now"}
             </Link>
           </span>
         </div>
@@ -307,7 +306,7 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
             data-aos="fade-right"
             data-aos-once="true"
           >
-            {lang == "ID" ? "ASPEK BUDAYA DI " : "CULTURAL ASPECTS IN "}{" "}
+            {lang === "ID" ? "ASPEK BUDAYA DI " : "CULTURAL ASPECTS IN "}{" "}
             <span className="text-red-500">INDONESIA</span>
           </h3>
           <p
@@ -316,7 +315,9 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
             data-aos-delay="300"
             data-aos-once="true"
           >
-            {lang == "ID" ? content.cultureAspect.id : content.cultureAspect.en}
+            {lang === "ID"
+              ? content.cultureAspect.id
+              : content.cultureAspect.en}
           </p>
         </div>
         <div data-aos="flip-left" data-aos-delay="250" data-aos-once="true">
@@ -335,7 +336,7 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
               </div>
               <div>
                 <h4 className="font-bold text-xl text-white md:mb-5 mb-2">
-                  {lang == "ID" ? "LAGU & MUSIK" : "SONG & MUSIC"}
+                  {lang === "ID" ? "LAGU & MUSIK" : "SONG & MUSIC"}
                 </h4>
                 <p className="text-gray-200 md:text-sm text-[12px]">
                   Nikmati keindahan seni musik Bonang di Jawa Timur. Temukan
@@ -363,7 +364,7 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
               </div>
               <div>
                 <h4 className="font-bold text-xl uppercase text-white md:mb-5 mb-2">
-                  {lang == "ID"
+                  {lang === "ID"
                     ? "ARSITEKTUR BANGUNAN"
                     : "building architecture"}
                 </h4>
@@ -392,7 +393,7 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
               </div>
               <div>
                 <h4 className="font-bold text-xl text-white md:mb-5 mb-2">
-                  {lang == "ID" ? "UPACARA" : "CEREMONY"}
+                  {lang === "ID" ? "UPACARA" : "CEREMONY"}
                 </h4>
                 <p className="text-gray-200 md:text-sm text-[12px]">
                   Temukan ungkapan syukur atas pertanian setahun. Rasakan
@@ -419,7 +420,7 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
               </div>
               <div>
                 <h4 className="font-bold text-xl text-white md:mb-5 mb-2">
-                  {lang == "ID" ? "PAKAIAN" : "CLOTHES"}
+                  {lang === "ID" ? "PAKAIAN" : "CLOTHES"}
                 </h4>
                 <p className="text-gray-200 md:text-sm text-[12px]">
                   Dengan desain dan corak yang beragam, busana tradisional Sunda
@@ -432,7 +433,7 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
         </div>
         <div className="lg:col-span-4 md:col-span-2 text-center mt-8">
           <button className="bg-red-500 hover:bg-red-400 text-white md:py-3 py-2 md:px-10 px-7 md:text-sm text-[12px] rounded-full">
-            {lang == "ID" ? "Lihat Lebih Banyak" : "View More"}
+            {lang === "ID" ? "Lihat Lebih Banyak" : "View More"}
           </button>
         </div>
       </section>
@@ -508,10 +509,10 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
           data-aos-delay="800"
         >
           <h2 className="font-semibold text-xl dark:text-gray-200">
-            {lang == "ID" ? content.gallery.id : content.gallery.en}
+            {lang === "ID" ? content.gallery.id : content.gallery.en}
           </h2>
           <p className="text-sm mt-3 text-gray-700 dark:text-gray-300">
-            {lang == "ID" ? content.gallery.body.id : content.gallery.body.en}
+            {lang === "ID" ? content.gallery.body.id : content.gallery.body.en}
           </p>
         </div>
         <div className="lg:order-8  order-5 lg:block md:hidden">
@@ -585,7 +586,7 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
           data-aos-once="true"
           data-aos="fade-down"
         >
-          {lang == "ID"
+          {lang === "ID"
             ? "GALERI KERAGAMAN INDONESIA"
             : "INDONESIAN DIVERSITY GALLERY"}
         </h3>
@@ -594,7 +595,7 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
           data-aos-once="true"
           data-aos="fade-up"
         >
-          {lang == "ID" ? content.slider.id : content.slider.en}
+          {lang === "ID" ? content.slider.id : content.slider.en}
         </p>
         <div
           className="slider md:h-[500px] h-[350px] overflow-x-hidden py-10 relative"
@@ -670,12 +671,12 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
       >
         <div className="bg-red-200 dark:bg-red-400 py-12 text-center rounded-md md:px-20 px-5">
           <h4 className="text-gray-800 dark:text-gray-300">
-            {lang == "ID"
+            {lang === "ID"
               ? "INDONESIA DIMATA DUNIA"
               : "Indonesia in the eyes of the world"}
           </h4>
           <h3 className="font-bold md:text-3xl text-xl mt-5 dark:text-gray-200">
-            {lang == "ID"
+            {lang === "ID"
               ? content.indonesiaAndWorld.id
               : content.indonesiaAndWorld.en}
           </h3>
@@ -703,13 +704,13 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
             </h5>
             <Link to="/news/read">
               <h2 className="font-bold md:text-3xl text-xl dark:text-gray-200">
-                {lang == "ID"
+                {lang === "ID"
                   ? "INDONESIA DENGAN KEBERAGAMAN BUDAYA NUSANTARA YANG MENDUNIA"
                   : "INDONESIA WITH THE WORLD'S DIVERSITY OF ARCHIPELAGO CULTURE"}
               </h2>
             </Link>
             <p className="text-gray-800 mt-5 md:text-base text-[12px] dark:text-gray-300">
-              {lang == "ID"
+              {lang === "ID"
                 ? content.news.highlight.id
                 : content.news.highlight.en}
             </p>
@@ -750,7 +751,9 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
 
                 <Link to="/news/read">
                   <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-                    {lang == "ID" ? "Festival Bali Arts" : "Bali Arts Festival"}
+                    {lang === "ID"
+                      ? "Festival Bali Arts"
+                      : "Bali Arts Festival"}
                   </h3>
                 </Link>
                 <div className="my-5 flex gap-5">
@@ -764,7 +767,7 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
                   </span>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-                  {lang == "ID"
+                  {lang === "ID"
                     ? content.news.sub.sub1.id
                     : content.news.sub.sub1.en}
                 </p>
@@ -777,7 +780,7 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
                 />
                 <Link to="/news/read">
                   <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-                    {lang == "ID"
+                    {lang === "ID"
                       ? "Festival Dalang Cilik"
                       : "'Dalang Cilik' Festival"}
                   </h3>
@@ -793,7 +796,7 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
                   </span>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-                  {lang == "ID"
+                  {lang === "ID"
                     ? content.news.sub.sub2.id
                     : content.news.sub.sub2.en}
                 </p>
@@ -806,7 +809,7 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
                 />
                 <Link to="/news/read">
                   <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-                    {lang == "ID" ? "Festival Babarit" : "Babarit Festival"}
+                    {lang === "ID" ? "Festival Babarit" : "Babarit Festival"}
                   </h3>
                 </Link>
                 <div className="my-5 flex gap-5">
@@ -820,7 +823,7 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
                   </span>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-                  {lang == "ID"
+                  {lang === "ID"
                     ? content.news.sub.sub3.id
                     : content.news.sub.sub3.en}
                 </p>
@@ -833,7 +836,7 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
                   setMoreNews(false);
                 }}
               >
-                {lang == "ID" ? "Lebih Sedikit" : "Show More"}
+                {lang === "ID" ? "Lebih Sedikit" : "Show More"}
                 <MdKeyboardDoubleArrowUp />
               </button>
               <Link
@@ -843,7 +846,7 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
                   changePage("news");
                 }}
               >
-                {lang == "ID" ? "Semua Berita" : "Show All News"}
+                {lang === "ID" ? "Semua Berita" : "Show All News"}
                 <MdKeyboardDoubleArrowRight />
               </Link>
             </div>
@@ -856,7 +859,7 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
                 setMoreNews(true);
               }}
             >
-              {lang == "ID" ? "Lihat Lainnya" : "Show More"}
+              {lang === "ID" ? "Lihat Lainnya" : "Show More"}
               <MdKeyboardDoubleArrowDown />
             </button>
           </div>
