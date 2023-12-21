@@ -27,11 +27,16 @@ import {
   MdKeyboardDoubleArrowUp,
 } from "react-icons/md";
 
-export default function Home(language: any) {
+type HomeProps = {
+  language: any;
+  changePage: (page: any) => void;
+};
+
+const Home: React.FC<HomeProps> = ({ language, changePage }) => {
   const [lang, setLang] = useState("ID");
 
   useEffect(() => {
-    setLang(language.language);
+    setLang(language);
   }, [language]);
 
   const [open, setOpen] = useState(false);
@@ -150,7 +155,7 @@ export default function Home(language: any) {
             className="absolute right-[10px] top-[30%] text-8xl font-semibold text-red-500 lg:block hidden"
             data-aos="fade-right"
           >
-            INDONESIA
+            WARISAN
           </h1>
         </section>
         <section className="lg:h-[800px] h-[550px] relative after:content-[''] after:absolute after:inset-0 after:bg-black/30 lg:order-2 order-1">
@@ -163,7 +168,7 @@ export default function Home(language: any) {
           <div className="absolute top-1/2 sm:right-[40px] right-[20px] -translate-y-1/2 z-10 flex flex-col justify-center items-center gap-10">
             <div className="w-[1px] lg:h-[200px] h-[100px] rounded-full bg-white/70 cursor-pointer"></div>
             <div
-              className="w-[15px] h-[15px] rounded-full bg-white/70 cursor-pointer flex items-center justify-center"
+              className="w-[15px] h-[15px] rounded-full bg-red-500/70 cursor-pointer flex items-center justify-center"
               onClick={() => {
                 changeHeaderImg("/images/header/1.jpg");
               }}
@@ -171,7 +176,7 @@ export default function Home(language: any) {
               <h6 className="text-3xl text-white font-bold">1</h6>
             </div>
             <div
-              className="w-[15px] h-[15px] rounded-full bg-white/70 cursor-pointer flex items-center justify-center"
+              className="w-[15px] h-[15px] rounded-full bg-red-500/70 cursor-pointer flex items-center justify-center"
               onClick={() => {
                 changeHeaderImg("/images/header/2.jpg");
               }}
@@ -179,7 +184,7 @@ export default function Home(language: any) {
               <h6 className="text-3xl text-white font-bold">2</h6>
             </div>
             <div
-              className="w-[15px] h-[15px] rounded-full bg-white/70 cursor-pointer flex items-center justify-center"
+              className="w-[15px] h-[15px] rounded-full bg-red-500/70 cursor-pointer flex items-center justify-center"
               onClick={() => {
                 changeHeaderImg("/images/header/3.jpg");
               }}
@@ -192,8 +197,8 @@ export default function Home(language: any) {
             className="absolute lg:left-[10px] left-[40px] sm:-translate-x-0 -translate-x-1/2 md:top-[30%] top-1/2 md:text-8xl sm:text-7xl text-5xl sm:text-left text-center font-semibold text-white z-10"
             data-aos="fade-left"
           >
-            <span className="text-red-500 block lg:hidden">INDONESIA</span>
-            PUSAKA
+            <span className="text-red-500 block lg:hidden">WARISAN</span>
+            NUSANTARA
           </h1>
         </section>
       </header>
@@ -247,16 +252,23 @@ export default function Home(language: any) {
           >
             {lang == "ID" ? content.explore.body.id : content.explore.body.en}
           </p>
-          <Link
-            to="/ragam-indonesia"
-            className="md:px-7 py-3 px-5 inline-flex gap-3 items-center bg-red-500 hover:bg-red-400 rounded-full text-white md:text-sm text-[12px]"
-            data-aos="fade-up"
-            data-aos-once="true"
-            data-aos-delay="500"
+
+          <span
+            onClick={() => {
+              changePage("ragam");
+            }}
           >
-            <FaMapMarkerAlt size={20} />
-            {lang == "ID" ? "Explorasi Sekarang" : "Explore Now"}
-          </Link>
+            <Link
+              to="/ragam-indonesia"
+              className="md:px-7 py-3 px-5 inline-flex gap-3 items-center bg-red-500 hover:bg-red-400 rounded-full text-white md:text-sm text-[12px]"
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-delay="500"
+            >
+              <FaMapMarkerAlt size={20} />
+              {lang == "ID" ? "Explorasi Sekarang" : "Explore Now"}
+            </Link>
+          </span>
         </div>
         <div className="h-[400px] lg:flex hidden lg:justify-start gap-5">
           <div className="h-full w-[40%] -translate-y-10">
@@ -827,6 +839,9 @@ export default function Home(language: any) {
               <Link
                 to={"/news"}
                 className="border-2 border-red-500 hover:bg-red-500 text-red-500 hover:text-white mx-auto text-sm px-5 py-2 mt-10 rounded-full inline-flex items-center gap-2"
+                onClick={() => {
+                  changePage("news");
+                }}
               >
                 {lang == "ID" ? "Semua Berita" : "Show All News"}
                 <MdKeyboardDoubleArrowRight />
@@ -849,4 +864,6 @@ export default function Home(language: any) {
       </section>
     </>
   );
-}
+};
+
+export default Home;

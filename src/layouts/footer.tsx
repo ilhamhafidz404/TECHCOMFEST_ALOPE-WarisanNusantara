@@ -115,44 +115,44 @@ export default function Footer() {
               </div>
               <div className="border-t-4 border-purple-500">
                 <h4 className="md:text-xl text-base font-semibold mb-4 mt-3">
-                  Indonesia Kaya
+                  Subscription
                 </h4>
                 <ul className="text-sm">
                   <li className="mb-2 text-gray-300">
                     <a href="#" className="md:text-base text-[12px]">
-                      Tentang Kami
+                      Lewat Email
                     </a>
                   </li>
                   <li className="mb-2 text-gray-300">
                     <a href="#" className="md:text-base text-[12px]">
-                      Hubungi Kami
+                      Lewat Instagram
                     </a>
                   </li>
                   <li className="mb-2 text-gray-300">
                     <a href="#" className="md:text-base text-[12px]">
-                      Peraturan dan Ketentuan
+                      Lewat Facebook
                     </a>
                   </li>
                 </ul>
               </div>
               <div className="border-t-4 border-orange-500">
                 <h4 className="md:text-xl text-base font-semibold mb-4 mt-3">
-                  Indonesia Kaya
+                  FAQ
                 </h4>
                 <ul className="text-sm">
                   <li className="mb-2 text-gray-300">
                     <a href="#" className="md:text-base text-[12px]">
-                      Tentang Kami
+                      Bagaimana Cara Subscription?
                     </a>
                   </li>
                   <li className="mb-2 text-gray-300">
                     <a href="#" className="md:text-base text-[12px]">
-                      Hubungi Kami
+                      Apa Keuntungan Subcription?
                     </a>
                   </li>
                   <li className="mb-2 text-gray-300">
                     <a href="#" className="md:text-base text-[12px]">
-                      Peraturan dan Ketentuan
+                      Apakah Subscription Berbayar?
                     </a>
                   </li>
                 </ul>

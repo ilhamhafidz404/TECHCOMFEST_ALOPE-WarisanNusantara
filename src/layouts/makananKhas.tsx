@@ -8,26 +8,28 @@ export default function MakananKhas() {
   return (
     <>
       <section className="mt-20 mb-20">
-        <div className="md:flex gap-10 items-center mb-10">
-          <div className="shadow py-4 w-[100px] text-center rounded bg-orange-500 text-white">
-            <FaBowlFood className="mx-auto" size={30} />
-          </div>
-          <div className="flex justify-between">
-            <div>
-              <h2 className="font-bold md:text-3xl text-xl mb-3 md:mt-0 mt-5 dark:text-gray-100">
-                MAKANAN KHAS DAERAH INDONESIA
-              </h2>
-              <p className="xl:w-[700px] md:w-[500px] w-full dark:text-gray-300 text-gray-700 dark:text-gray-400 md:text-sm text-[12px]">
-                Indonesia menawarkan ragam makanan khas dari setiap daerah.
-                Keberagaman ini mencerminkan kekayaan kuliner yang unik di
-                Indonesia.
-              </p>
+        <div className="flex items-center justify-between">
+          <div className="md:flex gap-10 items-center mb-10">
+            <div className="shadow py-4 w-[100px] text-center rounded bg-orange-500 text-white">
+              <FaBowlFood className="mx-auto" size={30} />
             </div>
-            {/* <img
-                src="https://react.dev/images/home/community/react_conf_nat.webp"
-                className="object-cover w-[300px] h-[100px] object-center"
-                alt=""
-              /> */}
+            <div className="flex justify-between">
+              <div>
+                <h2 className="font-bold md:text-3xl text-xl mb-3 md:mt-0 mt-5 dark:text-gray-100">
+                  MAKANAN KHAS DAERAH INDONESIA
+                </h2>
+                <p className="xl:w-[700px] md:w-[500px] w-full dark:text-gray-300 text-gray-700 md:text-sm text-[12px]">
+                  Indonesia menawarkan ragam makanan khas dari setiap daerah.
+                  Keberagaman ini mencerminkan kekayaan kuliner yang unik di
+                  Indonesia.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:block hidden">
+            <button className="px-5 text-sm py-2 rounded border text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white">
+              Lihat Lebih Lengkap
+            </button>
           </div>
         </div>
         <hr className="dark:border-orange-900" />

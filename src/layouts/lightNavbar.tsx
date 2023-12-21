@@ -123,12 +123,20 @@ const LightNavbar: React.FC<LightNavbarProps> = ({
             >
               <span
                 id="changeLanguage"
-                className="text-red-500 bg-white dark:bg-gray-900 dark:text-gray-100 hover:text-white hover:bg-red-500 transition-all cursor-pointer min-w-[30px] h-[30px] flex items-center justify-center rounded-full"
+                className="text-red-500 bg-white dark:bg-gray-900 dark:text-gray-100 hover:text-white hover:bg-red-500 transition-all cursor-pointer min-w-[30px] h-[30px] flex items-center justify-center rounded-full border-2 border-white"
                 onClick={() => {
                   switchLanguage();
                 }}
               >
-                <IoLanguage size={20} />
+                {/* <IoLanguage size={20} /> */}
+                {language == "ID" ? (
+                  <img
+                    src="./images/icons/indonesia.png"
+                    className="w-[30px]"
+                  />
+                ) : (
+                  <img src="./images/icons/uk.png" className="w-[30px]" />
+                )}
               </span>
             </BootstrapTooltip>
 

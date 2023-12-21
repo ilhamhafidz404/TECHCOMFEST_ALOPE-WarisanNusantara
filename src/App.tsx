@@ -59,7 +59,10 @@ export default function App() {
         )}
 
         <Routes>
-          <Route path="/" element={<Home language={language} />} />
+          <Route
+            path="/"
+            element={<Home language={language} changePage={handleChangePage} />}
+          />
           <Route path="/ragam-indonesia" element={<RagamIndonesia />} />
           <Route path="/news" element={<News />} />
           <Route path="/subscription" element={<Subscription />} />

@@ -111,7 +111,7 @@ const DarkNavbar: React.FC<DarkNavbarProps> = ({
             >
               <span
                 id="changeMode"
-                className="bg-gray-900 text-gray-100 hover:text-white hover:bg-red-500 transition-all cursor-pointer min-w-[30px] h-[30px] flex items-center justify-center rounded-full"
+                className="!bg-gray-900 !text-gray-100 hover:text-white hover:bg-red-500 transition-all cursor-pointer min-w-[30px] h-[30px] flex items-center justify-center rounded-full"
               >
                 <Switcher />
               </span>
@@ -123,12 +123,19 @@ const DarkNavbar: React.FC<DarkNavbarProps> = ({
             >
               <span
                 id="changeLanguage"
-                className="bg-gray-900 text-gray-100 hover:text-white hover:bg-red-500 transition-all cursor-pointer min-w-[30px] h-[30px] flex items-center justify-center rounded-full"
+                className="!bg-gray-900 !text-gray-100 hover:text-white hover:bg-red-500 transition-all cursor-pointer min-w-[30px] h-[30px] flex items-center justify-center rounded-full"
                 onClick={() => {
                   switchLanguage();
                 }}
               >
-                <IoLanguage size={20} />
+                {language == "ID" ? (
+                  <img
+                    src="./images/icons/indonesia.png"
+                    className="w-[30px]"
+                  />
+                ) : (
+                  <img src="./images/icons/uk.png" className="w-[30px]" />
+                )}
               </span>
             </BootstrapTooltip>
 

@@ -45,26 +45,28 @@ export default function LaguDaerah() {
       {/*  */}
 
       <section className="mt-20">
-        <div className="md:flex gap-10 items-center mb-10">
-          <div className="shadow py-4 w-[100px] text-center rounded bg-purple-500 text-white">
-            <GiMusicalScore className="mx-auto" size={30} />
-          </div>
-          <div className="flex justify-between">
-            <div>
-              <h2 className="font-bold md:text-3xl text-2xl mb-3 md:mt-0 mt-5 dark:text-gray-100">
-                LAGU DAERAH INDONESIA
-              </h2>
-              <p className="xl:w-[700px] md:w-[500px] w-full dark:text-gray-300 text-gray-700 md:text-sm text-[12px]">
-                Indonesia punya lebih dari 439 lagu tradisional, masing-masing
-                menceritakan kisah unik sebagai simbol keanekaragaman seni dan
-                warisan budaya yang memperkaya bangsa.
-              </p>
+        <div className="flex justify-between items-center">
+          <div className="md:flex gap-10 items-center mb-10">
+            <div className="shadow py-4 w-[100px] text-center rounded bg-purple-500 text-white">
+              <GiMusicalScore className="mx-auto" size={30} />
             </div>
-            {/* <img
-                src="https://react.dev/images/home/community/react_conf_nat.webp"
-                className="object-cover w-[300px] h-[100px] object-center"
-                alt=""
-              /> */}
+            <div className="flex justify-between items-center">
+              <div>
+                <h2 className="font-bold md:text-3xl text-2xl mb-3 md:mt-0 mt-5 dark:text-gray-100">
+                  LAGU DAERAH INDONESIA
+                </h2>
+                <p className="xl:w-[700px] md:w-[500px] w-full dark:text-gray-300 text-gray-700 md:text-sm text-[12px]">
+                  Indonesia punya lebih dari 439 lagu tradisional, masing-masing
+                  menceritakan kisah unik sebagai simbol keanekaragaman seni dan
+                  warisan budaya yang memperkaya bangsa.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:block hidden">
+            <button className="px-5 text-sm py-2 rounded border text-purple-500 border-purple-500 hover:bg-purple-500 hover:text-white">
+              Lihat Lebih Lengkap
+            </button>
           </div>
         </div>
         <hr className="dark:border-purple-900" />
@@ -154,6 +156,10 @@ export default function LaguDaerah() {
               ) : (
                 ""
               )}
+
+              <small className="italic text-gray-700 dark:text-gray-400">
+                Pastikan koneksi stabil untuk memutar musik*
+              </small>
             </div>
 
             <h5 className="font-semibold text-xl dark:text-gray-200">LIRIK</h5>
