@@ -6,8 +6,6 @@ import "yet-another-react-lightbox/styles.css";
 
 import content from "./../data/content.json";
 
-import GoogleMapComponent from "../components/googlemap";
-
 // icons
 import {
   FaCalendar,
@@ -203,7 +201,6 @@ const Home: React.FC<HomeProps> = ({ language, changePage }) => {
           </h1>
         </section>
       </header>
-      <GoogleMapComponent />
 
       <br />
       <br />

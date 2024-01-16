@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+// Icons
 import { FaArrowRight, FaTimes } from "react-icons/fa";
 import { FaBowlFood, FaMapLocation } from "react-icons/fa6";
 
@@ -35,9 +37,12 @@ export default function MakananKhas() {
             </div>
           </div>
           <div className="lg:block hidden">
-            <button className="px-5 text-sm py-2 rounded border text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white">
+            <Link
+              className="px-5 text-sm py-2 rounded border text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white"
+              to={"/ragam-indonesia/makanan"}
+            >
               Lihat Lebih Lengkap
-            </button>
+            </Link>
           </div>
         </div>
         <hr className="dark:border-orange-900" />
@@ -45,7 +50,7 @@ export default function MakananKhas() {
           <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-50 dark:bg-gray-900/80">
             <img
               className="w-full h-48 object-cover"
-              src="./images/card/gudeg.jpeg"
+              src="./images/makanan/gudeg.jpeg"
               alt="Card 1"
             />
             <div className="px-6 py-4">
@@ -64,7 +69,7 @@ export default function MakananKhas() {
                   resep:
                     "Nangka muda, santan, gula aren, cabai, aneka bumbu, ayam, telur, tempe (opsional)",
                   location: "DIY Yogyakarta",
-                  img: "./images/card/gudeg.jpeg",
+                  img: "./images/makanan/gudeg.jpeg",
                 });
               }}
               className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
@@ -76,7 +81,7 @@ export default function MakananKhas() {
           <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-50 dark:bg-gray-900/80">
             <img
               className="w-full h-48 object-cover"
-              src="./images/card/karedok.jpeg"
+              src="./images/makanan/karedok.jpeg"
               alt="Card 2"
             />
             <div className="px-6 py-4">
@@ -97,7 +102,7 @@ export default function MakananKhas() {
                   resep:
                     "mentimun, taoge, kol, kacang panjang, ubi, labu siam daun kemangi, dan terong atau leunca.",
                   location: "Jawa Barat",
-                  img: "./images/card/karedok.jpeg",
+                  img: "./images/makanan/karedok.jpeg",
                 });
               }}
               className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
@@ -109,7 +114,7 @@ export default function MakananKhas() {
           <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-50 dark:bg-gray-900/80">
             <img
               className="w-full h-48 object-cover"
-              src="./images/card/keraktelor.jpg"
+              src="./images/makanan/keraktelor.jpg"
               alt="Card 3"
             />
             <div className="px-6 py-4">
@@ -130,7 +135,7 @@ export default function MakananKhas() {
                   resep:
                     "Beras ketan putih, telur ayam atau bebek, ebi (udang kering yang diasinkan) yang disangrai kering ditambah bawang merah goreng, lalu diberi bumbu yang dihaluskan berupa kelapa sangrai..",
                   location: "DKI Jakarta",
-                  img: "./images/card/keraktelor.jpg",
+                  img: "./images/makanan/keraktelor.jpg",
                 });
               }}
               className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
@@ -142,7 +147,7 @@ export default function MakananKhas() {
           <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-50 dark:bg-gray-900/80">
             <img
               className="w-full h-48 object-cover"
-              src="./images/card/mieaceh.jpg"
+              src="./images/makanan/mieaceh.jpg"
               alt="Card 4"
             />
             <div className="px-6 py-4">
@@ -163,7 +168,7 @@ export default function MakananKhas() {
                   resep:
                     "Mi kuning tebal dengan irisan daging sapi, daging kambing atau makanan laut (udang dan cumi) disajikan dalam sup sejenis kari yang gurih dan pedas.",
                   location: "Aceh Darussalam",
-                  img: "./images/card/mieaceh.jpg",
+                  img: "./images/makanan/mieaceh.jpg",
                 });
               }}
               className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
@@ -175,7 +180,7 @@ export default function MakananKhas() {
           <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-50 dark:bg-gray-900/80">
             <img
               className="w-full h-48 object-cover"
-              src="./images/card/papeda.jpg"
+              src="./images/makanan/papeda.jpg"
               alt="Card 5"
             />
             <div className="px-6 py-4">
@@ -194,7 +199,7 @@ export default function MakananKhas() {
                   resep:
                     "1/4 kg tepung tapioka, 15 sdm tepung terigu, 3 batang Bawang godong (iris cincang), 1 penyedap rasa, 1 garam secukupnya, secukupnya Air, 1 telor",
                   location: "Papua",
-                  img: "./images/card/papeda.jpg",
+                  img: "./images/makanan/papeda.jpg",
                 });
               }}
               className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
@@ -206,7 +211,7 @@ export default function MakananKhas() {
           <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-50 dark:bg-gray-900/80">
             <img
               className="w-full h-48 object-cover"
-              src="./images/card/pempek.jpg"
+              src="./images/makanan/pempek.jpg"
               alt="Card 6"
             />
             <div className="px-6 py-4">
@@ -225,7 +230,7 @@ export default function MakananKhas() {
                   resep:
                     "daging ikan giling, tepung kanji atau tepung sagu, serta telur",
                   location: "Palembang",
-                  img: "./images/card/pempek.jpg",
+                  img: "./images/makanan/pempek.jpg",
                 });
               }}
               className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
@@ -237,7 +242,7 @@ export default function MakananKhas() {
           <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-50 dark:bg-gray-900/80">
             <img
               className="w-full h-48 object-cover"
-              src="./images/card/rendang.jpg"
+              src="./images/makanan/rendang.jpg"
               alt="Card "
             />
             <div className="px-6 py-4">
@@ -257,7 +262,7 @@ export default function MakananKhas() {
                   body: "Rendang adalah hidangan berbahan dasar daging yang dihasilkan dari proses memasak suhu rendah dalam waktu lama dengan menggunakan aneka rempah-rempah dan santan. Proses memasaknya memakan waktu berjam-jam hingga yang tinggal hanyalah potongan daging berwarna hitam pekat dan dedak.",
                   resep: "Daging sapi, santan kelapa, cabai, bumbu",
                   location: "Sumatra Barat",
-                  img: "./images/card/rendang.jpg",
+                  img: "./images/makanan/rendang.jpg",
                 });
               }}
               className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
@@ -269,28 +274,31 @@ export default function MakananKhas() {
             <div className="grid grid-cols-2 gap-2">
               <img
                 className="w-full h-[125px] object-cover"
-                src="./images/card/gudeg.jpeg"
+                src="./images/makanan/gudeg.jpeg"
                 alt="Card "
               />
               <img
                 className="w-full h-[125px] object-cover"
-                src="./images/card/papeda.jpg"
+                src="./images/makanan/papeda.jpg"
                 alt="Card "
               />
               <img
                 className="w-full h-[125px] object-cover"
-                src="./images/card/rendang.jpg"
+                src="./images/makanan/rendang.jpg"
                 alt="Card "
               />
               <img
                 className="w-full h-[125px] object-cover"
-                src="./images/card/pempek.jpg"
+                src="./images/makanan/pempek.jpg"
                 alt="Card "
               />
             </div>
-            <button className="block w-full border-2 border-orange-500 hover:bg-orange-500 text-orange-500 hover:text-white text-center py-2 px-4 mt-4 rounded">
+            <Link
+              to={"/ragam-indonesia/makanan"}
+              className="block w-full border-2 border-orange-500 hover:bg-orange-500 text-orange-500 hover:text-white text-center py-2 px-4 mt-4 rounded"
+            >
               Lihat Lainnya
-            </button>
+            </Link>
           </div>
         </div>
       </section>

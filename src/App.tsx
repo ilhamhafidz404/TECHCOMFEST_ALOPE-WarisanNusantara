@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import News from "./pages/News";
 import Detail from "./pages/Detail";
+import Map from "./pages/Map";
 
 // components
 import Footer from "./layouts/footer";
@@ -19,6 +20,9 @@ import LightNavbar from "./layouts/lightNavbar";
 import Switcher from "./components/swicher";
 import { IoLanguage } from "react-icons/io5";
 import DarktNavbar from "./layouts/darkNavbar";
+import RagamMakanan from "./pages/RagamMakanan";
+import DetailRagamMakanan from "./pages/DetailRagamMakanan";
+import DetailRagamTarian from "./pages/DetailRagamTarian";
 
 export default function App() {
   const [language, setLanguage] = useState("ID");
@@ -64,9 +68,19 @@ export default function App() {
             element={<Home language={language} changePage={handleChangePage} />}
           />
           <Route path="/ragam-indonesia" element={<RagamIndonesia />} />
+          <Route path="/ragam-indonesia/makanan" element={<RagamMakanan />} />
+          <Route
+            path="/ragam-indonesia/makanan/detail"
+            element={<DetailRagamMakanan />}
+          />
+          <Route
+            path="/ragam-indonesia/tarian/detail"
+            element={<DetailRagamTarian />}
+          />
           <Route path="/news" element={<News />} />
           <Route path="/subscription" element={<Subscription />} />
           <Route path="/news/read" element={<Detail language={language} />} />
+          <Route path="/map" element={<Map />} />
         </Routes>
         <Footer />
       </Router>

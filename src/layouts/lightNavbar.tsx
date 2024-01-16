@@ -7,6 +7,7 @@ import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 import Switcher from "./../components/swicher";
 // icons
 import { FaBars, FaBell, FaGlobe, FaHome, FaNewspaper } from "react-icons/fa";
+import { FaMapLocation } from "react-icons/fa6";
 
 type LightNavbarProps = {
   changeLanguage: (lang: any) => void;
@@ -91,7 +92,10 @@ const LightNavbar: React.FC<LightNavbarProps> = ({
       <nav className="fixed left-0 right-0 bg-transparent z-50 lg:text-black text-white lg:py-10 md:py-8 py-6 lg:px-24 md:px-12 px-5 transition-all duration-500">
         <section className="flex justify-between">
           <div className="w-1/2">
-            <h2 className="font-bold lg:text-black md:text-2xl text-xl font-dancing-script w-full dark:text-gray-200">
+            <h2
+              className="font-bold lg:text-black md:text-2xl text-xl font-dancing-script w-full dark:text-gray-200"
+              style={{ fontFamily: "'Dancing Script', cursive !important" }}
+            >
               <Link
                 to={"/"}
                 onClick={() => {
@@ -198,6 +202,18 @@ const LightNavbar: React.FC<LightNavbarProps> = ({
               <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
                 <FaGlobe className="md:inline-block hidden" />
                 Ragam
+              </span>
+            </Link>
+            <Link
+              to="/map"
+              onClick={() => {
+                toggleNavigation();
+                changePage("subscription");
+              }}
+            >
+              <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
+                <FaMapLocation className="md:inline-block hidden" />
+                Peta Interaktif
               </span>
             </Link>
             <Link
