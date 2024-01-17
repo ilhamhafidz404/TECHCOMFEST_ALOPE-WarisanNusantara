@@ -10,6 +10,7 @@ import { IoLanguage } from "react-icons/io5";
 import Home from "./pages/Home";
 import News from "./pages/News";
 import Detail from "./pages/Detail";
+import Kenali from "./pages/Kenali";
 
 // components
 import Switcher from "./components/swicher";
@@ -20,6 +21,7 @@ import { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import RagamIndonesia from "./pages/RagamIndoneisa";
+import Tentang from "./pages/Kenali";
 
 const BootstrapTooltip = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} arrow classes={{ popper: className }} />
@@ -152,6 +154,7 @@ export default function App() {
           <Route path="/ragam-indonesia" element={<RagamIndonesia />} />
           <Route path="/news" element={<News />} />
           <Route path="/news/read" element={<Detail />} />
+          <Route path="/kenali" element={<Kenali />} />
         </Routes>
         <Footer />
       </Router>
