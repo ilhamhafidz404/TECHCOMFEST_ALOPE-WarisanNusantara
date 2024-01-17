@@ -175,6 +175,7 @@ const dataMarker = [
     title: "Tari Jaipong",
     from: "Jawa Barat",
     image: "tariJaipong.jpg",
+    type: "tarian",
     longlat: {
       lat: parseFloat(-6.661622),
       lng: parseFloat(108.3667111),
@@ -184,6 +185,7 @@ const dataMarker = [
     title: "Tari Topeng Betawi",
     from: "DKI Jakarta",
     image: "taritopengbetawi.jpg",
+    type: "tarian",
     longlat: {
       lat: parseFloat(-6.1416449),
       lng: parseFloat(106.7519056),
@@ -193,6 +195,7 @@ const dataMarker = [
     title: "Tari Serimpi Banten",
     from: "Banten",
     image: "tariSerimpibanten.jpg",
+    type: "tarian",
     longlat: {
       lat: parseFloat(-6.425414),
       lng: parseFloat(106.0808663),
@@ -202,6 +205,7 @@ const dataMarker = [
     title: "Tari Bedhaya",
     from: "Jawa Tengah",
     image: "tariBedhaya.jpg",
+    type: "tarian",
     longlat: {
       lat: parseFloat(-7.1620738),
       lng: parseFloat(110.0656186),
@@ -211,6 +215,7 @@ const dataMarker = [
     title: "Tari Legong",
     from: "Bali",
     image: "tariLegong.jpg",
+    type: "tarian",
     longlat: {
       lat: parseFloat(-8.3540217),
       lng: parseFloat(115.0805652),
@@ -220,6 +225,7 @@ const dataMarker = [
     title: "Tari Pasola",
     from: "Nusa Tenggara Timur",
     image: "tariPasola.jpg",
+    type: "tarian",
     longlat: {
       lat: parseFloat(-8.4987155),
       lng: parseFloat(120.7508291),
@@ -229,6 +235,7 @@ const dataMarker = [
     title: "Tari Kabasaran",
     from: "Gorontalo",
     image: "tariKabasaran.jpg",
+    type: "tarian",
     longlat: {
       lat: parseFloat(0.5428127),
       lng: parseFloat(123.0555312),
@@ -238,6 +245,7 @@ const dataMarker = [
     title: "Tari Saman",
     from: "Sulawesi Selatan",
     image: "tariSaman.jpg",
+    type: "tarian",
     longlat: {
       lat: parseFloat(-3.7430496),
       lng: parseFloat(119.9004764),
@@ -247,6 +255,7 @@ const dataMarker = [
     title: "Tari Tifa",
     from: "Maluku",
     image: "tariTifa.jpg",
+    type: "tarian",
     longlat: {
       lat: parseFloat(-3.0270832),
       lng: parseFloat(128.6400625),
@@ -256,6 +265,7 @@ const dataMarker = [
     title: "Tari Yamko Rambe",
     from: "Papua Barat",
     image: "tariYamkorambe.jpg",
+    type: "tarian",
     longlat: {
       lat: parseFloat(-1.3525803),
       lng: parseFloat(133.2311857),
@@ -265,6 +275,7 @@ const dataMarker = [
     title: "Tari Sajojo",
     from: "Papua",
     image: "tariSajojo.jpg",
+    type: "tarian",
     longlat: {
       lat: parseFloat(-3.5510786),
       lng: parseFloat(138.2541689),
@@ -277,6 +288,7 @@ const dataMarker = [
     title: "Makanan Lontong Balap",
     from: "Jawa Timur",
     image: "makananLontongbalap.jpg",
+    type: "makanan",
     longlat: {
       lat: parseFloat(-7.5214457),
       lng: parseFloat(112.1756567),
@@ -286,6 +298,7 @@ const dataMarker = [
     title: "Makanan Pallubasa",
     from: "Sulawesi Tenggara",
     image: "makananPallubasa.jpg",
+    type: "makanan",
     longlat: {
       lat: parseFloat(-3.4661838),
       lng: parseFloat(121.8376521),
@@ -295,6 +308,7 @@ const dataMarker = [
     title: "Makanan Sagu Lempeng",
     from: "Papua",
     image: "makananSagulempeng.jpg",
+    type: "makanan",
     longlat: {
       lat: parseFloat(-3.1770942),
       lng: parseFloat(136.2786475),

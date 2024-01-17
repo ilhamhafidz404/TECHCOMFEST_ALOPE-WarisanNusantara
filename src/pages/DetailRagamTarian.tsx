@@ -127,23 +127,13 @@ export default function DetailRagamTarian(language: any) {
         </div>
         <div>
           <img
-            src="/images/festivalbali.jpeg"
+            src="/images/tarian/saman.jpg"
             alt="news1"
             className="h-[250px] object-cover w-full rounded"
           />
           <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-            {lang === "ID" ? "Festival Bali Arts" : "Bali Arts Festival"}
+            Tari Saman
           </h3>
-          <div className="my-5 flex gap-5">
-            <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
-              <FaUser />
-              <small>Ilham Hafidz</small>
-            </span>
-            <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
-              <FaCalendar />
-              <small>07 Des 2023</small>
-            </span>
-          </div>
           <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
             {lang === "ID"
               ? content.news.sub.sub1.id
@@ -152,25 +142,13 @@ export default function DetailRagamTarian(language: any) {
         </div>
         <div>
           <img
-            src="/images/dalangcilik.jpg"
+            src="/images/tarian/topengbetawi.png"
             alt="news2"
             className="h-[250px] object-cover w-full rounded"
           />
           <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-            {lang === "ID"
-              ? "Festival Dalang Cilik"
-              : "'Dalang Cilik' Festival"}
+            Tari Topeng Betawi
           </h3>
-          <div className="my-5 flex gap-5">
-            <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
-              <FaUser />
-              <small>Ilham Hafidz</small>
-            </span>
-            <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
-              <FaCalendar />
-              <small>07 Des 2023</small>
-            </span>
-          </div>
           <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
             {lang === "ID"
               ? content.news.sub.sub2.id
@@ -179,23 +157,13 @@ export default function DetailRagamTarian(language: any) {
         </div>
         <div>
           <img
-            src="/images/babarit.jpeg"
+            src="/images/tarian/legong.jpg"
             alt="news3"
             className="h-[250px] object-cover w-full rounded"
           />
           <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-            {lang === "ID" ? "Festival Babarit" : "Babarit Festival"}
+            Tari Legong
           </h3>
-          <div className="my-5 flex gap-5">
-            <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
-              <FaUser />
-              <small>Ilham Hafidz</small>
-            </span>
-            <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
-              <FaCalendar />
-              <small>07 Des 2023</small>
-            </span>
-          </div>
           <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
             {lang === "ID"
               ? content.news.sub.sub3.id
