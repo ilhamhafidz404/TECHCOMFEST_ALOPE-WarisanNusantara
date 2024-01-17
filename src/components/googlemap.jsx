@@ -13,8 +13,8 @@ const containerStyle = {
 };
 
 const center = {
-  lat: -1.1247206,
-  lng: 122.2579333,
+  lat: -0.7893,
+  lng: 113.9213,
 };
 
 const dataMarker = [
@@ -171,16 +171,133 @@ const dataMarker = [
     },
   },
 
+  {
+    title: "Tari Jaipong",
+    from: "Jawa Barat",
+    image: "tariJaipong.jpg",
+    longlat: {
+      lat: parseFloat(-6.661622),
+      lng: parseFloat(108.3667111),
+    },
+  },
+  {
+    title: "Tari Topeng Betawi",
+    from: "DKI Jakarta",
+    image: "taritopengbetawi.jpg",
+    longlat: {
+      lat: parseFloat(-6.1416449),
+      lng: parseFloat(106.7519056),
+    },
+  },
+  {
+    title: "Tari Serimpi Banten",
+    from: "Banten",
+    image: "tariSerimpibanten.jpg",
+    longlat: {
+      lat: parseFloat(-6.425414),
+      lng: parseFloat(106.0808663),
+    },
+  },
+  {
+    title: "Tari Bedhaya",
+    from: "Jawa Tengah",
+    image: "tariBedhaya.jpg",
+    longlat: {
+      lat: parseFloat(-7.1620738),
+      lng: parseFloat(110.0656186),
+    },
+  },
+  {
+    title: "Tari Legong",
+    from: "Bali",
+    image: "tariLegong.jpg",
+    longlat: {
+      lat: parseFloat(-8.3540217),
+      lng: parseFloat(115.0805652),
+    },
+  },
+  {
+    title: "Tari Pasola",
+    from: "Nusa Tenggara Timur",
+    image: "tariPasola.jpg",
+    longlat: {
+      lat: parseFloat(-8.4987155),
+      lng: parseFloat(120.7508291),
+    },
+  },
+  {
+    title: "Tari Kabasaran",
+    from: "Gorontalo",
+    image: "tariKabasaran.jpg",
+    longlat: {
+      lat: parseFloat(0.5428127),
+      lng: parseFloat(123.0555312),
+    },
+  },
+  {
+    title: "Tari Saman",
+    from: "Sulawesi Selatan",
+    image: "tariSaman.jpg",
+    longlat: {
+      lat: parseFloat(-3.7430496),
+      lng: parseFloat(119.9004764),
+    },
+  },
+  {
+    title: "Tari Tifa",
+    from: "Maluku",
+    image: "tariTifa.jpg",
+    longlat: {
+      lat: parseFloat(-3.0270832),
+      lng: parseFloat(128.6400625),
+    },
+  },
+  {
+    title: "Tari Yamko Rambe",
+    from: "Papua Barat",
+    image: "tariYamkorambe.jpg",
+    longlat: {
+      lat: parseFloat(-1.3525803),
+      lng: parseFloat(133.2311857),
+    },
+  },
+  {
+    title: "Tari Sajojo",
+    from: "Papua",
+    image: "tariSajojo.jpg",
+    longlat: {
+      lat: parseFloat(-3.5510786),
+      lng: parseFloat(138.2541689),
+    },
+  },
+
   //
 
   {
-    title: "Makanan Pempek",
-    from: "Sumatra Selatan",
-    image: "makananPempek.jpeg",
-    type: "makanan",
+    title: "Makanan Lontong Balap",
+    from: "Jawa Timur",
+    image: "makananLontongbalap.jpg",
     longlat: {
-      lat: parseFloat(-2.9753922),
-      lng: parseFloat(104.7742503),
+      lat: parseFloat(-7.5214457),
+      lng: parseFloat(112.1756567),
+    },
+  },
+  {
+    title: "Makanan Pallubasa",
+    from: "Sulawesi Tenggara",
+    image: "makananPallubasa.jpg",
+    longlat: {
+      lat: parseFloat(-3.4661838),
+      lng: parseFloat(121.8376521),
+    },
+  },
+  {
+    title: "Makanan Sagu Lempeng",
+    from: "Papua",
+    image: "makananSagulempeng.jpg",
+    longlat: {
+      lat: parseFloat(-3.1770942),
+      lng: parseFloat(136.2786475),
     },
   },
 ];
