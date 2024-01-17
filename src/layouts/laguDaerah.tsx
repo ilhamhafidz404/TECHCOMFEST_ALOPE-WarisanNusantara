@@ -1,12 +1,8 @@
 import React, { useState } from "react";
-import { FaChevronDown } from "react-icons/fa";
 import { GiMusicalScore } from "react-icons/gi";
-import { MdInventory, MdOutlineHistoryEdu } from "react-icons/md";
-//
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
+
+import { Accordion, AccordionItem } from "react-light-accordion";
+import "react-light-accordion/demo/css/index.css";
 
 import songs from "./../data/songs.json";
 
@@ -45,27 +41,28 @@ export default function LaguDaerah() {
       {/*  */}
 
       <section className="mt-20">
-        <div className="md:flex gap-10 items-center mb-10">
-          <div className="shadow py-4 w-[100px] text-center rounded bg-purple-500 text-white">
-            <GiMusicalScore className="mx-auto" size={30} />
-          </div>
-          <div className="flex justify-between">
-            <div>
-              <h2 className="font-bold text-3xl mb-3 md:mt-0 mt-5 dark:text-gray-100">
-                LAGU DAERAH INDONESIA
-              </h2>
-              <p className="xl:w-[700px] md:w-[500px] w-full dark:text-gray-300 text-gray-700">
-                Indonesia dengan kekayaan budaya yang luar biasa memiliki lebih
-                dari 439 lagu tradisional. Setiap lagu menceritakan kisah unik
-                dan memikat, menjadi simbol keanekaragaman seni dan warisan
-                budaya yang memperkaya bangsa ini.
-              </p>
+        <div className="flex justify-between items-center">
+          <div className="md:flex gap-10 items-center mb-10">
+            <div className="shadow py-4 w-[100px] text-center rounded bg-purple-500 text-white">
+              <GiMusicalScore className="mx-auto" size={30} />
             </div>
-            {/* <img
-                src="https://react.dev/images/home/community/react_conf_nat.webp"
-                className="object-cover w-[300px] h-[100px] object-center"
-                alt=""
-              /> */}
+            <div className="flex justify-between items-center">
+              <div>
+                <h2 className="font-bold md:text-3xl text-2xl mb-3 md:mt-0 mt-5 dark:text-gray-100">
+                  LAGU DAERAH INDONESIA
+                </h2>
+                <p className="xl:w-[700px] md:w-[500px] w-full dark:text-gray-300 text-gray-700 md:text-sm text-[12px]">
+                  Indonesia punya lebih dari 439 lagu tradisional, masing-masing
+                  menceritakan kisah unik sebagai simbol keanekaragaman seni dan
+                  warisan budaya yang memperkaya bangsa.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:block hidden">
+            <button className="px-5 text-sm py-2 rounded border text-purple-500 border-purple-500 hover:bg-purple-500 hover:text-white">
+              Lihat Lebih Lengkap
+            </button>
           </div>
         </div>
         <hr className="dark:border-purple-900" />
@@ -155,6 +152,10 @@ export default function LaguDaerah() {
               ) : (
                 ""
               )}
+
+              <small className="italic text-gray-700 dark:text-gray-400">
+                Pastikan koneksi stabil untuk memutar musik*
+              </small>
             </div>
 
             <h5 className="font-semibold text-xl dark:text-gray-200">LIRIK</h5>
@@ -172,7 +173,25 @@ export default function LaguDaerah() {
               INFORMASI LAINNYA
             </h5>
 
-            <Accordion
+            <Accordion atomic={true}>
+              <AccordionItem title="Makna Lagu">
+                <p className="p-5 text-sm text-gray-800 dark:text-gray-200">
+                  <p
+                    dangerouslySetInnerHTML={{ __html: selectedSong.mean }}
+                  ></p>
+                </p>
+              </AccordionItem>
+
+              <AccordionItem title="Sejarah">
+                <p className="p-5 text-sm text-gray-800 dark:text-gray-200">
+                  <p
+                    dangerouslySetInnerHTML={{ __html: selectedSong.history }}
+                  ></p>
+                </p>
+              </AccordionItem>
+            </Accordion>
+
+            {/* <Accordion
               expanded={expanded === "panel1"}
               onChange={handleChangeAccordionItem("panel1")}
             >
@@ -219,7 +238,7 @@ export default function LaguDaerah() {
                   ></p>
                 </Typography>
               </AccordionDetails>
-            </Accordion>
+            </Accordion> */}
           </div>
         </div>
       </section>

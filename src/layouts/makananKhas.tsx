@@ -1,199 +1,354 @@
-import React from "react";
-import { FaBowlFood } from "react-icons/fa6";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+// Icons
+import { FaArrowRight, FaTimes } from "react-icons/fa";
+import { FaBowlFood, FaMapLocation } from "react-icons/fa6";
 
 export default function MakananKhas() {
+  const [modalDetail, setModalDetail] = useState(false);
+
+  const [contentModal, setContentModal] = useState({
+    title: "",
+    body: "",
+    resep: "",
+    location: "",
+    img: "",
+  });
+
   return (
     <>
-      <section className="mt-20">
-        <div className="md:flex gap-10 items-center mb-10">
-          <div className="shadow py-4 w-[100px] text-center rounded bg-orange-500 text-white">
-            <FaBowlFood className="mx-auto" size={30} />
-          </div>
-          <div className="flex justify-between">
-            <div>
-              <h2 className="font-bold text-3xl mb-3 md:mt-0 mt-5 dark:text-gray-100">
-                MAKANAN KHAS DAERAH INDONESIA
-              </h2>
-              <p className="xl:w-[700px] md:w-[500px] w-full dark:text-gray-300 text-gray-700">
-                Indonesia dengan kekayaan budaya yang luar biasa memiliki lebih
-                dari 439 lagu tradisional. Setiap lagu menceritakan kisah unik
-                dan memikat, menjadi simbol keanekaragaman seni dan warisan
-                budaya yang memperkaya bangsa ini.
-              </p>
+      <section className="mt-20 mb-20">
+        <div className="flex items-center justify-between">
+          <div className="md:flex gap-10 items-center mb-10">
+            <div className="shadow py-4 w-[100px] text-center rounded bg-orange-500 text-white">
+              <FaBowlFood className="mx-auto" size={30} />
             </div>
-            {/* <img
-                src="https://react.dev/images/home/community/react_conf_nat.webp"
-                className="object-cover w-[300px] h-[100px] object-center"
-                alt=""
-              /> */}
+            <div className="flex justify-between">
+              <div>
+                <h2 className="font-bold md:text-3xl text-xl mb-3 md:mt-0 mt-5 dark:text-gray-100">
+                  MAKANAN KHAS DAERAH INDONESIA
+                </h2>
+                <p className="xl:w-[700px] md:w-[500px] w-full dark:text-gray-300 text-gray-700 md:text-sm text-[12px]">
+                  Indonesia menawarkan ragam makanan khas dari setiap daerah.
+                  Keberagaman ini mencerminkan kekayaan kuliner yang unik di
+                  Indonesia.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:block hidden">
+            <Link
+              className="px-5 text-sm py-2 rounded border text-orange-500 border-orange-500 hover:bg-orange-500 hover:text-white"
+              to={"/ragam-indonesia/makanan"}
+            >
+              Lihat Lebih Lengkap
+            </Link>
           </div>
         </div>
         <hr className="dark:border-orange-900" />
-        <div className="mt-8 ml-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mr-4">
-          <div className="max-w-sm rounded overflow-hidden shadow-lg">
+        <div className="mt-8 ml-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 mr-4">
+          <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-50 dark:bg-gray-900/80">
             <img
               className="w-full h-48 object-cover"
-              src="./images/card/gudeg.jpeg"
-              alt="Card Image 1"
+              src="./images/makanan/gudeg.jpeg"
+              alt="Card 1"
             />
             <div className="px-6 py-4">
-              <div className="font-bold text-xl">Gudeg</div>
-              <p className="text-gray-700 text-base">DIY Yogyakarta</p>
-
-              <a
-                href="#"
-                className="block bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded mt-4"
-              >
-                Learn More
-              </a>
+              <div className="font-bold text-xl dark:text-gray-300">Gudeg</div>
+              <p className="flex gap-2 items-center text-gray-700 dark:text-gray-400 text-sm">
+                <FaMapLocation />
+                DIY Yogyakarta
+              </p>
             </div>
+            <button
+              onClick={() => {
+                setModalDetail(true);
+                setContentModal({
+                  title: "Gudeg",
+                  body: "Gudeg adalah hidangan khas Provinsi Daerah Istimewa Yogyakarta yang terbuat dari nangka muda yang dimasak dengan santan. Perlu waktu berjam-jam untuk membuat hidangan ini. Warna cokelat biasanya dihasilkan oleh daun jati yang dimasak bersamaan.",
+                  resep:
+                    "Nangka muda, santan, gula aren, cabai, aneka bumbu, ayam, telur, tempe (opsional)",
+                  location: "DIY Yogyakarta",
+                  img: "./images/makanan/gudeg.jpeg",
+                });
+              }}
+              className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
+            >
+              Detail
+            </button>
           </div>
 
-          <div className="max-w-sm rounded overflow-hidden shadow-lg">
+          <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-50 dark:bg-gray-900/80">
             <img
               className="w-full h-48 object-cover"
-              src="./images/card/karedok.jpeg"
-              alt="Card Image 2"
+              src="./images/makanan/karedok.jpeg"
+              alt="Card 2"
             />
             <div className="px-6 py-4">
-              <div className="font-bold text-xl">Karedok</div>
-              <p className="text-gray-700 text-base">Jawa Barat</p>
-
-              <a
-                href="#"
-                className="block bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded mt-4"
-              >
-                Learn More
-              </a>
+              <div className="font-bold text-xl dark:text-gray-300">
+                Karedok
+              </div>
+              <p className="flex gap-2 items-center text-gray-700 dark:text-gray-400 text-sm">
+                <FaMapLocation />
+                Jawa Barat
+              </p>
             </div>
+            <button
+              onClick={() => {
+                setModalDetail(true);
+                setContentModal({
+                  title: "Karedok",
+                  body: "Karedok adalah salah satu makanan khas Sunda di Indonesia. Karedok sekilas mirip dengan lotek. Karedok dibuat dengan bahan-bahan sayuran mentah.",
+                  resep:
+                    "mentimun, taoge, kol, kacang panjang, ubi, labu siam daun kemangi, dan terong atau leunca.",
+                  location: "Jawa Barat",
+                  img: "./images/makanan/karedok.jpeg",
+                });
+              }}
+              className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
+            >
+              Detail
+            </button>
           </div>
 
-          <div className="max-w-sm rounded overflow-hidden shadow-lg">
+          <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-50 dark:bg-gray-900/80">
             <img
               className="w-full h-48 object-cover"
-              src="./images/card/keraktelor.jpg"
-              alt="Card Image 3"
+              src="./images/makanan/keraktelor.jpg"
+              alt="Card 3"
             />
             <div className="px-6 py-4">
-              <div className="font-bold text-xl">Kerak Telor</div>
-              <p className="text-gray-700 text-base">DKI Jakarta</p>
-
-              <a
-                href="#"
-                className="block bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded mt-4"
-              >
-                Learn More
-              </a>
+              <div className="font-bold text-xl dark:text-gray-300">
+                Kerak Telor
+              </div>
+              <p className="flex gap-2 items-center text-gray-700 dark:text-gray-400 text-sm">
+                <FaMapLocation />
+                DKI Jakarta
+              </p>
             </div>
+            <button
+              onClick={() => {
+                setModalDetail(true);
+                setContentModal({
+                  title: "Kerak Telor",
+                  body: "Kerak telur adalah makanan asli daerah Jakarta (Betawi). Anda bisa menemukan kerak telor di sekitar Kota Tua, Jakarta Barat. Menurut sejarah, Kerak Telor sudah ada dari zaman kolonial Belanda..",
+                  resep:
+                    "Beras ketan putih, telur ayam atau bebek, ebi (udang kering yang diasinkan) yang disangrai kering ditambah bawang merah goreng, lalu diberi bumbu yang dihaluskan berupa kelapa sangrai..",
+                  location: "DKI Jakarta",
+                  img: "./images/makanan/keraktelor.jpg",
+                });
+              }}
+              className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
+            >
+              Detail
+            </button>
           </div>
 
-          <div className="max-w-sm rounded overflow-hidden shadow-lg">
+          <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-50 dark:bg-gray-900/80">
             <img
               className="w-full h-48 object-cover"
-              src="./images/card/mieaceh.jpg"
-              alt="Card Image 4"
+              src="./images/makanan/mieaceh.jpg"
+              alt="Card 4"
             />
             <div className="px-6 py-4">
-              <div className="font-bold text-xl">Mie Aceh</div>
-              <p className="text-gray-700 text-base">Aceh Darrussalam</p>
-
-              <a
-                href="#"
-                className="block bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded mt-4"
-              >
-                Learn More
-              </a>
+              <div className="font-bold text-xl dark:text-gray-300">
+                Mie Aceh
+              </div>
+              <p className="flex gap-2 items-center text-gray-700 dark:text-gray-400 text-sm">
+                <FaMapLocation />
+                Aceh Darrussalam
+              </p>
             </div>
+            <button
+              onClick={() => {
+                setModalDetail(true);
+                setContentModal({
+                  title: "Mie Aceh",
+                  body: "Mi aceh adalah masakan mi pedas khas Aceh di Indonesia. Mi aceh biasanya ditaburi dengan bawang goreng dan disajikan bersama emping, potongan bawang merah, mentimun, dan jeruk nipis.",
+                  resep:
+                    "Mi kuning tebal dengan irisan daging sapi, daging kambing atau makanan laut (udang dan cumi) disajikan dalam sup sejenis kari yang gurih dan pedas.",
+                  location: "Aceh Darussalam",
+                  img: "./images/makanan/mieaceh.jpg",
+                });
+              }}
+              className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
+            >
+              Detail
+            </button>
           </div>
 
-          <div className="max-w-sm rounded overflow-hidden shadow-lg">
+          <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-50 dark:bg-gray-900/80">
             <img
               className="w-full h-48 object-cover"
-              src="./images/card/papeda.jpg"
-              alt="Card Image 5"
+              src="./images/makanan/papeda.jpg"
+              alt="Card 5"
             />
             <div className="px-6 py-4">
-              <div className="font-bold text-xl">Papeda</div>
-              <p className="text-gray-700 text-base">Papua</p>
-
-              <a
-                href="#"
-                className="block bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded mt-4"
-              >
-                Learn More
-              </a>
+              <div className="font-bold text-xl dark:text-gray-300">Papeda</div>
+              <p className="flex gap-2 items-center text-gray-700 dark:text-gray-400 text-sm">
+                <FaMapLocation />
+                Papua
+              </p>
             </div>
+            <button
+              onClick={() => {
+                setModalDetail(true);
+                setContentModal({
+                  title: "Papeda",
+                  body: "Papeda adalah makanan berupa bubur sagu khas Maluku dan Papua yang biasanya disajikan dengan ikan tongkol atau bubara yang dibumbui dengan kunyit. Papeda berwarna putih dan bertekstur lengket menyerupai lem dengan rasa yang tawar.",
+                  resep:
+                    "1/4 kg tepung tapioka, 15 sdm tepung terigu, 3 batang Bawang godong (iris cincang), 1 penyedap rasa, 1 garam secukupnya, secukupnya Air, 1 telor",
+                  location: "Papua",
+                  img: "./images/makanan/papeda.jpg",
+                });
+              }}
+              className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
+            >
+              Detail
+            </button>
           </div>
 
-          <div className="max-w-sm rounded overflow-hidden shadow-lg">
+          <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-50 dark:bg-gray-900/80">
             <img
               className="w-full h-48 object-cover"
-              src="./images/card/pempek.jpg"
-              alt="Card Image 6"
+              src="./images/makanan/pempek.jpg"
+              alt="Card 6"
             />
             <div className="px-6 py-4">
-              <div className="font-bold text-xl">Pempek</div>
-              <p className="text-gray-700 text-base">Palembang</p>
-
-              <a
-                href="#"
-                className="block bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded mt-4"
-              >
-                Learn More
-              </a>
+              <div className="font-bold text-xl dark:text-gray-300">Pempek</div>
+              <p className="flex gap-2 items-center text-gray-700 dark:text-gray-400 text-sm">
+                <FaMapLocation />
+                Palembang
+              </p>
             </div>
+            <button
+              onClick={() => {
+                setModalDetail(true);
+                setContentModal({
+                  title: "Pempek",
+                  body: "Pempek adalah makanan yang dibuat dari daging ikan yang digiling lembut yang dicampur tepung kanji atau tepung sagu, serta komposisi beberapa bahan lain seperti telur, bawang putih yang dihaluskan, penyedap rasa, dan garam.",
+                  resep:
+                    "daging ikan giling, tepung kanji atau tepung sagu, serta telur",
+                  location: "Palembang",
+                  img: "./images/makanan/pempek.jpg",
+                });
+              }}
+              className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
+            >
+              Detail
+            </button>
           </div>
 
-          <div className="max-w-sm rounded overflow-hidden shadow-lg">
+          <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-50 dark:bg-gray-900/80">
             <img
               className="w-full h-48 object-cover"
-              src="./images/card/rendang.jpg"
-              alt="Card Image "
+              src="./images/makanan/rendang.jpg"
+              alt="Card "
             />
             <div className="px-6 py-4">
-              <div className="font-bold text-xl">Rendang</div>
-              <p className="text-gray-700 text-base">Sumatra Barat</p>
-
-              <a
-                href="#"
-                className="block bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded mt-4"
-              >
-                Learn More
-              </a>
+              <div className="font-bold text-xl dark:text-gray-300">
+                Rendang
+              </div>
+              <p className="flex gap-2 items-center text-gray-700 dark:text-gray-400 text-sm">
+                <FaMapLocation />
+                Sumatra Barat
+              </p>
             </div>
+            <button
+              onClick={() => {
+                setModalDetail(true);
+                setContentModal({
+                  title: "Rendang",
+                  body: "Rendang adalah hidangan berbahan dasar daging yang dihasilkan dari proses memasak suhu rendah dalam waktu lama dengan menggunakan aneka rempah-rempah dan santan. Proses memasaknya memakan waktu berjam-jam hingga yang tinggal hanyalah potongan daging berwarna hitam pekat dan dedak.",
+                  resep: "Daging sapi, santan kelapa, cabai, bumbu",
+                  location: "Sumatra Barat",
+                  img: "./images/makanan/rendang.jpg",
+                });
+              }}
+              className="block w-full bg-orange-500 hover:bg-orange-400 text-white text-center py-2 px-4 mt-4"
+            >
+              Detail
+            </button>
           </div>
-          <div className="max-w-sm rounded overflow-hidden !h-[332px]">
+          <div className="max-w-sm rounded overflow-hidden !h-[325px]">
             <div className="grid grid-cols-2 gap-2">
               <img
                 className="w-full h-[125px] object-cover"
-                src="./images/card/rendang.jpg"
-                alt="Card Image "
+                src="./images/makanan/gudeg.jpeg"
+                alt="Card "
               />
               <img
                 className="w-full h-[125px] object-cover"
-                src="./images/card/rendang.jpg"
-                alt="Card Image "
+                src="./images/makanan/papeda.jpg"
+                alt="Card "
               />
               <img
                 className="w-full h-[125px] object-cover"
-                src="./images/card/rendang.jpg"
-                alt="Card Image "
+                src="./images/makanan/rendang.jpg"
+                alt="Card "
               />
               <img
                 className="w-full h-[125px] object-cover"
-                src="./images/card/rendang.jpg"
-                alt="Card Image "
+                src="./images/makanan/pempek.jpg"
+                alt="Card "
               />
             </div>
-            <a
-              href="#"
-              className="block bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 rounded mt-4"
+            <Link
+              to={"/ragam-indonesia/makanan"}
+              className="block w-full border-2 border-orange-500 hover:bg-orange-500 text-orange-500 hover:text-white text-center py-2 px-4 mt-4 rounded"
             >
-              Learn More
-            </a>
+              Lihat Lainnya
+            </Link>
           </div>
         </div>
       </section>
+
+      {modalDetail ? (
+        <section className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center">
+          <div className="bg-white dark:bg-gray-950 md:w-[500px] w-[95%] md:mx-0 mx-auto p-7 rounded relative">
+            <button
+              className="absolute right-0 top-0 m-5 dark:text-gray-200 hover:!text-orange-500"
+              onClick={() => {
+                setModalDetail(false);
+              }}
+            >
+              <FaTimes />
+            </button>
+            <h1 className="text-2xl font-bold dark:text-gray-200">
+              {" "}
+              {contentModal.title}
+            </h1>
+            <hr className="my-3 dark:border-gray-700" />
+            <div>
+              <img
+                src={contentModal.img}
+                className="rounded h-[200px] object-cover w-full"
+              />
+              <p className="md:text-sm text-[13px] mt-5 dark:text-gray-300">
+                {contentModal.body}
+              </p>
+              <p className="md:text-sm text-[13px] mt-5 dark:text-gray-300">
+                <b className="text-orange-500">Bahan utama:</b>{" "}
+                {contentModal.resep}
+              </p>
+
+              <hr className="my-5 dark:border-gray-700" />
+              <div className="flex items-center justify-between">
+                <p className="flex gap-2 items-center text-gray-700 dark:text-gray-400 text-sm">
+                  <FaMapLocation />
+                  {contentModal.location}
+                </p>
+                <button className="text-sm text-orange-500 flex items-center gap-2">
+                  Detail Lainnya
+                  <FaArrowRight />
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      ) : (
+        ""
+      )}
     </>
   );
 }

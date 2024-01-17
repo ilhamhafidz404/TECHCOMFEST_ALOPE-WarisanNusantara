@@ -1,7 +1,7 @@
 // Filename - Components/Switcher.js
 
 // import { DarkModeSwitch } from "react-toggle-dark-mode";
-import { MdDarkMode } from "react-icons/md";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 import useDarkSide from "../hooks/useDarkSide";
 
 export default function Switcher() {
@@ -13,12 +13,21 @@ export default function Switcher() {
 
   return (
     <>
-      <MdDarkMode
-        // checked={darkSide}
-        // onChange={toggleDarkMode}
-        onClick={toggleDarkMode}
-        size={20}
-      />
+      {colorTheme === "dark" ? (
+        <MdLightMode
+          // checked={darkSide}
+          // onChange={toggleDarkMode}
+          onClick={toggleDarkMode}
+          size={20}
+        />
+      ) : (
+        <MdDarkMode
+          // checked={darkSide}
+          // onChange={toggleDarkMode}
+          onClick={toggleDarkMode}
+          size={20}
+        />
+      )}
     </>
   );
 }

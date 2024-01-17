@@ -31,6 +31,26 @@
   },
   "indonesiaAndWorld": {
     "id": "Sopan Santun dalam Keanekaragaman🤝✨, 👣Jejak Budaya yang Membahana di Seluruh Dunia🌍",
-    "en": "Courtesy in Diversity🤝✨, 👣Cultural Traces That Spread Around the World🌍🇮🇩"
+    "en": "Courtesy in Diversity🤝✨, 👣Cultural Traces That Spread Around the World🌍"
+  },
+  "news": {
+    "highlight": {
+      "id": "Temukan keindahan ragam budaya di Indonesia, tempat di mana tradisi dan keberagaman menjadi kekuatan bersama. Dari tarianhingga kuliner setiap elemen mencerminkan kekayaan dan keunikan yang membuat Indonesia istimewa. Mari menjelajahi dan merayakankeberagaman yang memperkaya bumi Nusantara.",
+      "en": "Discover the beauty of cultural diversity in Indonesia, a place where traditions and variety become a collective strength. From dance to culinary delights, each element reflects the richness and uniqueness that make Indonesia special. Let's explore and celebrate the diversity that enriches the archipelago."
+    },
+    "sub": {
+      "sub1": {
+        "id": "Setiap tahun, Festival Seni Bali menyoroti kekayaan budaya dengan durasi sebulan, memamerkan seni, musik, tarian, danliteratur Bali....",
+        "en": "Every year, the Bali Arts Festival highlights its rich culture with a duration of a month, exhibiting art, music, dance, and Balinese literature...."
+      },
+      "sub2": {
+        "id": "Sepuluh dalang cilik di Semarang tampil dalam Festival Dalang Cilik, Rabu (22/11), di Gedung Ki Narto Sabdo, Taman Budaya Raden Saleh....",
+        "en": "Ten young puppeteers in Semarang performed at the Little Puppeteer Festival, Wednesday (22/11), at the Ki Narto Sabdo Building, Raden Saleh Cultural Park...."
+      },
+      "sub3": {
+        "id": "Tradisi Babarit di Kuningan untuk perayaan Milangkala ke-524 (28/8/2022) menonjolkan nilai syukur, pelestarian alam, dan berbagi....",
+        "en": "The Babarit tradition in Kuningan for the 524th Milankala celebration (28/8/2022) emphasizes the values of gratitude, nature conservation and sharing...."
+      }
+    }
   }
 }

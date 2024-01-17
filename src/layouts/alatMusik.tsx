@@ -67,27 +67,28 @@ export default function AlatMusik() {
   return (
     <>
       <section className="mt-20">
-        <div className="md:flex gap-10 items-center mb-10">
-          <div className="shadow py-4 w-[100px] text-center rounded bg-indigo-500 text-white">
-            <MdOutlinePiano className="mx-auto" size={30} />
-          </div>
-          <div className="flex justify-between">
-            <div>
-              <h2 className="font-bold text-3xl mb-3 md:mt-0 mt-5 dark:text-gray-100">
-                ALAT MUSIK TRADISIONAL INDONESIA
-              </h2>
-              <p className="xl:w-[700px] md:w-[500px] w-full dark:text-gray-300 text-gray-700">
-                Indonesia dengan kekayaan budaya yang luar biasa memiliki lebih
-                dari 439 lagu tradisional. Setiap lagu menceritakan kisah unik
-                dan memikat, menjadi simbol keanekaragaman seni dan warisan
-                budaya yang memperkaya bangsa ini.
-              </p>
+        <div className="flex items-center justify-between">
+          <div className="md:flex gap-10 items-center mb-10">
+            <div className="shadow py-4 w-[100px] text-center rounded bg-indigo-500 text-white">
+              <MdOutlinePiano className="mx-auto" size={30} />
             </div>
-            {/* <img
-                src="https://react.dev/images/home/community/react_conf_nat.webp"
-                className="object-cover w-[300px] h-[100px] object-center"
-                alt=""
-              /> */}
+            <div className="flex justify-between">
+              <div>
+                <h2 className="font-bold md:text-3xl text-2xl mb-3 md:mt-0 mt-5 dark:text-gray-100">
+                  ALAT MUSIK TRADISIONAL INDONESIA
+                </h2>
+                <p className="xl:w-[700px] md:w-[500px] w-full dark:text-gray-300 text-gray-700 md:text-sm text-[12px]">
+                  Indonesia kaya budaya dengan 439 lagu tradisional,
+                  masing-masing sebagai simbol keanekaragaman seni dan warisan
+                  bangsa.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:block hidden">
+            <button className="px-5 text-sm py-2 rounded border text-indigo-500 border-indigo-500 hover:bg-indigo-500 hover:text-white">
+              Lihat Lebih Lengkap
+            </button>
           </div>
         </div>
         <hr className="mb-5 dark:border-indigo-900" />
@@ -99,7 +100,7 @@ export default function AlatMusik() {
               alt="gambarAlatMusik"
             />
           </div>
-          <div className="grid md:grid-cols-3 grid-cols-2 lg:col-span-3 gap-5">
+          <div className="grid md:grid-cols-3 grid-cols-2 lg:col-span-3 md:gap-5 gap-2">
             {musics.map((row) => (
               <div
                 key={row.name} // Add a unique key for each item
@@ -111,8 +112,12 @@ export default function AlatMusik() {
                 onClick={() => setSelectedAlatMusik(row)}
               >
                 <div>
-                  <h3 className="dark:text-gray-100">{row.name}</h3>
-                  <small className="dark:text-gray-300">{row.from}</small>
+                  <h3 className="dark:text-gray-100 md:text-base text-sm font-semibold">
+                    {row.name}
+                  </h3>
+                  <small className="dark:text-gray-300 md:text-sm text-[12px]">
+                    {row.from}
+                  </small>
                 </div>
                 {selectedAlatMusik.name === row.name ? (
                   <BootstrapTooltip

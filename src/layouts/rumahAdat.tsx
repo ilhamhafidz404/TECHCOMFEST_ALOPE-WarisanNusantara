@@ -126,34 +126,42 @@ export default function RumahAdat() {
   return (
     <>
       <section className="mt-20">
-        <div className="md:flex gap-10 items-center mb-10">
-          <div className="shadow py-4 w-[100px] text-center rounded bg-emerald-500 text-white">
-            <FaHome className="mx-auto" size={30} />
-          </div>
-          <div className="flex justify-between">
-            <div>
-              <h2 className="font-bold text-3xl mb-3 md:mt-0 mt-5 dark:text-gray-100">
-                RUMAH ADAT INDONESIA
-              </h2>
-              <p className="xl:w-[700px] md:w-[500px] w-full dark:text-gray-300 text-gray-700">
-                Jika dihitung berdasarkan jumlah provinsi, setidaknya ada 34
-                jenis rumah adat
-              </p>
+        <div className="flex items-center justify-between">
+          <div className="md:flex gap-10 items-center mb-10">
+            <div className="shadow py-4 w-[100px] text-center rounded bg-emerald-500 text-white">
+              <FaHome className="mx-auto" size={30} />
             </div>
+            <div className="flex justify-between">
+              <div>
+                <h2 className="font-bold md:text-3xl text-2xl mb-3 md:mt-0 mt-5 dark:text-gray-100">
+                  RUMAH ADAT INDONESIA
+                </h2>
+                <p className="xl:w-[700px] md:w-[500px] w-full dark:text-gray-300 text-gray-700 md:text-sm text-[12px]">
+                  Indonesia, dengan 34 rumah adat dari setiap provinsi,
+                  memancarkan keberagaman budaya dan menjadi karya seni yang
+                  memperkaya warisan tradisional.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:block hidden">
+            <button className="px-5 text-sm py-2 rounded border text-emerald-500 border-emerald-500 hover:bg-emerald-500 hover:text-white">
+              Lihat Lebih Lengkap
+            </button>
           </div>
         </div>
         <hr className="dark:border-emerald-900" />
-        <div className="grid grid-cols-2 mt-5 items-center gap-20 mb-10">
-          <div>
+        <div className="grid lg:grid-cols-2 mt-5 items-center gap-20 mb-10">
+          <div className="lg:order-1 order-2">
             <h4
               id="rumahAdatName"
-              className="text-2xl font-bold dark:text-gray-200"
+              className="md:text-2xl text-xl font-bold dark:text-gray-200"
             >
               RUMAH ADAT ACEH
             </h4>
             <p
               id="rumahAdatDesc"
-              className="w-[90%] mt-3 dark:text-gray-300 text-gray-700"
+              className="md:w-[90%] mt-3 dark:text-gray-300 text-gray-700 md:text-base text-sm"
             >
               Rumah Aceh atau yang lebih dikenal dengan nama "Rumoh Aceh"
               merupakan rumah adat dari suku Aceh. Rumah ini bertipe rumah
@@ -162,7 +170,7 @@ export default function RumahAdat() {
               seuramoë likôt. Sedangkan 1 bagian tambahannya yaitu rumoh dap
             </p>
           </div>
-          <div>
+          <div className="lg:order-2 order-1">
             <img
               id="rumahAdatImage"
               src="/images/rumahAdat/aceh.png"

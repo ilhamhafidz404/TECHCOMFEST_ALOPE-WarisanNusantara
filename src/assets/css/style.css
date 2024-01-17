@@ -8,7 +8,7 @@ body {
   background-image: url(./../images/carausel/1.jpeg);
 }
 #slider2 {
-  background-image: url(./../images/carausel/2.gif);
+  background-image: url(./../images/carausel/2.jpg);
 }
 
 header:hover #sliderControlArrow #next {
@@ -49,7 +49,6 @@ header:hover #sliderControlArrow #prev {
 }
 
 .slide {
-  width: 500px;
   transition: 0.3s;
 }
 
@@ -134,4 +133,30 @@ header:hover #sliderControlArrow #prev {
   100% {
     left: -500px;
   }
+}
+
+.accordion {
+  border: 1px solid #d9d9d9;
+}
+html.dark .accordion {
+  border: 1px solid #212020;
+}
+.accordion .accordion-item .title {
+  background-color: #f6f6f6;
+}
+html.dark .accordion .accordion-item .title {
+  background-color: rgb(3 7 18) !important;
+  color: rgb(243 244 246);
+}
+.accordion .accordion-item .title:after {
+  color: rgb(248 113 113) !important;
+}
+
+html.dark
+  .MuiButtonBase-root.MuiAccordionSummary-root.Mui-expanded.MuiAccordionSummary-gutters.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root,
+html.dark
+  .MuiButtonBase-root.MuiAccordionSummary-root.MuiAccordionSummary-gutters.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root,
+html.dark .MuiAccordionDetails-root.css-15v22id-MuiAccordionDetails-root {
+  background-color: #0d131f !important;
+  color: rgb(229 231 235);
 }

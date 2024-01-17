@@ -22,14 +22,20 @@ import {
 } from "react-icons/fa";
 import {
   MdKeyboardDoubleArrowDown,
+  MdKeyboardDoubleArrowRight,
   MdKeyboardDoubleArrowUp,
 } from "react-icons/md";
 
-export default function Home(language: any) {
+type HomeProps = {
+  language: any;
+  changePage: (page: any) => void;
+};
+
+const Home: React.FC<HomeProps> = ({ language, changePage }) => {
   const [lang, setLang] = useState("ID");
 
   useEffect(() => {
-    setLang(language.language);
+    setLang(language);
   }, [language]);
 
   const [open, setOpen] = useState(false);
@@ -86,8 +92,9 @@ export default function Home(language: any) {
               className="text-sm text-gray-800 dark:text-gray-200 lg:text-right text-left"
               data-aos="fade-right"
               data-aos-delay="100"
+              data-aos-once="true"
             >
-              {lang == "ID" ? content.header.id : content.header.en}
+              {lang === "ID" ? content.header.id : content.header.en}
             </p>
           </div>
           <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-3 lg:gap-5 gap-3 sm:order-2 order-1">
@@ -96,6 +103,7 @@ export default function Home(language: any) {
               onClick={() => setOpen(true)}
               data-aos="fade-left"
               data-aos-delay="900"
+              data-aos-once="true"
             >
               <img
                 src="/images/header/subheader2_thumb.jpg"
@@ -108,6 +116,7 @@ export default function Home(language: any) {
               onClick={() => setOpen(true)}
               data-aos="fade-left"
               data-aos-delay="600"
+              data-aos-once="true"
             >
               <img
                 src="/images/header/subheader1_thumb.jpg"
@@ -120,6 +129,7 @@ export default function Home(language: any) {
               onClick={() => setOpen(true)}
               data-aos="fade-left"
               data-aos-delay="300"
+              data-aos-once="true"
             >
               <img
                 src="/images/header/subheader3_thumb.jpg"
@@ -144,7 +154,7 @@ export default function Home(language: any) {
             className="absolute right-[10px] top-[30%] text-8xl font-semibold text-red-500 lg:block hidden"
             data-aos="fade-right"
           >
-            INDONESIA
+            WARISAN
           </h1>
         </section>
         <section className="lg:h-[800px] h-[550px] relative after:content-[''] after:absolute after:inset-0 after:bg-black/30 lg:order-2 order-1">
@@ -157,7 +167,7 @@ export default function Home(language: any) {
           <div className="absolute top-1/2 sm:right-[40px] right-[20px] -translate-y-1/2 z-10 flex flex-col justify-center items-center gap-10">
             <div className="w-[1px] lg:h-[200px] h-[100px] rounded-full bg-white/70 cursor-pointer"></div>
             <div
-              className="w-[15px] h-[15px] rounded-full bg-white/70 cursor-pointer flex items-center justify-center"
+              className="w-[15px] h-[15px] rounded-full bg-red-500/70 cursor-pointer flex items-center justify-center"
               onClick={() => {
                 changeHeaderImg("/images/header/1.jpg");
               }}
@@ -165,7 +175,7 @@ export default function Home(language: any) {
               <h6 className="text-3xl text-white font-bold">1</h6>
             </div>
             <div
-              className="w-[15px] h-[15px] rounded-full bg-white/70 cursor-pointer flex items-center justify-center"
+              className="w-[15px] h-[15px] rounded-full bg-red-500/70 cursor-pointer flex items-center justify-center"
               onClick={() => {
                 changeHeaderImg("/images/header/2.jpg");
               }}
@@ -173,7 +183,7 @@ export default function Home(language: any) {
               <h6 className="text-3xl text-white font-bold">2</h6>
             </div>
             <div
-              className="w-[15px] h-[15px] rounded-full bg-white/70 cursor-pointer flex items-center justify-center"
+              className="w-[15px] h-[15px] rounded-full bg-red-500/70 cursor-pointer flex items-center justify-center"
               onClick={() => {
                 changeHeaderImg("/images/header/3.jpg");
               }}
@@ -183,11 +193,11 @@ export default function Home(language: any) {
             <div className="w-[1px] lg:h-[200px] h-[100px] rounded-full bg-white/70 cursor-pointer"></div>
           </div>
           <h1
-            className="absolute lg:left-[10px] left-[40px] sm:-translate-x-0 -translate-x-1/2 md:top-[30%] top-1/2 md:text-8xl sm:text-7xl text-6xl sm:text-left text-center font-semibold text-white z-10"
+            className="absolute lg:left-[10px] left-[40px] sm:-translate-x-0 -translate-x-1/2 md:top-[30%] top-1/2 md:text-8xl sm:text-7xl text-5xl sm:text-left text-center font-semibold text-white z-10"
             data-aos="fade-left"
           >
-            <span className="text-red-500 block lg:hidden">INDONESIA</span>
-            PUSAKA
+            <span className="text-red-500 block lg:hidden">WARISAN</span>
+            NUSANTARA
           </h1>
         </section>
       </header>
@@ -214,11 +224,11 @@ export default function Home(language: any) {
 
         <div className="md:text-left text-center ">
           <h2
-            className="font-bold sm:text-3xl text-2xl mb-5 dark:text-gray-200"
+            className="font-bold md:text-3xl text-2xl mb-5 dark:text-gray-200"
             data-aos="fade-right"
             data-aos-once="true"
           >
-            {lang == "ID" ? (
+            {lang === "ID" ? (
               <>
                 {content.explore.header.id}
                 <span className="relative md:pe-32 pe-16 md:pl-0 pl-16">
@@ -234,23 +244,30 @@ export default function Home(language: any) {
             )}
           </h2>
           <p
-            className="text-sm text-gray-800 dark:text-gray-300 mb-10"
+            className="md:text-sm text-[12px] text-gray-800 dark:text-gray-300 mb-10"
             data-aos="fade-right"
             data-aos-once="true"
             data-aos-delay="200"
           >
-            {lang == "ID" ? content.explore.body.id : content.explore.body.en}
+            {lang === "ID" ? content.explore.body.id : content.explore.body.en}
           </p>
-          <Link
-            to="/ragam-indonesia"
-            className="px-7 py-3 inline-flex gap-3 items-center bg-red-500 hover:bg-red-400 rounded-full text-white text-sm"
-            data-aos="fade-up"
-            data-aos-once="true"
-            data-aos-delay="500"
+
+          <span
+            onClick={() => {
+              changePage("ragam");
+            }}
           >
-            <FaMapMarkerAlt size={20} />
-            {lang == "ID" ? "Explorasi Sekarang" : "Explore Now"}
-          </Link>
+            <Link
+              to="/ragam-indonesia"
+              className="md:px-7 py-3 px-5 inline-flex gap-3 items-center bg-red-500 hover:bg-red-400 rounded-full text-white md:text-sm text-[12px]"
+              data-aos="fade-up"
+              data-aos-once="true"
+              data-aos-delay="500"
+            >
+              <FaMapMarkerAlt size={20} />
+              {lang === "ID" ? "Explorasi Sekarang" : "Explore Now"}
+            </Link>
+          </span>
         </div>
         <div className="h-[400px] lg:flex hidden lg:justify-start gap-5">
           <div className="h-full w-[40%] -translate-y-10">
@@ -285,25 +302,27 @@ export default function Home(language: any) {
 
         <div className="lg:col-span-4 md:col-span-2">
           <h3
-            className="font-bold text-3xl md:text-left text-center dark:text-gray-200"
+            className="font-bold md:text-3xl text-2xl md:text-left text-center dark:text-gray-200"
             data-aos="fade-right"
             data-aos-once="true"
           >
-            {lang == "ID" ? "ASPEK BUDAYA DI " : "CULTURAL ASPECTS IN "}{" "}
+            {lang === "ID" ? "ASPEK BUDAYA DI " : "CULTURAL ASPECTS IN "}{" "}
             <span className="text-red-500">INDONESIA</span>
           </h3>
           <p
-            className="text-gray-800 dark:text-gray-300 lg:w-2/3 md:w-3/4 w-full md:mx-0 mx-auto md:text-left text-center text-sm mt-5"
+            className="text-gray-800 dark:text-gray-300 lg:w-2/3 md:w-3/4 w-full md:mx-0 mx-auto md:text-left text-center md:text-sm text-[12px] mt-5"
             data-aos="fade-right"
             data-aos-delay="300"
             data-aos-once="true"
           >
-            {lang == "ID" ? content.cultureAspect.id : content.cultureAspect.en}
+            {lang === "ID"
+              ? content.cultureAspect.id
+              : content.cultureAspect.en}
           </p>
         </div>
         <div data-aos="flip-left" data-aos-delay="250" data-aos-once="true">
           <div
-            className="lg:h-[500px] md:h-[400px] h-[200px] rounded-md overflow-hidden relative after:content-[''] after:absolute after:inset-0 after:bg-black/40 bg-cover bg-center p-5 md:hover:scale-110 transition-all"
+            className="lg:h-[500px] md:h-[400px] h-[250px] rounded-md overflow-hidden relative after:content-[''] after:absolute after:inset-0 after:bg-black/40 bg-cover bg-center p-5 md:hover:scale-110 transition-all"
             style={{
               backgroundImage: "url(/images/card/musik.jpg)",
             }}
@@ -316,10 +335,10 @@ export default function Home(language: any) {
                 </p>
               </div>
               <div>
-                <h4 className="font-bold text-xl text-white mb-5">
-                  {lang == "ID" ? "LAGU & MUSIK" : "SONG & MUSIC"}
+                <h4 className="font-bold text-xl text-white md:mb-5 mb-2">
+                  {lang === "ID" ? "LAGU & MUSIK" : "SONG & MUSIC"}
                 </h4>
-                <p className="text-gray-200 text-sm">
+                <p className="text-gray-200 md:text-sm text-[12px]">
                   Nikmati keindahan seni musik Bonang di Jawa Timur. Temukan
                   harmoni yang khas dan cerita yang tersembunyi di setiap
                   nadanya.
@@ -331,7 +350,7 @@ export default function Home(language: any) {
         </div>
         <div data-aos="flip-left" data-aos-delay="500" data-aos-once="true">
           <div
-            className="lg:h-[500px] md:h-[400px] h-[200px] rounded-md overflow-hidden relative after:content-[''] after:absolute after:inset-0 after:bg-black/40 bg-cover bg-center p-5 md:hover:scale-110 transition-all"
+            className="lg:h-[500px] md:h-[400px] h-[250px] rounded-md overflow-hidden relative after:content-[''] after:absolute after:inset-0 after:bg-black/40 bg-cover bg-center p-5 md:hover:scale-110 transition-all"
             style={{
               backgroundImage: "url(/images/card/arsitektur.jpg)",
             }}
@@ -344,12 +363,12 @@ export default function Home(language: any) {
                 </p>
               </div>
               <div>
-                <h4 className="font-bold text-xl uppercase text-white mb-5">
-                  {lang == "ID"
+                <h4 className="font-bold text-xl uppercase text-white md:mb-5 mb-2">
+                  {lang === "ID"
                     ? "ARSITEKTUR BANGUNAN"
                     : "building architecture"}
                 </h4>
-                <p className="text-gray-200 text-sm">
+                <p className="text-gray-200 md:text-sm text-[12px]">
                   Temukan keunikan dan harmoni arsitektur rumah panggung di
                   Sulawesi Selatan, simbol budaya yang kaya.
                   {/* Discover the uniqueness and harmony of the stilt house architecture in South Sulawesi, a symbol of rich cultural heritage. */}
@@ -360,7 +379,7 @@ export default function Home(language: any) {
         </div>
         <div data-aos-once="true" data-aos="flip-left" data-aos-delay="750">
           <div
-            className="lg:h-[500px] md:h-[400px] h-[200px] rounded-md overflow-hidden relative after:content-[''] after:absolute after:inset-0 after:bg-black/40 bg-cover bg-center p-5 md:hover:scale-110 transition-all"
+            className="lg:h-[500px] md:h-[400px] h-[250px] rounded-md overflow-hidden relative after:content-[''] after:absolute after:inset-0 after:bg-black/40 bg-cover bg-center p-5 md:hover:scale-110 transition-all"
             style={{
               backgroundImage: "url(/images/card/upacara.jpg)",
             }}
@@ -373,10 +392,10 @@ export default function Home(language: any) {
                 </p>
               </div>
               <div>
-                <h4 className="font-bold text-xl text-white mb-5">
-                  {lang == "ID" ? "UPACARA" : "CEREMONY"}
+                <h4 className="font-bold text-xl text-white md:mb-5 mb-2">
+                  {lang === "ID" ? "UPACARA" : "CEREMONY"}
                 </h4>
-                <p className="text-gray-200 text-sm">
+                <p className="text-gray-200 md:text-sm text-[12px]">
                   Temukan ungkapan syukur atas pertanian setahun. Rasakan
                   keharmonisan manusia, Tuhan, dan alam dalam budaya unik.
                   {/* Discover the expression of gratitude for a year of agriculture. Feel the harmony between humans, God, and nature in a unique cultural context. */}
@@ -387,7 +406,7 @@ export default function Home(language: any) {
         </div>
         <div data-aos-once="true" data-aos="flip-left" data-aos-delay="1000">
           <div
-            className="lg:h-[500px] md:h-[400px] h-[200px] rounded-md overflow-hidden relative after:content-[''] after:absolute after:inset-0 after:bg-black/40 bg-cover bg-center p-5 md:hover:scale-110 transition-all"
+            className="lg:h-[500px] md:h-[400px] h-[250px] rounded-md overflow-hidden relative after:content-[''] after:absolute after:inset-0 after:bg-black/40 bg-cover bg-center p-5 md:hover:scale-110 transition-all"
             style={{
               backgroundImage: "url(/images/card/pakaian.jpg)",
             }}
@@ -400,10 +419,10 @@ export default function Home(language: any) {
                 </p>
               </div>
               <div>
-                <h4 className="font-bold text-xl text-white mb-5">
-                  {lang == "ID" ? "PAKAIAN" : "CLOTHES"}
+                <h4 className="font-bold text-xl text-white md:mb-5 mb-2">
+                  {lang === "ID" ? "PAKAIAN" : "CLOTHES"}
                 </h4>
-                <p className="text-gray-200 text-sm">
+                <p className="text-gray-200 md:text-sm text-[12px]">
                   Dengan desain dan corak yang beragam, busana tradisional Sunda
                   mencerminkan kekayaan budaya dan identitas khas masyarakatnya.
                   {/* With diverse designs and patterns, Sundanese traditional clothing reflects the cultural richness and distinctive identity of its community. */}
@@ -413,8 +432,8 @@ export default function Home(language: any) {
           </div>
         </div>
         <div className="lg:col-span-4 md:col-span-2 text-center mt-8">
-          <button className="bg-red-500 hover:bg-red-400 text-white py-3 px-10 text-sm rounded-full">
-            {lang == "ID" ? "Lihat Lebih Banyak" : "View More"}
+          <button className="bg-red-500 hover:bg-red-400 text-white md:py-3 py-2 md:px-10 px-7 md:text-sm text-[12px] rounded-full">
+            {lang === "ID" ? "Lihat Lebih Banyak" : "View More"}
           </button>
         </div>
       </section>
@@ -490,10 +509,10 @@ export default function Home(language: any) {
           data-aos-delay="800"
         >
           <h2 className="font-semibold text-xl dark:text-gray-200">
-            {lang == "ID" ? content.gallery.id : content.gallery.en}
+            {lang === "ID" ? content.gallery.id : content.gallery.en}
           </h2>
           <p className="text-sm mt-3 text-gray-700 dark:text-gray-300">
-            {lang == "ID" ? content.gallery.body.id : content.gallery.body.en}
+            {lang === "ID" ? content.gallery.body.id : content.gallery.body.en}
           </p>
         </div>
         <div className="lg:order-8  order-5 lg:block md:hidden">
@@ -563,81 +582,81 @@ export default function Home(language: any) {
 
       <section className="mt-20 dark:bg-gray-950 pt-20">
         <h3
-          className="text-center md:text-4xl text-3xl font-bold dark:text-gray-100"
+          className="text-center md:text-4xl text-2xl font-bold dark:text-gray-100"
           data-aos-once="true"
           data-aos="fade-down"
         >
-          {lang == "ID"
+          {lang === "ID"
             ? "GALERI KERAGAMAN INDONESIA"
             : "INDONESIAN DIVERSITY GALLERY"}
         </h3>
         <p
-          className="lg:w-[900px] w-[90%] text-center mx-auto md:text-base text-sm mt-5 mb-10 dark:text-gray-300 text-gray-700"
+          className="lg:w-[900px] w-[90%] text-center mx-auto md:text-base text-[13px] mt-5 mb-10 dark:text-gray-300 text-gray-700"
           data-aos-once="true"
           data-aos="fade-up"
         >
-          {lang == "ID" ? content.slider.id : content.slider.en}
+          {lang === "ID" ? content.slider.id : content.slider.en}
         </p>
         <div
-          className="slider h-[500px] overflow-x-hidden py-10 relative"
+          className="slider md:h-[500px] h-[350px] overflow-x-hidden py-10 relative"
           data-aos-once="true"
           data-aos="fade-left"
           data-aos-delay="300"
         >
-          <div className="slide-track flex gap-20 items-center">
-            <div className="slide">
+          <div className="slide-track flex md:gap-20 gap-10 items-center">
+            <div className="md:w-[500px] w-[200px] slide">
               <img
                 src="/images/gallery/1.jpg"
-                className="w-[500px] h-[300px] object-cover rounded-lg"
+                className="md:w-[500px] w-[200px] md:h-[300px] h-[150px] object-cover rounded-lg"
                 alt=""
               />
             </div>
-            <div className="slide">
+            <div className="md:w-[500px] w-[200px] slide">
               <img
                 src="/images/gallery/8.jpg"
-                className="w-[500px] h-[300px] object-cover rounded-lg"
+                className="md:w-[500px] w-[200px] md:h-[300px] h-[150px] object-cover rounded-lg"
                 alt=""
               />
             </div>
-            <div className="slide">
+            <div className="md:w-[500px] w-[200px] slide">
               <img
                 src="/images/gallery/3.jpg"
-                className="w-[500px] h-[300px] object-cover rounded-lg"
+                className="md:w-[500px] w-[200px] md:h-[300px] h-[150px] object-cover rounded-lg"
                 alt=""
               />
             </div>
-            <div className="slide">
+            <div className="md:w-[500px] w-[200px] slide">
               <img
                 src="/images/gallery/4.jpg"
-                className="w-[500px] h-[300px] object-cover rounded-lg"
+                className="md:w-[500px] w-[200px] md:h-[300px] h-[150px] object-cover rounded-lg"
                 alt=""
               />
             </div>
-            <div className="slide">
+            <div className="md:w-[500px] w-[200px] slide">
               <img
                 src="/images/gallery/5.jpg"
-                className="w-[500px] h-[300px] object-cover rounded-lg"
+                className="md:w-[500px] w-[200px] md:h-[300px] h-[150px] object-cover rounded-lg"
                 alt=""
               />
             </div>
-            <div className="slide">
+            <div className="md:w-[500px] w-[200px] slide">
               <img
                 src="/images/gallery/10.jpg"
-                className="w-[500px] h-[300px] object-cover rounded-lg"
+                className="md:w-[500px] w-[200px] md:h-[300px] h-[150px] object-cover rounded-lg"
                 alt=""
               />
             </div>
-            <div className="slide">
+            <div className="md:w-[500px] w-[200px] slide">
               <img
                 src="/images/gallery/6.jpg"
-                className="w-[500px] h-[300px] object-cover rounded-lg"
+                className="md:w-[500px] w-[200px] md:h-[300px] h-[150px] object-cover rounded-lg"
                 alt=""
               />
             </div>
-            <div className="slide">
+            <div className="md:w-[500px] w-[200px] slide">
               <img
                 src="/images/gallery/7.jpg"
-                className="w-[500px] h-[300px] object-cover rounded-lg"
+                className="md:w-[500px] w-[200px] md:h-[300px] h-[150px] object-cover rounded-lg"
                 alt=""
               />
             </div>
@@ -650,14 +669,14 @@ export default function Home(language: any) {
         data-aos-once="true"
         data-aos="zoom-in"
       >
-        <div className="bg-red-200 dark:bg-red-400 py-12 text-center rounded-md px-20">
+        <div className="bg-red-200 dark:bg-red-400 py-12 text-center rounded-md md:px-20 px-5">
           <h4 className="text-gray-800 dark:text-gray-300">
-            {lang == "ID"
+            {lang === "ID"
               ? "INDONESIA DIMATA DUNIA"
               : "Indonesia in the eyes of the world"}
           </h4>
           <h3 className="font-bold md:text-3xl text-xl mt-5 dark:text-gray-200">
-            {lang == "ID"
+            {lang === "ID"
               ? content.indonesiaAndWorld.id
               : content.indonesiaAndWorld.en}
           </h3>
@@ -680,39 +699,37 @@ export default function Home(language: any) {
             data-aos-once="true"
             data-aos="fade-right"
           >
-            <h5 className="text-red-500 font-semibold mb-5">RAGAM BERITA</h5>
-            <h2 className="font-bold md:text-3xl text-2xl dark:text-gray-200">
-              INDONESIA DENGAN KEBERAGAMAN BUDAYA INDONESIA
-            </h2>
-            <p className="text-gray-800 mt-5 md:text-base text-sm dark:text-gray-300">
-              Temukan keindahan ragam budaya di Indonesia, tempat di mana
-              tradisi dan keberagaman menjadi kekuatan bersama. Dari tarian
-              hingga kuliner, setiap elemen mencerminkan kekayaan dan keunikan
-              yang membuat Indonesia istimewa. Mari menjelajahi dan merayakan
-              keberagaman yang memperkaya bumi Nusantara.
-              {/* Discover the beauty of
-              cultural diversity in Indonesia, a place where traditions and
-              variety become a collective strength. From dance to culinary
-              delights, each element reflects the richness and uniqueness that
-              make Indonesia special. Let's explore and celebrate the diversity
-              that enriches the archipelago. */}
+            <h5 className="text-red-500 font-semibold md:mb-5 mb-3 md:text-base text-sm">
+              RAGAM BERITA
+            </h5>
+            <Link to="/news/read">
+              <h2 className="font-bold md:text-3xl text-xl dark:text-gray-200">
+                {lang === "ID"
+                  ? "INDONESIA DENGAN KEBERAGAMAN BUDAYA NUSANTARA YANG MENDUNIA"
+                  : "INDONESIA WITH THE WORLD'S DIVERSITY OF ARCHIPELAGO CULTURE"}
+              </h2>
+            </Link>
+            <p className="text-gray-800 mt-5 md:text-base text-[12px] dark:text-gray-300">
+              {lang === "ID"
+                ? content.news.highlight.id
+                : content.news.highlight.en}
             </p>
             <div className="flex gap-5 mt-10 text-gray-600 dark:text-gray-400 md:text-base text-sm">
-              <span className="flex gap-2">
+              <span className="flex gap-2 items-center">
                 <FaEye />
                 <small>2.000 views</small>
               </span>
-              <span className="flex gap-2">
+              <span className="flex gap-2 items-center">
                 <FaHeart />
                 <small>2.000 suka</small>
               </span>
-              <span className="flex gap-2">
+              <span className="flex gap-2 items-center">
                 <FaComment />
                 <small>2.000 komentar</small>
               </span>
             </div>
 
-            <div className="flex gap-5 md:justify-end justify-center mt-5">
+            <div className="lg:flex hidden gap-5 md:justify-end justify-center mt-5">
               <button className="flex items-center justify-center rounded-full w-[30px] h-[30px] dark:bg-gray-700 dark:hover:bg-gray-800 ">
                 <FaChevronLeft />
               </button>
@@ -729,11 +746,16 @@ export default function Home(language: any) {
                 <img
                   src="/images/festivalbali.jpeg"
                   alt="news1"
-                  className="h-[300px] object-cover w-full"
+                  className="h-[250px] object-cover w-full rounded"
                 />
-                <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-                  Festival Bali Arts
-                </h3>
+
+                <Link to="/news/read">
+                  <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
+                    {lang === "ID"
+                      ? "Festival Bali Arts"
+                      : "Bali Arts Festival"}
+                  </h3>
+                </Link>
                 <div className="my-5 flex gap-5">
                   <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
                     <FaUser />
@@ -745,29 +767,24 @@ export default function Home(language: any) {
                   </span>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-                  Setiap tahun, Festival Seni Bali menyoroti kekayaan budaya
-                  dengan durasi sebulan, memamerkan seni, musik, tarian, dan
-                  literatur Bali. Festival Seni Bali 2023 akan digelar dari 18
-                  Juni hingga 16 Juli di Taman Werdhi Budaya Art Centre,
-                  menandai 45 tahun peringatan festival ini. 
-                  {/* Every year, the
-                  Bali Arts Festival highlights the cultural richness with a
-                  month-long celebration showcasing the arts, music, dance, and
-                  literature of Bali. The Bali Arts Festival 2023 is scheduled
-                  to take place from June 18 to July 16 at the Taman Werdhi
-                  Budaya Art Centre, marking the 45th anniversary of the
-                  festival. */}
+                  {lang === "ID"
+                    ? content.news.sub.sub1.id
+                    : content.news.sub.sub1.en}
                 </p>
               </div>
               <div>
                 <img
                   src="/images/dalangcilik.jpg"
                   alt="news2"
-                  className="h-[300px] object-cover w-full"
+                  className="h-[250px] object-cover w-full rounded"
                 />
-                <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-                  Festival Dalang Cilik
-                </h3>
+                <Link to="/news/read">
+                  <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
+                    {lang === "ID"
+                      ? "Festival Dalang Cilik"
+                      : "'Dalang Cilik' Festival"}
+                  </h3>
+                </Link>
                 <div className="my-5 flex gap-5">
                   <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
                     <FaUser />
@@ -779,27 +796,22 @@ export default function Home(language: any) {
                   </span>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-                  Sepuluh dalang cilik di Semarang tampil dalam Festival Dalang
-                  Cilik, Rabu (22/11), di Gedung Ki Narto Sabdo, Taman Budaya
-                  Raden Saleh. Festival ini tidak hanya mencari bakat dalang
-                  muda, tetapi juga bertujuan melestarikan seni budaya
-                  nusantara. 
-                  {/* Ten young puppeteers in Semarang showcased their skills at the
-                  Puppeteer Festival on Wednesday (22/11) at Ki Narto Sabdo
-                  Building, Raden Saleh Cultural Park. The festival not only
-                  seeks to discover young puppetry talents but also aims to
-                  preserve the cultural arts of the archipelago. */}
+                  {lang === "ID"
+                    ? content.news.sub.sub2.id
+                    : content.news.sub.sub2.en}
                 </p>
               </div>
               <div>
                 <img
                   src="/images/babarit.jpeg"
                   alt="news3"
-                  className="h-[300px] object-cover w-full"
+                  className="h-[250px] object-cover w-full rounded"
                 />
-                <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-                  Festival Babarit
-                </h3>
+                <Link to="/news/read">
+                  <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
+                    {lang === "ID" ? "Festival Babarit" : "Babarit Festival"}
+                  </h3>
+                </Link>
                 <div className="my-5 flex gap-5">
                   <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
                     <FaUser />
@@ -811,29 +823,32 @@ export default function Home(language: any) {
                   </span>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-                  Tradisi Babarit di Kuningan untuk perayaan Milangkala ke-524
-                  (28/8/2022) menonjolkan nilai syukur, pelestarian alam, dan
-                  berbagi. Ciri khasnya termasuk sawer air, Tumpeng, gamelan,
-                  dan tarian. 
-                  {/* The Babarit tradition in Kuningan for the celebration of its
-                  524th Milangkala (28/8/2022) emphasizes the values of
-                  gratitude, environmental conservation, and sharing. Its
-                  distinctive features include the pouring of water from four
-                  directions, Tumpeng (cone-shaped rice dish), gamelan music,
-                  and traditional dances. */}
+                  {lang === "ID"
+                    ? content.news.sub.sub3.id
+                    : content.news.sub.sub3.en}
                 </p>
               </div>
             </section>
             <div className="lg:block hidden text-center ">
               <button
-                className="bg-red-500 hover:bg-red-400 text-white mx-auto text-sm px-5 py-2 mt-10 rounded-full inline-flex items-center gap-2"
+                className="bg-red-500 border-2 border-red-500 hover:bg-red-400 hover:border-red-400 text-white mx-auto text-sm px-5 py-2 mt-10 rounded-full inline-flex items-center gap-2 mr-5"
                 onClick={() => {
                   setMoreNews(false);
                 }}
               >
-                Show Less
+                {lang === "ID" ? "Lebih Sedikit" : "Show More"}
                 <MdKeyboardDoubleArrowUp />
               </button>
+              <Link
+                to={"/news"}
+                className="border-2 border-red-500 hover:bg-red-500 text-red-500 hover:text-white mx-auto text-sm px-5 py-2 mt-10 rounded-full inline-flex items-center gap-2"
+                onClick={() => {
+                  changePage("news");
+                }}
+              >
+                {lang === "ID" ? "Semua Berita" : "Show All News"}
+                <MdKeyboardDoubleArrowRight />
+              </Link>
             </div>
           </>
         ) : (
@@ -844,7 +859,7 @@ export default function Home(language: any) {
                 setMoreNews(true);
               }}
             >
-              Show More
+              {lang === "ID" ? "Lihat Lainnya" : "Show More"}
               <MdKeyboardDoubleArrowDown />
             </button>
           </div>
@@ -852,4 +867,6 @@ export default function Home(language: any) {
       </section>
     </>
   );
-}
+};
+
+export default Home;
