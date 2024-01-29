@@ -4,10 +4,13 @@ import { Accordion, AccordionItem } from "react-light-accordion";
 import "react-light-accordion/demo/css/index.css";
 import { Link } from "react-router-dom";
 
+import DarkNavbar from "../layouts/darkNavbar";
+
 export default function Subscription() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   const faqDescription = {
     benefit:
       "Berlangganan bukan hanya soal akses eksklusif ke konten keren, tapi juga tentang keuntungan eksklusif. Kamu bisa dapetin info terkini duluan sebelum yang lain, nikmatin acara eksklusif, dan bahkan lepas dari gangguan iklan. Ada juga diskon, promosi, dan hadiah spesial buat yang langganan setia. Jadi, dengan berlangganan, bukan cuma akses ke konten premium, tapi juga gaya hidup kekinian dan manfaat ekstra lainnya!",
@@ -16,6 +19,8 @@ export default function Subscription() {
 
   return (
     <>
+      <DarkNavbar />
+
       <header className="grid lg:grid-cols-2 md:gap-10 items-center md:px-20 px-5 lg:h-[800px] h-[700px] relative">
         <span
           className="w-[1000px] h-[1000px] rounded-full absolute -left-[500px] -top-[500px] -rotate-[60deg]"

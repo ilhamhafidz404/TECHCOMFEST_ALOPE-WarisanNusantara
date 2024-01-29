@@ -9,15 +9,7 @@ import Switcher from "./../components/swicher";
 import { FaBars, FaBell, FaGlobe, FaHome, FaNewspaper } from "react-icons/fa";
 import { FaMapLocation } from "react-icons/fa6";
 
-type DarkNavbarProps = {
-  changeLanguage: (lang: any) => void;
-  changePage: (page: any) => void;
-};
-
-const DarkNavbar: React.FC<DarkNavbarProps> = ({
-  changeLanguage,
-  changePage,
-}) => {
+const DarkNavbar = () => {
   const BootstrapTooltip = styled(({ className, ...props }: TooltipProps) => (
     <Tooltip {...props} arrow classes={{ popper: className }} />
   ))(({ theme }) => ({
@@ -29,7 +21,6 @@ const DarkNavbar: React.FC<DarkNavbarProps> = ({
     },
   }));
 
-  const [language, setLanguage] = useState("ID");
   let navOpen: boolean = false;
 
   const toggleNavigation = () => {
@@ -40,22 +31,12 @@ const DarkNavbar: React.FC<DarkNavbarProps> = ({
     navOpen = !navOpen;
   };
 
-  const switchLanguage = () => {
-    if (language === "ID") {
-      changeLanguage("EN");
-      setLanguage("EN");
-    } else {
-      changeLanguage("ID");
-      setLanguage("ID");
-    }
-  };
-
   useEffect(() => {
     const nav = document.querySelector("nav") as HTMLElement;
     const modeToggle = document.querySelector("#changeMode") as HTMLElement;
-    const changeLanguage = document.querySelector(
-      "#changeLanguage"
-    ) as HTMLElement;
+    // const changeLanguage = document.querySelector(
+    //   "#changeLanguage"
+    // ) as HTMLElement;
     const h2Nav = document.querySelector("nav section div h2") as HTMLElement;
 
     const handleScroll = () => {
@@ -71,8 +52,8 @@ const DarkNavbar: React.FC<DarkNavbarProps> = ({
         modeToggle.classList.toggle("bg-white", window.scrollY < 200);
         modeToggle.classList.toggle("!text-white", window.scrollY > 200);
         //
-        changeLanguage.classList.toggle("bg-white", window.scrollY < 200);
-        changeLanguage.classList.toggle("!text-white", window.scrollY > 200);
+        // changeLanguage.classList.toggle("bg-white", window.scrollY < 200);
+        // changeLanguage.classList.toggle("!text-white", window.scrollY > 200);
 
         h2Nav.classList.toggle("!text-white", window.scrollY > 200);
       }
@@ -96,14 +77,7 @@ const DarkNavbar: React.FC<DarkNavbarProps> = ({
               className="font-bold md:text-2xl text-xl font-dancing-script w-full text-gray-200"
               style={{ fontFamily: "Dancing Script, cursive !important" }}
             >
-              <Link
-                to={"/"}
-                onClick={() => {
-                  changePage("home");
-                }}
-              >
-                Warisan Nusantara
-              </Link>
+              <Link to={"/"}>Warisan Nusantara</Link>
             </h2>
           </div>
           <div className="md:flex hidden gap-10 items-center justify-end w-1/4">
@@ -117,28 +91,6 @@ const DarkNavbar: React.FC<DarkNavbarProps> = ({
                 className="!bg-gray-900 !text-gray-100 hover:text-white hover:bg-red-500 transition-all cursor-pointer min-w-[30px] h-[30px] flex items-center justify-center rounded-full"
               >
                 <Switcher />
-              </span>
-            </BootstrapTooltip>
-            <BootstrapTooltip
-              title={"Ganti Bahasa"}
-              placement="bottom"
-              className="pr-2"
-            >
-              <span
-                id="changeLanguage"
-                className="!bg-gray-900 !text-gray-100 hover:text-white hover:bg-red-500 transition-all cursor-pointer min-w-[30px] h-[30px] flex items-center justify-center rounded-full"
-                onClick={() => {
-                  switchLanguage();
-                }}
-              >
-                {language === "ID" ? (
-                  <img
-                    src="./images/icons/indonesia.png"
-                    className="w-[30px]"
-                  />
-                ) : (
-                  <img src="./images/icons/uk.png" className="w-[30px]" />
-                )}
               </span>
             </BootstrapTooltip>
 
@@ -171,7 +123,6 @@ const DarkNavbar: React.FC<DarkNavbarProps> = ({
               to="/"
               onClick={() => {
                 toggleNavigation();
-                changePage("home");
               }}
             >
               <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
@@ -183,7 +134,6 @@ const DarkNavbar: React.FC<DarkNavbarProps> = ({
               to="/news"
               onClick={() => {
                 toggleNavigation();
-                changePage("news");
               }}
             >
               <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
@@ -195,7 +145,6 @@ const DarkNavbar: React.FC<DarkNavbarProps> = ({
               to="/ragam-indonesia"
               onClick={() => {
                 toggleNavigation();
-                changePage("ragam");
               }}
             >
               <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
@@ -207,7 +156,6 @@ const DarkNavbar: React.FC<DarkNavbarProps> = ({
               to="/map"
               onClick={() => {
                 toggleNavigation();
-                changePage("subscription");
               }}
             >
               <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
@@ -219,7 +167,6 @@ const DarkNavbar: React.FC<DarkNavbarProps> = ({
               to="/subscription"
               onClick={() => {
                 toggleNavigation();
-                changePage("subscription");
               }}
             >
               <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">

@@ -3,20 +3,17 @@ import { FaCalendar, FaUser } from "react-icons/fa";
 
 import content from "./../data/content.json";
 import { Link } from "react-router-dom";
+import DarkNavbar from "../layouts/darkNavbar";
 
-export default function Detail(language: any) {
-  const [lang, setLang] = useState("ID");
-
-  useEffect(() => {
-    setLang(language.language);
-  }, [language]);
-
+export default function Detail() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <>
+      <DarkNavbar />
+
       <div className="grid lg:grid-cols-5 pt-20 pb-10 md:px-20 px-5 mb-8 items-center bg-gray-100 dark:bg-gray-950 relative">
         <span className="h-full lg:w-[700px] w-full absolute right-0 lg:bg-gradient-to-l bg-gradient-to-b from-red-500/70 to-red-500/0"></span>
         <div className="lg:col-span-3 order-2 lg:order-1 relative z-10 lg:text-left text-center">
@@ -85,45 +82,6 @@ export default function Detail(language: any) {
             baik buruk dan sebaginya.
           </p>
         </div>
-        {/* <div className="">
-          <p className="text-medium mb-3">
-            Harvest Festival: A Sundanese expression of gratitude for a year of
-            agriculture. Celebrated every 22nd month of the Sundanese calendar
-            with rituals, arts, and the connection between humans and God,
-            fellow beings, and nature.
-          </p>
-          <p className="text-medium mb-3">
-            Harvest Festival: The "Seren Taun" ceremony, specifically the
-            "Ngajayak" (Harvesting Rice), commences on the 18th day of Rayagung,
-            with the rice pounding reaching its peak on the 22nd day of
-            Rayagung. The "Ngajayak" on the eighteenth day signifies God's
-            compassion for the lives of His people worldwide.
-          </p>
-          <p className="text-medium mb-3">
-            The peak of Seren Taun on the 22nd day of Rayagung, represented by
-            the pounding of 22 quintals of rice, holds a special meaning. The
-            number 22 comprises 20 quintals of rice that are pounded and
-            distributed to the community, while 2 quintals serve as seeds. The
-            number 20 reflects the anatomical elements of the human body.
-          </p>
-          <p className="text-medium mb-3">
-            Both males and females possess 20 physical characteristics of the
-            human form, namely: 1. blood, 2. flesh, 3. feathers, 4. nails, 5.
-            hair, 6. skin, 7. veins, 8. brain, 9. lungs, 10. liver, 11. spleen,
-            12. pancreas, 13. gall bladder, 14. bones, 15. marrow, 16. fat, 17.
-            stomach, 18. intestines, 19. kidneys, and 20. heart.
-          </p>
-          <p className="text-medium mb-3">
-            The 20 characteristics mentioned above unite the organs and cells of
-            the body with diverse functions, or in other words, the body or the
-            physical form is seen as a living structure that undergoes processes
-            akin to natural laws. These natural laws then transform into the
-            physical body, the spiritual essence, and
-            acknowledgment. Meanwhile, the number 2 refers to the
-            understanding that life involves day and night, joy and sorrow, good
-            and bad, and so on.
-          </p>
-        </div> */}
         <div>
           <div className="bg-gray-50 dark:bg-gray-950 p-10 rounded">
             <img
@@ -175,7 +133,7 @@ export default function Detail(language: any) {
             className="h-[250px] object-cover w-full rounded"
           />
           <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-            {lang === "ID" ? "Festival Bali Arts" : "Bali Arts Festival"}
+            Bali Arts Festival
           </h3>
           <div className="my-5 flex gap-5">
             <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
@@ -188,9 +146,7 @@ export default function Detail(language: any) {
             </span>
           </div>
           <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-            {lang === "ID"
-              ? content.news.sub.sub1.id
-              : content.news.sub.sub1.en}
+            {content.news.sub.sub1.id}
           </p>
         </div>
         <div>
@@ -200,9 +156,7 @@ export default function Detail(language: any) {
             className="h-[250px] object-cover w-full rounded"
           />
           <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-            {lang === "ID"
-              ? "Festival Dalang Cilik"
-              : "'Dalang Cilik' Festival"}
+            Festival Dalang Cilik
           </h3>
           <div className="my-5 flex gap-5">
             <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
@@ -215,9 +169,7 @@ export default function Detail(language: any) {
             </span>
           </div>
           <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-            {lang === "ID"
-              ? content.news.sub.sub2.id
-              : content.news.sub.sub2.en}
+            {content.news.sub.sub2.id}
           </p>
         </div>
         <div>
@@ -227,7 +179,7 @@ export default function Detail(language: any) {
             className="h-[250px] object-cover w-full rounded"
           />
           <h3 className="mt-3 text-xl font-bold dark:text-gray-200">
-            {lang === "ID" ? "Festival Babarit" : "Babarit Festival"}
+            Festival Babarit
           </h3>
           <div className="my-5 flex gap-5">
             <span className="flex gap-2 items-center text-gray-600 dark:text-gray-400">
@@ -240,9 +192,7 @@ export default function Detail(language: any) {
             </span>
           </div>
           <p className="text-gray-700 dark:text-gray-300 mt-2 text-sm">
-            {lang === "ID"
-              ? content.news.sub.sub3.id
-              : content.news.sub.sub3.en}
+            {content.news.sub.sub3.id}
           </p>
         </div>
       </section>

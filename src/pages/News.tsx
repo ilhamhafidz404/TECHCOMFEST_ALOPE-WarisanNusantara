@@ -7,6 +7,7 @@ import {
   FaMapMarkedAlt,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import DarkNavbar from "../layouts/darkNavbar";
 
 export default function News() {
   useEffect(() => {
@@ -15,6 +16,8 @@ export default function News() {
 
   return (
     <>
+      <DarkNavbar />
+
       <header className="mt-10 mx-auto grid lg:grid-cols-4 gap-10 pt-20 lg:px-20 md:px-5 px-3">
         <span
           className="w-[1000px] h-[1000px] rounded-full absolute -left-[500px] -top-[500px] -rotate-[60deg]"

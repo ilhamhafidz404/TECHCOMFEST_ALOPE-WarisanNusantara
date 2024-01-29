@@ -3,6 +3,7 @@ import { FaCalendar, FaUser } from "react-icons/fa";
 
 import content from "./../data/content.json";
 import { Link } from "react-router-dom";
+import DarkNavbar from "../layouts/darkNavbar";
 
 export default function DetailRagamTarian(language: any) {
   const [lang, setLang] = useState("ID");
@@ -17,6 +18,8 @@ export default function DetailRagamTarian(language: any) {
 
   return (
     <>
+      <DarkNavbar />
+
       <div className="grid lg:grid-cols-5 pt-20 pb-10 md:px-20 px-5 mb-8 items-center bg-gray-100 dark:bg-gray-950 relative">
         <span className="h-full lg:w-[700px] w-full absolute right-0 lg:bg-gradient-to-l bg-gradient-to-b from-purple-500/70 to-red-500/0"></span>
         <div className="lg:col-span-3 order-2 lg:order-1 relative z-10 lg:text-left text-center">
