@@ -23,6 +23,7 @@ import DarktNavbar from "./layouts/darkNavbar";
 import RagamMakanan from "./pages/RagamMakanan";
 import DetailRagamMakanan from "./pages/DetailRagamMakanan";
 import DetailRagamTarian from "./pages/DetailRagamTarian";
+import Event from "./pages/Event";
 
 export default function App() {
   const [language, setLanguage] = useState("ID");
@@ -81,6 +82,7 @@ export default function App() {
           <Route path="/subscription" element={<Subscription />} />
           <Route path="/news/read" element={<Detail language={language} />} />
           <Route path="/map" element={<Map />} />
+          <Route path="/event" element={<Event />} />
         </Routes>
         <Footer />
       </Router>
