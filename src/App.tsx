@@ -1,35 +1,25 @@
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-//
-import { IoLanguage } from "react-icons/io5";
 
 // pages
 import Home from "./pages/Home";
 import News from "./pages/News";
 import Detail from "./pages/Detail";
-import Map from "./pages/Map";
+import RagamIndonesia from "./pages/RagamIndonesia";
+import Subscription from "./pages/Subscription";
 import RagamMakanan from "./pages/RagamMakanan";
 import DetailRagamMakanan from "./pages/DetailRagamMakanan";
 import DetailRagamTarian from "./pages/DetailRagamTarian";
-import RagamIndonesia from "./pages/RagamIndonesia";
-import Subscription from "./pages/Subscription";
+import Map from "./pages/Map";
+import Event from "./pages/Event";
 
 // components
-import React, { useState, useEffect } from "react";
+import Footer from "./layouts/footer";
+import Switcher from "./components/swicher";
 
 // importing aos
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-//
-import Footer from "./layouts/footer";
-import Switcher from "./components/swicher";
-import { IoLanguage } from "react-icons/io5";
-import DarktNavbar from "./layouts/darkNavbar";
-import RagamMakanan from "./pages/RagamMakanan";
-import DetailRagamMakanan from "./pages/DetailRagamMakanan";
-import DetailRagamTarian from "./pages/DetailRagamTarian";
-import Event from "./pages/Event";
 
 export default function App() {
   useEffect(() => {

@@ -174,6 +174,17 @@ const DarkNavbar = () => {
                 Subscription
               </span>
             </Link>
+            <Link
+              to="/event"
+              onClick={() => {
+                toggleNavigation();
+              }}
+            >
+              <span className="lg:text-base text-[12px] cursor-pointer text-white flex gap-3 items-center justify-center rounded-full hover:bg-white hover:text-black md:px-3 px-2">
+                <FaBell className="md:inline-block hidden" />
+                Event
+              </span>
+            </Link>
           </div>
         </section>
       </nav>
