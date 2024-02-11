@@ -24,6 +24,12 @@ import "aos/dist/aos.css";
 //
 import Footer from "./layouts/footer";
 import Switcher from "./components/swicher";
+import { IoLanguage } from "react-icons/io5";
+import DarktNavbar from "./layouts/darkNavbar";
+import RagamMakanan from "./pages/RagamMakanan";
+import DetailRagamMakanan from "./pages/DetailRagamMakanan";
+import DetailRagamTarian from "./pages/DetailRagamTarian";
+import Event from "./pages/Event";
 
 export default function App() {
   useEffect(() => {
@@ -49,6 +55,7 @@ export default function App() {
           <Route path="/subscription" element={<Subscription />} />
           <Route path="/news/read" element={<Detail />} />
           <Route path="/map" element={<Map />} />
+          <Route path="/event" element={<Event />} />
         </Routes>
         <Footer />
       </Router>
